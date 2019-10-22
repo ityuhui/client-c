@@ -1,0 +1,94 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "v1_self_subject_access_review_spec.h"
+
+
+
+v1_self_subject_access_review_spec_t *v1_self_subject_access_review_spec_create(
+    v1_non_resource_attributes_t *nonResourceAttributes,
+    v1_resource_attributes_t *resourceAttributes
+    ) {
+	v1_self_subject_access_review_spec_t *v1_self_subject_access_review_spec_local_var = malloc(sizeof(v1_self_subject_access_review_spec_t));
+    if (!v1_self_subject_access_review_spec_local_var) {
+        return NULL;
+    }
+	v1_self_subject_access_review_spec_local_var->nonResourceAttributes = nonResourceAttributes;
+	v1_self_subject_access_review_spec_local_var->resourceAttributes = resourceAttributes;
+
+	return v1_self_subject_access_review_spec_local_var;
+}
+
+
+void v1_self_subject_access_review_spec_free(v1_self_subject_access_review_spec_t *v1_self_subject_access_review_spec) {
+    listEntry_t *listEntry;
+    v1_non_resource_attributes_free(v1_self_subject_access_review_spec->nonResourceAttributes);
+    v1_resource_attributes_free(v1_self_subject_access_review_spec->resourceAttributes);
+	free(v1_self_subject_access_review_spec);
+}
+
+cJSON *v1_self_subject_access_review_spec_convertToJSON(v1_self_subject_access_review_spec_t *v1_self_subject_access_review_spec) {
+	cJSON *item = cJSON_CreateObject();
+
+	// v1_self_subject_access_review_spec->nonResourceAttributes
+    if(v1_self_subject_access_review_spec->nonResourceAttributes) { 
+    cJSON *nonResourceAttributes_local_JSON = v1_non_resource_attributes_convertToJSON(v1_self_subject_access_review_spec->nonResourceAttributes);
+    if(nonResourceAttributes_local_JSON == NULL) {
+    goto fail; //model
+    }
+    cJSON_AddItemToObject(item, "nonResourceAttributes", nonResourceAttributes_local_JSON);
+    if(item->child == NULL) {
+    goto fail;
+    }
+     } 
+
+
+	// v1_self_subject_access_review_spec->resourceAttributes
+    if(v1_self_subject_access_review_spec->resourceAttributes) { 
+    cJSON *resourceAttributes_local_JSON = v1_resource_attributes_convertToJSON(v1_self_subject_access_review_spec->resourceAttributes);
+    if(resourceAttributes_local_JSON == NULL) {
+    goto fail; //model
+    }
+    cJSON_AddItemToObject(item, "resourceAttributes", resourceAttributes_local_JSON);
+    if(item->child == NULL) {
+    goto fail;
+    }
+     } 
+
+	return item;
+fail:
+	if (item) {
+        cJSON_Delete(item);
+    }
+	return NULL;
+}
+
+v1_self_subject_access_review_spec_t *v1_self_subject_access_review_spec_parseFromJSON(cJSON *v1_self_subject_access_review_specJSON){
+
+    v1_self_subject_access_review_spec_t *v1_self_subject_access_review_spec_local_var = NULL;
+
+    // v1_self_subject_access_review_spec->nonResourceAttributes
+    cJSON *nonResourceAttributes = cJSON_GetObjectItemCaseSensitive(v1_self_subject_access_review_specJSON, "nonResourceAttributes");
+    v1_non_resource_attributes_t *nonResourceAttributes_local_nonprim = NULL;
+    if (nonResourceAttributes) { 
+    nonResourceAttributes_local_nonprim = v1_non_resource_attributes_parseFromJSON(nonResourceAttributes); //nonprimitive
+    }
+
+    // v1_self_subject_access_review_spec->resourceAttributes
+    cJSON *resourceAttributes = cJSON_GetObjectItemCaseSensitive(v1_self_subject_access_review_specJSON, "resourceAttributes");
+    v1_resource_attributes_t *resourceAttributes_local_nonprim = NULL;
+    if (resourceAttributes) { 
+    resourceAttributes_local_nonprim = v1_resource_attributes_parseFromJSON(resourceAttributes); //nonprimitive
+    }
+
+
+    v1_self_subject_access_review_spec_local_var = v1_self_subject_access_review_spec_create (
+        nonResourceAttributes ? nonResourceAttributes_local_nonprim : NULL,
+        resourceAttributes ? resourceAttributes_local_nonprim : NULL
+        );
+
+    return v1_self_subject_access_review_spec_local_var;
+end:
+    return NULL;
+
+}
