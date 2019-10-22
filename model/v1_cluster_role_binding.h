@@ -1,7 +1,7 @@
 /*
  * v1_cluster_role_binding.h
  *
- * ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.
+ * ClusterRoleBinding references a ClusterRole, but not_ contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.
  */
 
 #ifndef _v1_cluster_role_binding_H_

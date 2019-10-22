@@ -49,7 +49,7 @@ AutoscalingAPI_getAutoscalingAPIGroup(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_group_t *elementToReturn = v1_api_group_parseFromJSON(AutoscalingAPIlocalVarJSON);
     cJSON_Delete(AutoscalingAPIlocalVarJSON);

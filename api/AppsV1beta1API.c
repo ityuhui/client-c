@@ -110,7 +110,7 @@ AppsV1beta1API_createAppsV1beta1NamespacedControllerRevision(apiClient_t *apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_controller_revision_t *elementToReturn = v1beta1_controller_revision_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -245,7 +245,7 @@ AppsV1beta1API_createAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,cha
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -390,7 +390,7 @@ AppsV1beta1API_createAppsV1beta1NamespacedDeploymentRollback(apiClient_t *apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -526,7 +526,7 @@ AppsV1beta1API_createAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,ch
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -565,7 +565,7 @@ end:
 // delete collection of ControllerRevision
 //
 v1_status_t*
-AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedControllerRevision(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedControllerRevision(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -620,10 +620,10 @@ AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedControllerRevision(apiClient
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -775,7 +775,7 @@ AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedControllerRevision(apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -838,7 +838,7 @@ end:
 // delete collection of Deployment
 //
 v1_status_t*
-AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedDeployment(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedDeployment(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -893,10 +893,10 @@ AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedDeployment(apiClient_t *apiC
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1048,7 +1048,7 @@ AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedDeployment(apiClient_t *apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -1111,7 +1111,7 @@ end:
 // delete collection of StatefulSet
 //
 v1_status_t*
-AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedStatefulSet(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedStatefulSet(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1166,10 +1166,10 @@ AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedStatefulSet(apiClient_t *api
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1321,7 +1321,7 @@ AppsV1beta1API_deleteAppsV1beta1CollectionNamespacedStatefulSet(apiClient_t *api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -1511,7 +1511,7 @@ AppsV1beta1API_deleteAppsV1beta1NamespacedControllerRevision(apiClient_t *apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -1682,7 +1682,7 @@ AppsV1beta1API_deleteAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,cha
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -1853,7 +1853,7 @@ AppsV1beta1API_deleteAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,ch
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -1932,7 +1932,7 @@ AppsV1beta1API_getAppsV1beta1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -1959,7 +1959,7 @@ end:
 // list or watch objects of kind ControllerRevision
 //
 v1beta1_controller_revision_list_t*
-AppsV1beta1API_listAppsV1beta1ControllerRevisionForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AppsV1beta1API_listAppsV1beta1ControllerRevisionForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1992,10 +1992,10 @@ AppsV1beta1API_listAppsV1beta1ControllerRevisionForAllNamespaces(apiClient_t *ap
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2104,7 +2104,7 @@ AppsV1beta1API_listAppsV1beta1ControllerRevisionForAllNamespaces(apiClient_t *ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_controller_revision_list_t *elementToReturn = v1beta1_controller_revision_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -2154,7 +2154,7 @@ end:
 // list or watch objects of kind Deployment
 //
 apps_v1beta1_deployment_list_t*
-AppsV1beta1API_listAppsV1beta1DeploymentForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AppsV1beta1API_listAppsV1beta1DeploymentForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2187,10 +2187,10 @@ AppsV1beta1API_listAppsV1beta1DeploymentForAllNamespaces(apiClient_t *apiClient 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2299,7 +2299,7 @@ AppsV1beta1API_listAppsV1beta1DeploymentForAllNamespaces(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_list_t *elementToReturn = apps_v1beta1_deployment_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -2349,7 +2349,7 @@ end:
 // list or watch objects of kind ControllerRevision
 //
 v1beta1_controller_revision_list_t*
-AppsV1beta1API_listAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AppsV1beta1API_listAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2404,10 +2404,10 @@ AppsV1beta1API_listAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClien
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2504,7 +2504,7 @@ AppsV1beta1API_listAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_controller_revision_list_t *elementToReturn = v1beta1_controller_revision_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -2555,7 +2555,7 @@ end:
 // list or watch objects of kind Deployment
 //
 apps_v1beta1_deployment_list_t*
-AppsV1beta1API_listAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AppsV1beta1API_listAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2610,10 +2610,10 @@ AppsV1beta1API_listAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2710,7 +2710,7 @@ AppsV1beta1API_listAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_list_t *elementToReturn = apps_v1beta1_deployment_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -2761,7 +2761,7 @@ end:
 // list or watch objects of kind StatefulSet
 //
 v1beta1_stateful_set_list_t*
-AppsV1beta1API_listAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AppsV1beta1API_listAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2816,10 +2816,10 @@ AppsV1beta1API_listAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2916,7 +2916,7 @@ AppsV1beta1API_listAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_list_t *elementToReturn = v1beta1_stateful_set_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -2967,7 +2967,7 @@ end:
 // list or watch objects of kind StatefulSet
 //
 v1beta1_stateful_set_list_t*
-AppsV1beta1API_listAppsV1beta1StatefulSetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AppsV1beta1API_listAppsV1beta1StatefulSetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3000,10 +3000,10 @@ AppsV1beta1API_listAppsV1beta1StatefulSetForAllNamespaces(apiClient_t *apiClient
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -3112,7 +3112,7 @@ AppsV1beta1API_listAppsV1beta1StatefulSetForAllNamespaces(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_list_t *elementToReturn = v1beta1_stateful_set_list_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -3278,7 +3278,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_controller_revision_t *elementToReturn = v1beta1_controller_revision_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -3436,7 +3436,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -3594,7 +3594,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_scale_t *elementToReturn = apps_v1beta1_scale_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -3752,7 +3752,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -3910,7 +3910,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,cha
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4068,7 +4068,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSetScale(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_scale_t *elementToReturn = apps_v1beta1_scale_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4226,7 +4226,7 @@ AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSetStatus(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4359,7 +4359,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_controller_revision_t *elementToReturn = v1beta1_controller_revision_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4486,7 +4486,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4589,7 +4589,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_scale_t *elementToReturn = apps_v1beta1_scale_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4688,7 +4688,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4811,7 +4811,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -4914,7 +4914,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedStatefulSetScale(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_scale_t *elementToReturn = apps_v1beta1_scale_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5013,7 +5013,7 @@ AppsV1beta1API_readAppsV1beta1NamespacedStatefulSetStatus(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5148,7 +5148,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedControllerRevision(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_controller_revision_t *elementToReturn = v1beta1_controller_revision_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5291,7 +5291,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,ch
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5434,7 +5434,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedDeploymentScale(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_scale_t *elementToReturn = apps_v1beta1_scale_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5577,7 +5577,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_deployment_t *elementToReturn = apps_v1beta1_deployment_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5720,7 +5720,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,c
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -5863,7 +5863,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedStatefulSetScale(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     apps_v1beta1_scale_t *elementToReturn = apps_v1beta1_scale_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);
@@ -6006,7 +6006,7 @@ AppsV1beta1API_replaceAppsV1beta1NamespacedStatefulSetStatus(apiClient_t *apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AppsV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_stateful_set_t *elementToReturn = v1beta1_stateful_set_parseFromJSON(AppsV1beta1APIlocalVarJSON);
     cJSON_Delete(AppsV1beta1APIlocalVarJSON);

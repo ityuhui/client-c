@@ -20,7 +20,7 @@ NodeV1beta1API_createNodeV1beta1RuntimeClass(apiClient_t *apiClient ,v1beta1_run
 // delete collection of RuntimeClass
 //
 v1_status_t*
-NodeV1beta1API_deleteNodeV1beta1CollectionRuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+NodeV1beta1API_deleteNodeV1beta1CollectionRuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a RuntimeClass
@@ -38,7 +38,7 @@ NodeV1beta1API_getNodeV1beta1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind RuntimeClass
 //
 v1beta1_runtime_class_list_t*
-NodeV1beta1API_listNodeV1beta1RuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+NodeV1beta1API_listNodeV1beta1RuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified RuntimeClass

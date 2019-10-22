@@ -1,7 +1,7 @@
 /*
  * v1_nfs_volume_source.h
  *
- * Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
+ * Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not_ support ownership management or SELinux relabeling.
  */
 
 #ifndef _v1_nfs_volume_source_H_

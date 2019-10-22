@@ -110,7 +110,7 @@ SettingsV1alpha1API_createSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_pod_preset_t *elementToReturn = v1alpha1_pod_preset_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -149,7 +149,7 @@ end:
 // delete collection of PodPreset
 //
 v1_status_t*
-SettingsV1alpha1API_deleteSettingsV1alpha1CollectionNamespacedPodPreset(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+SettingsV1alpha1API_deleteSettingsV1alpha1CollectionNamespacedPodPreset(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -204,10 +204,10 @@ SettingsV1alpha1API_deleteSettingsV1alpha1CollectionNamespacedPodPreset(apiClien
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -359,7 +359,7 @@ SettingsV1alpha1API_deleteSettingsV1alpha1CollectionNamespacedPodPreset(apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -549,7 +549,7 @@ SettingsV1alpha1API_deleteSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -628,7 +628,7 @@ SettingsV1alpha1API_getSettingsV1alpha1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -655,7 +655,7 @@ end:
 // list or watch objects of kind PodPreset
 //
 v1alpha1_pod_preset_list_t*
-SettingsV1alpha1API_listSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+SettingsV1alpha1API_listSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -710,10 +710,10 @@ SettingsV1alpha1API_listSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClie
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -810,7 +810,7 @@ SettingsV1alpha1API_listSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_pod_preset_list_t *elementToReturn = v1alpha1_pod_preset_list_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -861,7 +861,7 @@ end:
 // list or watch objects of kind PodPreset
 //
 v1alpha1_pod_preset_list_t*
-SettingsV1alpha1API_listSettingsV1alpha1PodPresetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+SettingsV1alpha1API_listSettingsV1alpha1PodPresetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -894,10 +894,10 @@ SettingsV1alpha1API_listSettingsV1alpha1PodPresetForAllNamespaces(apiClient_t *a
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1006,7 +1006,7 @@ SettingsV1alpha1API_listSettingsV1alpha1PodPresetForAllNamespaces(apiClient_t *a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_pod_preset_list_t *elementToReturn = v1alpha1_pod_preset_list_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -1172,7 +1172,7 @@ SettingsV1alpha1API_patchSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_pod_preset_t *elementToReturn = v1alpha1_pod_preset_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -1305,7 +1305,7 @@ SettingsV1alpha1API_readSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_pod_preset_t *elementToReturn = v1alpha1_pod_preset_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);
@@ -1444,7 +1444,7 @@ SettingsV1alpha1API_replaceSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SettingsV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_pod_preset_t *elementToReturn = v1alpha1_pod_preset_parseFromJSON(SettingsV1alpha1APIlocalVarJSON);
     cJSON_Delete(SettingsV1alpha1APIlocalVarJSON);

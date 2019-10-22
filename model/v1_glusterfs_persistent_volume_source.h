@@ -1,7 +1,7 @@
 /*
  * v1_glusterfs_persistent_volume_source.h
  *
- * Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+ * Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not_ support ownership management or SELinux relabeling.
  */
 
 #ifndef _v1_glusterfs_persistent_volume_source_H_

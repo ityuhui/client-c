@@ -85,15 +85,15 @@ typedef int cJSON_bool;
 #endif
 #ifdef __WINDOWS__
 
-/* When compiling for windows, we specify a specific calling convention to avoid issues where we are being called from a project with a different default calling convention.  For windows you have 2 define options:
+/* When compiling for windows, we specify a specific calling convention to avoid issues where we are being called from a project with a different default_ calling convention.  For windows you have 2 define options:
 
 CJSON_HIDE_SYMBOLS - Define this in the case where you don't want to ever dllexport symbols
-CJSON_EXPORT_SYMBOLS - Define this on library build when you want to dllexport symbols (default)
+CJSON_EXPORT_SYMBOLS - Define this on library build when you want to dllexport symbols (default_)
 CJSON_IMPORT_SYMBOLS - Define this if you want to dllimport symbol
 
 For *nix builds that support visibility attribute, you can define similar behavior by
 
-setting default visibility to hidden by adding
+setting default_ visibility to hidden by adding
 -fvisibility=hidden (for gcc)
 or
 -xldscope=hidden (for sun cc)
@@ -103,7 +103,7 @@ then using the CJSON_API_VISIBILITY flag to "export" the same symbols the way CJ
 
 */
 
-/* export symbols by default, this is necessary for copy pasting the C and header file */
+/* export symbols by default_, this is necessary for copy pasting the C and header file */
 #if !defined(CJSON_HIDE_SYMBOLS) && !defined(CJSON_IMPORT_SYMBOLS) && !defined(CJSON_EXPORT_SYMBOLS)
 #define CJSON_EXPORT_SYMBOLS
 #endif
@@ -117,7 +117,7 @@ then using the CJSON_API_VISIBILITY flag to "export" the same symbols the way CJ
 #endif
 #else /* !WIN32 */
 #if (defined(__GNUC__) || defined(__SUNPRO_CC) || defined (__SUNPRO_C)) && defined(CJSON_API_VISIBILITY)
-#define CJSON_PUBLIC(type)   __attribute__((visibility("default"))) type
+#define CJSON_PUBLIC(type)   __attribute__((visibility("default_"))) type
 #else
 #define CJSON_PUBLIC(type) type
 #endif
@@ -149,7 +149,7 @@ CJSON_PUBLIC(char *) cJSON_PrintUnformatted(const cJSON *item);
 /* Render a cJSON entity to text using a buffered strategy. prebuffer is a guess at the final size. guessing well reduces reallocation. fmt=0 gives unformatted, =1 gives formatted */
 CJSON_PUBLIC(char *) cJSON_PrintBuffered(const cJSON *item, int prebuffer, cJSON_bool fmt);
 /* Render a cJSON entity to text using a buffer already allocated in memory with given length. Returns 1 on success and 0 on failure. */
-/* NOTE: cJSON is not always 100% accurate in estimating how much memory it will use, so to be safe allocate 5 bytes more than you actually need */
+/* NOTE: cJSON is not_ always 100% accurate in estimating how much memory it will use, so to be safe allocate 5 bytes more than you actually need */
 CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buffer, const int length, const cJSON_bool format);
 /* Delete a cJSON entity and all subentities. */
 CJSON_PUBLIC(void) cJSON_Delete(cJSON *c);
@@ -193,10 +193,10 @@ CJSON_PUBLIC(cJSON *) cJSON_CreateArray(void);
 CJSON_PUBLIC(cJSON *) cJSON_CreateObject(void);
 
 /* Create a string where valuestring references a string so
- * it will not be freed by cJSON_Delete */
+ * it will not_ be freed by cJSON_Delete */
 CJSON_PUBLIC(cJSON *) cJSON_CreateStringReference(const char *string);
 /* Create an object/arrray that only references it's elements so
- * they will not be freed by cJSON_Delete */
+ * they will not_ be freed by cJSON_Delete */
 CJSON_PUBLIC(cJSON *) cJSON_CreateObjectReference(const cJSON *child);
 CJSON_PUBLIC(cJSON *) cJSON_CreateArrayReference(const cJSON *child);
 

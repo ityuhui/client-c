@@ -20,7 +20,7 @@ BatchV1beta1API_createBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char
 // delete collection of CronJob
 //
 v1_status_t*
-BatchV1beta1API_deleteBatchV1beta1CollectionNamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+BatchV1beta1API_deleteBatchV1beta1CollectionNamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a CronJob
@@ -38,13 +38,13 @@ BatchV1beta1API_getBatchV1beta1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind CronJob
 //
 v1beta1_cron_job_list_t*
-BatchV1beta1API_listBatchV1beta1CronJobForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
+BatchV1beta1API_listBatchV1beta1CronJobForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind CronJob
 //
 v1beta1_cron_job_list_t*
-BatchV1beta1API_listBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+BatchV1beta1API_listBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified CronJob

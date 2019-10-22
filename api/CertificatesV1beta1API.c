@@ -100,7 +100,7 @@ CertificatesV1beta1API_createCertificatesV1beta1CertificateSigningRequest(apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -255,7 +255,7 @@ CertificatesV1beta1API_deleteCertificatesV1beta1CertificateSigningRequest(apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -298,7 +298,7 @@ end:
 // delete collection of CertificateSigningRequest
 //
 v1_status_t*
-CertificatesV1beta1API_deleteCertificatesV1beta1CollectionCertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+CertificatesV1beta1API_deleteCertificatesV1beta1CollectionCertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -343,10 +343,10 @@ CertificatesV1beta1API_deleteCertificatesV1beta1CollectionCertificateSigningRequ
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -498,7 +498,7 @@ CertificatesV1beta1API_deleteCertificatesV1beta1CollectionCertificateSigningRequ
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -595,7 +595,7 @@ CertificatesV1beta1API_getCertificatesV1beta1APIResources(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -622,7 +622,7 @@ end:
 // list or watch objects of kind CertificateSigningRequest
 //
 v1beta1_certificate_signing_request_list_t*
-CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -667,10 +667,10 @@ CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClien
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -767,7 +767,7 @@ CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_list_t *elementToReturn = v1beta1_certificate_signing_request_list_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -923,7 +923,7 @@ CertificatesV1beta1API_patchCertificatesV1beta1CertificateSigningRequest(apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -1070,7 +1070,7 @@ CertificatesV1beta1API_patchCertificatesV1beta1CertificateSigningRequestStatus(a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -1192,7 +1192,7 @@ CertificatesV1beta1API_readCertificatesV1beta1CertificateSigningRequest(apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -1284,7 +1284,7 @@ CertificatesV1beta1API_readCertificatesV1beta1CertificateSigningRequestStatus(ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -1408,7 +1408,7 @@ CertificatesV1beta1API_replaceCertificatesV1beta1CertificateSigningRequest(apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -1540,7 +1540,7 @@ CertificatesV1beta1API_replaceCertificatesV1beta1CertificateSigningRequestApprov
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);
@@ -1672,7 +1672,7 @@ CertificatesV1beta1API_replaceCertificatesV1beta1CertificateSigningRequestStatus
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_certificate_signing_request_t *elementToReturn = v1beta1_certificate_signing_request_parseFromJSON(CertificatesV1beta1APIlocalVarJSON);
     cJSON_Delete(CertificatesV1beta1APIlocalVarJSON);

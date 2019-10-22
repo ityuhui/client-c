@@ -100,7 +100,7 @@ AuditregistrationV1alpha1API_createAuditregistrationV1alpha1AuditSink(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_audit_sink_t *elementToReturn = v1alpha1_audit_sink_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -255,7 +255,7 @@ AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1AuditSink(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -298,7 +298,7 @@ end:
 // delete collection of AuditSink
 //
 v1_status_t*
-AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1CollectionAuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1CollectionAuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -343,10 +343,10 @@ AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1CollectionAuditSink(
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -498,7 +498,7 @@ AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1CollectionAuditSink(
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -595,7 +595,7 @@ AuditregistrationV1alpha1API_getAuditregistrationV1alpha1APIResources(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -622,7 +622,7 @@ end:
 // list or watch objects of kind AuditSink
 //
 v1alpha1_audit_sink_list_t*
-AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -667,10 +667,10 @@ AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -767,7 +767,7 @@ AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_audit_sink_list_t *elementToReturn = v1alpha1_audit_sink_list_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -923,7 +923,7 @@ AuditregistrationV1alpha1API_patchAuditregistrationV1alpha1AuditSink(apiClient_t
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_audit_sink_t *elementToReturn = v1alpha1_audit_sink_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -1045,7 +1045,7 @@ AuditregistrationV1alpha1API_readAuditregistrationV1alpha1AuditSink(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_audit_sink_t *elementToReturn = v1alpha1_audit_sink_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);
@@ -1173,7 +1173,7 @@ AuditregistrationV1alpha1API_replaceAuditregistrationV1alpha1AuditSink(apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuditregistrationV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_audit_sink_t *elementToReturn = v1alpha1_audit_sink_parseFromJSON(AuditregistrationV1alpha1APIlocalVarJSON);
     cJSON_Delete(AuditregistrationV1alpha1APIlocalVarJSON);

@@ -20,7 +20,7 @@ AutoscalingV1API_createAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_
 // delete collection of HorizontalPodAutoscaler
 //
 v1_status_t*
-AutoscalingV1API_deleteAutoscalingV1CollectionNamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+AutoscalingV1API_deleteAutoscalingV1CollectionNamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a HorizontalPodAutoscaler
@@ -38,13 +38,13 @@ AutoscalingV1API_getAutoscalingV1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind HorizontalPodAutoscaler
 //
 v1_horizontal_pod_autoscaler_list_t*
-AutoscalingV1API_listAutoscalingV1HorizontalPodAutoscalerForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
+AutoscalingV1API_listAutoscalingV1HorizontalPodAutoscalerForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind HorizontalPodAutoscaler
 //
 v1_horizontal_pod_autoscaler_list_t*
-AutoscalingV1API_listAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+AutoscalingV1API_listAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified HorizontalPodAutoscaler

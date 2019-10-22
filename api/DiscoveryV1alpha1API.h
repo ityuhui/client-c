@@ -20,7 +20,7 @@ DiscoveryV1alpha1API_createDiscoveryV1alpha1NamespacedEndpointSlice(apiClient_t 
 // delete collection of EndpointSlice
 //
 v1_status_t*
-DiscoveryV1alpha1API_deleteDiscoveryV1alpha1CollectionNamespacedEndpointSlice(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+DiscoveryV1alpha1API_deleteDiscoveryV1alpha1CollectionNamespacedEndpointSlice(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete an EndpointSlice
@@ -38,13 +38,13 @@ DiscoveryV1alpha1API_getDiscoveryV1alpha1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind EndpointSlice
 //
 v1alpha1_endpoint_slice_list_t*
-DiscoveryV1alpha1API_listDiscoveryV1alpha1EndpointSliceForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
+DiscoveryV1alpha1API_listDiscoveryV1alpha1EndpointSliceForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind EndpointSlice
 //
 v1alpha1_endpoint_slice_list_t*
-DiscoveryV1alpha1API_listDiscoveryV1alpha1NamespacedEndpointSlice(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+DiscoveryV1alpha1API_listDiscoveryV1alpha1NamespacedEndpointSlice(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified EndpointSlice

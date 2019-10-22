@@ -32,8 +32,8 @@ void v1_flex_volume_source_free(v1_flex_volume_source_t *v1_flex_volume_source) 
     free(v1_flex_volume_source->fsType);
 	list_ForEach(listEntry, v1_flex_volume_source->options) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_flex_volume_source->options);
     v1_local_object_reference_free(v1_flex_volume_source->secretRef);

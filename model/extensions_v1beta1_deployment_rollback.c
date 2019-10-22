@@ -34,8 +34,8 @@ void extensions_v1beta1_deployment_rollback_free(extensions_v1beta1_deployment_r
     extensions_v1beta1_rollback_config_free(extensions_v1beta1_deployment_rollback->rollbackTo);
 	list_ForEach(listEntry, extensions_v1beta1_deployment_rollback->updatedAnnotations) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(extensions_v1beta1_deployment_rollback->updatedAnnotations);
 	free(extensions_v1beta1_deployment_rollback);

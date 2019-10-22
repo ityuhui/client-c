@@ -1,7 +1,7 @@
 /*
  * v1alpha1_policy_rule.h
  *
- * PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.
+ * PolicyRule holds information that describes a policy rule, but does not_ contain information about who the rule applies to or which namespace the rule applies to.
  */
 
 #ifndef _v1alpha1_policy_rule_H_

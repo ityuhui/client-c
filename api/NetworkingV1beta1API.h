@@ -20,7 +20,7 @@ NetworkingV1beta1API_createNetworkingV1beta1NamespacedIngress(apiClient_t *apiCl
 // delete collection of Ingress
 //
 v1_status_t*
-NetworkingV1beta1API_deleteNetworkingV1beta1CollectionNamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+NetworkingV1beta1API_deleteNetworkingV1beta1CollectionNamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete an Ingress
@@ -38,13 +38,13 @@ NetworkingV1beta1API_getNetworkingV1beta1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind Ingress
 //
 networking_v1beta1_ingress_list_t*
-NetworkingV1beta1API_listNetworkingV1beta1IngressForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
+NetworkingV1beta1API_listNetworkingV1beta1IngressForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind Ingress
 //
 networking_v1beta1_ingress_list_t*
-NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified Ingress

@@ -100,7 +100,7 @@ AdmissionregistrationV1beta1API_createAdmissionregistrationV1beta1MutatingWebhoo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_mutating_webhook_configuration_t *elementToReturn = v1beta1_mutating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -224,7 +224,7 @@ AdmissionregistrationV1beta1API_createAdmissionregistrationV1beta1ValidatingWebh
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_validating_webhook_configuration_t *elementToReturn = v1beta1_validating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -262,7 +262,7 @@ end:
 // delete collection of MutatingWebhookConfiguration
 //
 v1_status_t*
-AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionMutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionMutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -307,10 +307,10 @@ AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionMuta
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -462,7 +462,7 @@ AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionMuta
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -524,7 +524,7 @@ end:
 // delete collection of ValidatingWebhookConfiguration
 //
 v1_status_t*
-AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -569,10 +569,10 @@ AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionVali
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -724,7 +724,7 @@ AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1CollectionVali
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -903,7 +903,7 @@ AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1MutatingWebhoo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1063,7 +1063,7 @@ AdmissionregistrationV1beta1API_deleteAdmissionregistrationV1beta1ValidatingWebh
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1141,7 +1141,7 @@ AdmissionregistrationV1beta1API_getAdmissionregistrationV1beta1APIResources(apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1168,7 +1168,7 @@ end:
 // list or watch objects of kind MutatingWebhookConfiguration
 //
 v1beta1_mutating_webhook_configuration_list_t*
-AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1213,10 +1213,10 @@ AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1MutatingWebhookC
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1313,7 +1313,7 @@ AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1MutatingWebhookC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_mutating_webhook_configuration_list_t *elementToReturn = v1beta1_mutating_webhook_configuration_list_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1363,7 +1363,7 @@ end:
 // list or watch objects of kind ValidatingWebhookConfiguration
 //
 v1beta1_validating_webhook_configuration_list_t*
-AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1408,10 +1408,10 @@ AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1ValidatingWebhoo
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1508,7 +1508,7 @@ AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1ValidatingWebhoo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_validating_webhook_configuration_list_t *elementToReturn = v1beta1_validating_webhook_configuration_list_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1664,7 +1664,7 @@ AdmissionregistrationV1beta1API_patchAdmissionregistrationV1beta1MutatingWebhook
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_mutating_webhook_configuration_t *elementToReturn = v1beta1_mutating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1811,7 +1811,7 @@ AdmissionregistrationV1beta1API_patchAdmissionregistrationV1beta1ValidatingWebho
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_validating_webhook_configuration_t *elementToReturn = v1beta1_validating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -1933,7 +1933,7 @@ AdmissionregistrationV1beta1API_readAdmissionregistrationV1beta1MutatingWebhookC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_mutating_webhook_configuration_t *elementToReturn = v1beta1_mutating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -2049,7 +2049,7 @@ AdmissionregistrationV1beta1API_readAdmissionregistrationV1beta1ValidatingWebhoo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_validating_webhook_configuration_t *elementToReturn = v1beta1_validating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -2177,7 +2177,7 @@ AdmissionregistrationV1beta1API_replaceAdmissionregistrationV1beta1MutatingWebho
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_mutating_webhook_configuration_t *elementToReturn = v1beta1_mutating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);
@@ -2309,7 +2309,7 @@ AdmissionregistrationV1beta1API_replaceAdmissionregistrationV1beta1ValidatingWeb
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AdmissionregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_validating_webhook_configuration_t *elementToReturn = v1beta1_validating_webhook_configuration_parseFromJSON(AdmissionregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(AdmissionregistrationV1beta1APIlocalVarJSON);

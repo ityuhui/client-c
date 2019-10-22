@@ -20,7 +20,7 @@ NetworkingV1API_createNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient
 // delete collection of NetworkPolicy
 //
 v1_status_t*
-NetworkingV1API_deleteNetworkingV1CollectionNamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+NetworkingV1API_deleteNetworkingV1CollectionNamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a NetworkPolicy
@@ -38,13 +38,13 @@ NetworkingV1API_getNetworkingV1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind NetworkPolicy
 //
 v1_network_policy_list_t*
-NetworkingV1API_listNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+NetworkingV1API_listNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind NetworkPolicy
 //
 v1_network_policy_list_t*
-NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
+NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified NetworkPolicy

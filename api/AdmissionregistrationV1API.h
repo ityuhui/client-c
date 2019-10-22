@@ -28,13 +28,13 @@ AdmissionregistrationV1API_createAdmissionregistrationV1ValidatingWebhookConfigu
 // delete collection of MutatingWebhookConfiguration
 //
 v1_status_t*
-AdmissionregistrationV1API_deleteAdmissionregistrationV1CollectionMutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+AdmissionregistrationV1API_deleteAdmissionregistrationV1CollectionMutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete collection of ValidatingWebhookConfiguration
 //
 v1_status_t*
-AdmissionregistrationV1API_deleteAdmissionregistrationV1CollectionValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+AdmissionregistrationV1API_deleteAdmissionregistrationV1CollectionValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a MutatingWebhookConfiguration
@@ -58,13 +58,13 @@ AdmissionregistrationV1API_getAdmissionregistrationV1APIResources(apiClient_t *a
 // list or watch objects of kind MutatingWebhookConfiguration
 //
 v1_mutating_webhook_configuration_list_t*
-AdmissionregistrationV1API_listAdmissionregistrationV1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+AdmissionregistrationV1API_listAdmissionregistrationV1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind ValidatingWebhookConfiguration
 //
 v1_validating_webhook_configuration_list_t*
-AdmissionregistrationV1API_listAdmissionregistrationV1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+AdmissionregistrationV1API_listAdmissionregistrationV1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified MutatingWebhookConfiguration

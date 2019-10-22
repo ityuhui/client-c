@@ -23,11 +23,11 @@ typedef struct v1_json_schema_props_t {
     object_t *additionalProperties; //object
     list_t *allOf; //nonprimitive container
     list_t *anyOf; //nonprimitive container
-    object_t *default; //object
+    object_t *default_; //object
     list_t* definitions; //map
     list_t* dependencies; //map
     char *description; // string
-    list_t *enum; //nonprimitive container
+    list_t *enum_; //nonprimitive container
     object_t *example; //object
     int exclusiveMaximum; //boolean
     int exclusiveMinimum; //boolean
@@ -44,7 +44,7 @@ typedef struct v1_json_schema_props_t {
     long minProperties; //numeric
     double minimum; //numeric
     double multipleOf; //numeric
-    v1_json_schema_props_t *not; //model
+    struct v1_json_schema_props_t *not_; //model
     int nullable; //boolean
     list_t *oneOf; //nonprimitive container
     char *pattern; // string
@@ -54,11 +54,11 @@ typedef struct v1_json_schema_props_t {
     char *title; // string
     char *type; // string
     int uniqueItems; //boolean
-    int x-kubernetes-embedded-resource; //boolean
-    int x-kubernetes-int-or-string; //boolean
-    list_t *x-kubernetes-list-map-keys; //primitive container
-    char *x-kubernetes-list-type; // string
-    int x-kubernetes-preserve-unknown-fields; //boolean
+    int x_kubernetes_embedded_resource; //boolean
+    int x_kubernetes_int_or_string; //boolean
+    list_t *x_kubernetes_list_map_keys; //primitive container
+    char *x_kubernetes_list_type; // string
+    int x_kubernetes_preserve_unknown_fields; //boolean
 
 } v1_json_schema_props_t;
 
@@ -69,11 +69,11 @@ v1_json_schema_props_t *v1_json_schema_props_create(
     object_t *additionalProperties,
     list_t *allOf,
     list_t *anyOf,
-    object_t *default,
+    object_t *default_,
     list_t* definitions,
     list_t* dependencies,
     char *description,
-    list_t *enum,
+    list_t *enum_,
     object_t *example,
     int exclusiveMaximum,
     int exclusiveMinimum,
@@ -90,7 +90,7 @@ v1_json_schema_props_t *v1_json_schema_props_create(
     long minProperties,
     double minimum,
     double multipleOf,
-    v1_json_schema_props_t *not,
+    v1_json_schema_props_t *not_,
     int nullable,
     list_t *oneOf,
     char *pattern,
@@ -100,11 +100,11 @@ v1_json_schema_props_t *v1_json_schema_props_create(
     char *title,
     char *type,
     int uniqueItems,
-    int x-kubernetes-embedded-resource,
-    int x-kubernetes-int-or-string,
-    list_t *x-kubernetes-list-map-keys,
-    char *x-kubernetes-list-type,
-    int x-kubernetes-preserve-unknown-fields
+    int x_kubernetes_embedded_resource,
+    int x_kubernetes_int_or_string,
+    list_t *x_kubernetes_list_map_keys,
+    char *x_kubernetes_list_type,
+    int x_kubernetes_preserve_unknown_fields
 );
 
 void v1_json_schema_props_free(v1_json_schema_props_t *v1_json_schema_props);

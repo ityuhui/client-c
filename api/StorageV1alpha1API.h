@@ -20,7 +20,7 @@ StorageV1alpha1API_createStorageV1alpha1VolumeAttachment(apiClient_t *apiClient 
 // delete collection of VolumeAttachment
 //
 v1_status_t*
-StorageV1alpha1API_deleteStorageV1alpha1CollectionVolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+StorageV1alpha1API_deleteStorageV1alpha1CollectionVolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a VolumeAttachment
@@ -38,7 +38,7 @@ StorageV1alpha1API_getStorageV1alpha1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind VolumeAttachment
 //
 v1alpha1_volume_attachment_list_t*
-StorageV1alpha1API_listStorageV1alpha1VolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+StorageV1alpha1API_listStorageV1alpha1VolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified VolumeAttachment

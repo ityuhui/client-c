@@ -100,7 +100,7 @@ ApiregistrationV1beta1API_createApiregistrationV1beta1APIService(apiClient_t *ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -255,7 +255,7 @@ ApiregistrationV1beta1API_deleteApiregistrationV1beta1APIService(apiClient_t *ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -298,7 +298,7 @@ end:
 // delete collection of APIService
 //
 v1_status_t*
-ApiregistrationV1beta1API_deleteApiregistrationV1beta1CollectionAPIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+ApiregistrationV1beta1API_deleteApiregistrationV1beta1CollectionAPIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -343,10 +343,10 @@ ApiregistrationV1beta1API_deleteApiregistrationV1beta1CollectionAPIService(apiCl
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -498,7 +498,7 @@ ApiregistrationV1beta1API_deleteApiregistrationV1beta1CollectionAPIService(apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -595,7 +595,7 @@ ApiregistrationV1beta1API_getApiregistrationV1beta1APIResources(apiClient_t *api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -622,7 +622,7 @@ end:
 // list or watch objects of kind APIService
 //
 v1beta1_api_service_list_t*
-ApiregistrationV1beta1API_listApiregistrationV1beta1APIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+ApiregistrationV1beta1API_listApiregistrationV1beta1APIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -667,10 +667,10 @@ ApiregistrationV1beta1API_listApiregistrationV1beta1APIService(apiClient_t *apiC
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -767,7 +767,7 @@ ApiregistrationV1beta1API_listApiregistrationV1beta1APIService(apiClient_t *apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_list_t *elementToReturn = v1beta1_api_service_list_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -923,7 +923,7 @@ ApiregistrationV1beta1API_patchApiregistrationV1beta1APIService(apiClient_t *api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -1070,7 +1070,7 @@ ApiregistrationV1beta1API_patchApiregistrationV1beta1APIServiceStatus(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -1192,7 +1192,7 @@ ApiregistrationV1beta1API_readApiregistrationV1beta1APIService(apiClient_t *apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -1284,7 +1284,7 @@ ApiregistrationV1beta1API_readApiregistrationV1beta1APIServiceStatus(apiClient_t
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -1408,7 +1408,7 @@ ApiregistrationV1beta1API_replaceApiregistrationV1beta1APIService(apiClient_t *a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);
@@ -1540,7 +1540,7 @@ ApiregistrationV1beta1API_replaceApiregistrationV1beta1APIServiceStatus(apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *ApiregistrationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_api_service_t *elementToReturn = v1beta1_api_service_parseFromJSON(ApiregistrationV1beta1APIlocalVarJSON);
     cJSON_Delete(ApiregistrationV1beta1APIlocalVarJSON);

@@ -1,7 +1,7 @@
 /*
  * v1_quobyte_volume_source.h
  *
- * Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
+ * Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not_ support ownership management or SELinux relabeling.
  */
 
 #ifndef _v1_quobyte_volume_source_H_

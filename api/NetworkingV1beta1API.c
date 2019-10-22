@@ -110,7 +110,7 @@ NetworkingV1beta1API_createNetworkingV1beta1NamespacedIngress(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -149,7 +149,7 @@ end:
 // delete collection of Ingress
 //
 v1_status_t*
-NetworkingV1beta1API_deleteNetworkingV1beta1CollectionNamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+NetworkingV1beta1API_deleteNetworkingV1beta1CollectionNamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -204,10 +204,10 @@ NetworkingV1beta1API_deleteNetworkingV1beta1CollectionNamespacedIngress(apiClien
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -359,7 +359,7 @@ NetworkingV1beta1API_deleteNetworkingV1beta1CollectionNamespacedIngress(apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -549,7 +549,7 @@ NetworkingV1beta1API_deleteNetworkingV1beta1NamespacedIngress(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -628,7 +628,7 @@ NetworkingV1beta1API_getNetworkingV1beta1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -655,7 +655,7 @@ end:
 // list or watch objects of kind Ingress
 //
 networking_v1beta1_ingress_list_t*
-NetworkingV1beta1API_listNetworkingV1beta1IngressForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+NetworkingV1beta1API_listNetworkingV1beta1IngressForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -688,10 +688,10 @@ NetworkingV1beta1API_listNetworkingV1beta1IngressForAllNamespaces(apiClient_t *a
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -800,7 +800,7 @@ NetworkingV1beta1API_listNetworkingV1beta1IngressForAllNamespaces(apiClient_t *a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_list_t *elementToReturn = networking_v1beta1_ingress_list_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -850,7 +850,7 @@ end:
 // list or watch objects of kind Ingress
 //
 networking_v1beta1_ingress_list_t*
-NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -905,10 +905,10 @@ NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClie
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1005,7 +1005,7 @@ NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_list_t *elementToReturn = networking_v1beta1_ingress_list_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -1172,7 +1172,7 @@ NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -1330,7 +1330,7 @@ NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -1463,7 +1463,7 @@ NetworkingV1beta1API_readNetworkingV1beta1NamespacedIngress(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -1566,7 +1566,7 @@ NetworkingV1beta1API_readNetworkingV1beta1NamespacedIngressStatus(apiClient_t *a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -1701,7 +1701,7 @@ NetworkingV1beta1API_replaceNetworkingV1beta1NamespacedIngress(apiClient_t *apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);
@@ -1844,7 +1844,7 @@ NetworkingV1beta1API_replaceNetworkingV1beta1NamespacedIngressStatus(apiClient_t
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     networking_v1beta1_ingress_t *elementToReturn = networking_v1beta1_ingress_parseFromJSON(NetworkingV1beta1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1beta1APIlocalVarJSON);

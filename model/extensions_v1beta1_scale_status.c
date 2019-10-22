@@ -26,8 +26,8 @@ void extensions_v1beta1_scale_status_free(extensions_v1beta1_scale_status_t *ext
     listEntry_t *listEntry;
 	list_ForEach(listEntry, extensions_v1beta1_scale_status->selector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(extensions_v1beta1_scale_status->selector);
     free(extensions_v1beta1_scale_status->targetSelector);

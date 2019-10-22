@@ -100,7 +100,7 @@ NodeV1alpha1API_createNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,v1alpha1_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_runtime_class_t *elementToReturn = v1alpha1_runtime_class_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -138,7 +138,7 @@ end:
 // delete collection of RuntimeClass
 //
 v1_status_t*
-NodeV1alpha1API_deleteNodeV1alpha1CollectionRuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+NodeV1alpha1API_deleteNodeV1alpha1CollectionRuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -183,10 +183,10 @@ NodeV1alpha1API_deleteNodeV1alpha1CollectionRuntimeClass(apiClient_t *apiClient 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -338,7 +338,7 @@ NodeV1alpha1API_deleteNodeV1alpha1CollectionRuntimeClass(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -517,7 +517,7 @@ NodeV1alpha1API_deleteNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * na
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -595,7 +595,7 @@ NodeV1alpha1API_getNodeV1alpha1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -622,7 +622,7 @@ end:
 // list or watch objects of kind RuntimeClass
 //
 v1alpha1_runtime_class_list_t*
-NodeV1alpha1API_listNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+NodeV1alpha1API_listNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -667,10 +667,10 @@ NodeV1alpha1API_listNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * pret
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -767,7 +767,7 @@ NodeV1alpha1API_listNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * pret
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_runtime_class_list_t *elementToReturn = v1alpha1_runtime_class_list_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -923,7 +923,7 @@ NodeV1alpha1API_patchNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * nam
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_runtime_class_t *elementToReturn = v1alpha1_runtime_class_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -1045,7 +1045,7 @@ NodeV1alpha1API_readNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * name
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_runtime_class_t *elementToReturn = v1alpha1_runtime_class_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);
@@ -1173,7 +1173,7 @@ NodeV1alpha1API_replaceNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * n
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NodeV1alpha1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1alpha1_runtime_class_t *elementToReturn = v1alpha1_runtime_class_parseFromJSON(NodeV1alpha1APIlocalVarJSON);
     cJSON_Delete(NodeV1alpha1APIlocalVarJSON);

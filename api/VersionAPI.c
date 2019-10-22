@@ -47,7 +47,7 @@ VersionAPI_getCodeVersion(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *VersionAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     version_info_t *elementToReturn = version_info_parseFromJSON(VersionAPIlocalVarJSON);
     cJSON_Delete(VersionAPIlocalVarJSON);

@@ -1,7 +1,7 @@
 /*
  * v1_container_state.h
  *
- * ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.
+ * ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default_ one is ContainerStateWaiting.
  */
 
 #ifndef _v1_container_state_H_

@@ -12,11 +12,11 @@ v1_json_schema_props_t *v1_json_schema_props_create(
     object_t *additionalProperties,
     list_t *allOf,
     list_t *anyOf,
-    object_t *default,
+    object_t *default_,
     list_t* definitions,
     list_t* dependencies,
     char *description,
-    list_t *enum,
+    list_t *enum_,
     object_t *example,
     int exclusiveMaximum,
     int exclusiveMinimum,
@@ -33,7 +33,7 @@ v1_json_schema_props_t *v1_json_schema_props_create(
     long minProperties,
     double minimum,
     double multipleOf,
-    v1_json_schema_props_t *not,
+    v1_json_schema_props_t *not_,
     int nullable,
     list_t *oneOf,
     char *pattern,
@@ -43,11 +43,11 @@ v1_json_schema_props_t *v1_json_schema_props_create(
     char *title,
     char *type,
     int uniqueItems,
-    int x-kubernetes-embedded-resource,
-    int x-kubernetes-int-or-string,
-    list_t *x-kubernetes-list-map-keys,
-    char *x-kubernetes-list-type,
-    int x-kubernetes-preserve-unknown-fields
+    int x_kubernetes_embedded_resource,
+    int x_kubernetes_int_or_string,
+    list_t *x_kubernetes_list_map_keys,
+    char *x_kubernetes_list_type,
+    int x_kubernetes_preserve_unknown_fields
     ) {
 	v1_json_schema_props_t *v1_json_schema_props_local_var = malloc(sizeof(v1_json_schema_props_t));
     if (!v1_json_schema_props_local_var) {
@@ -59,11 +59,11 @@ v1_json_schema_props_t *v1_json_schema_props_create(
 	v1_json_schema_props_local_var->additionalProperties = additionalProperties;
 	v1_json_schema_props_local_var->allOf = allOf;
 	v1_json_schema_props_local_var->anyOf = anyOf;
-	v1_json_schema_props_local_var->default = default;
+	v1_json_schema_props_local_var->default_ = default_;
 	v1_json_schema_props_local_var->definitions = definitions;
 	v1_json_schema_props_local_var->dependencies = dependencies;
 	v1_json_schema_props_local_var->description = description;
-	v1_json_schema_props_local_var->enum = enum;
+	v1_json_schema_props_local_var->enum_ = enum_;
 	v1_json_schema_props_local_var->example = example;
 	v1_json_schema_props_local_var->exclusiveMaximum = exclusiveMaximum;
 	v1_json_schema_props_local_var->exclusiveMinimum = exclusiveMinimum;
@@ -80,7 +80,7 @@ v1_json_schema_props_t *v1_json_schema_props_create(
 	v1_json_schema_props_local_var->minProperties = minProperties;
 	v1_json_schema_props_local_var->minimum = minimum;
 	v1_json_schema_props_local_var->multipleOf = multipleOf;
-	v1_json_schema_props_local_var->not = not;
+	v1_json_schema_props_local_var->not_ = not_;
 	v1_json_schema_props_local_var->nullable = nullable;
 	v1_json_schema_props_local_var->oneOf = oneOf;
 	v1_json_schema_props_local_var->pattern = pattern;
@@ -90,11 +90,11 @@ v1_json_schema_props_t *v1_json_schema_props_create(
 	v1_json_schema_props_local_var->title = title;
 	v1_json_schema_props_local_var->type = type;
 	v1_json_schema_props_local_var->uniqueItems = uniqueItems;
-	v1_json_schema_props_local_var->x-kubernetes-embedded-resource = x-kubernetes-embedded-resource;
-	v1_json_schema_props_local_var->x-kubernetes-int-or-string = x-kubernetes-int-or-string;
-	v1_json_schema_props_local_var->x-kubernetes-list-map-keys = x-kubernetes-list-map-keys;
-	v1_json_schema_props_local_var->x-kubernetes-list-type = x-kubernetes-list-type;
-	v1_json_schema_props_local_var->x-kubernetes-preserve-unknown-fields = x-kubernetes-preserve-unknown-fields;
+	v1_json_schema_props_local_var->x_kubernetes_embedded_resource = x_kubernetes_embedded_resource;
+	v1_json_schema_props_local_var->x_kubernetes_int_or_string = x_kubernetes_int_or_string;
+	v1_json_schema_props_local_var->x_kubernetes_list_map_keys = x_kubernetes_list_map_keys;
+	v1_json_schema_props_local_var->x_kubernetes_list_type = x_kubernetes_list_type;
+	v1_json_schema_props_local_var->x_kubernetes_preserve_unknown_fields = x_kubernetes_preserve_unknown_fields;
 
 	return v1_json_schema_props_local_var;
 }
@@ -114,30 +114,30 @@ void v1_json_schema_props_free(v1_json_schema_props_t *v1_json_schema_props) {
 		v1_json_schema_props_free(listEntry->data);
 	}
 	list_free(v1_json_schema_props->anyOf);
-    object_free(v1_json_schema_props->default);
+    object_free(v1_json_schema_props->default_);
 	list_ForEach(listEntry, v1_json_schema_props->definitions) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_json_schema_props->definitions);
 	list_ForEach(listEntry, v1_json_schema_props->dependencies) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_json_schema_props->dependencies);
     free(v1_json_schema_props->description);
-	list_ForEach(listEntry, v1_json_schema_props->enum) {
+	list_ForEach(listEntry, v1_json_schema_props->enum_) {
 		object_free(listEntry->data);
 	}
-	list_free(v1_json_schema_props->enum);
+	list_free(v1_json_schema_props->enum_);
     object_free(v1_json_schema_props->example);
     v1_external_documentation_free(v1_json_schema_props->externalDocs);
     free(v1_json_schema_props->format);
     free(v1_json_schema_props->id);
     object_free(v1_json_schema_props->items);
-    v1_json_schema_props_free(v1_json_schema_props->not);
+    v1_json_schema_props_free(v1_json_schema_props->not_);
 	list_ForEach(listEntry, v1_json_schema_props->oneOf) {
 		v1_json_schema_props_free(listEntry->data);
 	}
@@ -145,14 +145,14 @@ void v1_json_schema_props_free(v1_json_schema_props_t *v1_json_schema_props) {
     free(v1_json_schema_props->pattern);
 	list_ForEach(listEntry, v1_json_schema_props->patternProperties) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_json_schema_props->patternProperties);
 	list_ForEach(listEntry, v1_json_schema_props->properties) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_json_schema_props->properties);
 	list_ForEach(listEntry, v1_json_schema_props->required) {
@@ -161,11 +161,11 @@ void v1_json_schema_props_free(v1_json_schema_props_t *v1_json_schema_props) {
 	list_free(v1_json_schema_props->required);
     free(v1_json_schema_props->title);
     free(v1_json_schema_props->type);
-	list_ForEach(listEntry, v1_json_schema_props->x-kubernetes-list-map-keys) {
+	list_ForEach(listEntry, v1_json_schema_props->x_kubernetes_list_map_keys) {
 		free(listEntry->data);
 	}
-	list_free(v1_json_schema_props->x-kubernetes-list-map-keys);
-    free(v1_json_schema_props->x-kubernetes-list-type);
+	list_free(v1_json_schema_props->x_kubernetes_list_map_keys);
+    free(v1_json_schema_props->x_kubernetes_list_type);
 	free(v1_json_schema_props);
 }
 
@@ -254,13 +254,13 @@ cJSON *v1_json_schema_props_convertToJSON(v1_json_schema_props_t *v1_json_schema
      } 
 
 
-	// v1_json_schema_props->default
-    if(v1_json_schema_props->default) { 
-    cJSON *default_object = object_convertToJSON(v1_json_schema_props->default);
+	// v1_json_schema_props->default_
+    if(v1_json_schema_props->default_) { 
+    cJSON *default_object = object_convertToJSON(v1_json_schema_props->default_);
     if(default_object == NULL) {
     goto fail; //model
     }
-    cJSON_AddItemToObject(item, "default", default_object);
+    cJSON_AddItemToObject(item, "default_", default_object);
     if(item->child == NULL) {
     goto fail;
     }
@@ -317,21 +317,21 @@ cJSON *v1_json_schema_props_convertToJSON(v1_json_schema_props_t *v1_json_schema
      } 
 
 
-	// v1_json_schema_props->enum
-    if(v1_json_schema_props->enum) { 
-    cJSON *enum = cJSON_AddArrayToObject(item, "enum");
-    if(enum == NULL) {
+	// v1_json_schema_props->enum_
+    if(v1_json_schema_props->enum_) { 
+    cJSON *enum_ = cJSON_AddArrayToObject(item, "enum_");
+    if(enum_ == NULL) {
     goto fail; //nonprimitive container
     }
 
     listEntry_t *enumListEntry;
-    if (v1_json_schema_props->enum) {
-    list_ForEach(enumListEntry, v1_json_schema_props->enum) {
+    if (v1_json_schema_props->enum_) {
+    list_ForEach(enumListEntry, v1_json_schema_props->enum_) {
     cJSON *itemLocal = object_convertToJSON(enumListEntry->data);
     if(itemLocal == NULL) {
     goto fail;
     }
-    cJSON_AddItemToArray(enum, itemLocal);
+    cJSON_AddItemToArray(enum_, itemLocal);
     }
     }
      } 
@@ -480,13 +480,13 @@ cJSON *v1_json_schema_props_convertToJSON(v1_json_schema_props_t *v1_json_schema
      } 
 
 
-	// v1_json_schema_props->not
-    if(v1_json_schema_props->not) { 
-    cJSON *not_local_JSON = v1_json_schema_props_convertToJSON(v1_json_schema_props->not);
+	// v1_json_schema_props->not_
+    if(v1_json_schema_props->not_) { 
+    cJSON *not_local_JSON = v1_json_schema_props_convertToJSON(v1_json_schema_props->not_);
     if(not_local_JSON == NULL) {
     goto fail; //model
     }
-    cJSON_AddItemToObject(item, "not", not_local_JSON);
+    cJSON_AddItemToObject(item, "not_", not_local_JSON);
     if(item->child == NULL) {
     goto fail;
     }
@@ -612,31 +612,31 @@ cJSON *v1_json_schema_props_convertToJSON(v1_json_schema_props_t *v1_json_schema
      } 
 
 
-	// v1_json_schema_props->x-kubernetes-embedded-resource
-    if(v1_json_schema_props->x-kubernetes-embedded-resource) { 
-    if(cJSON_AddBoolToObject(item, "x-kubernetes-embedded-resource", v1_json_schema_props->x-kubernetes-embedded-resource) == NULL) {
+	// v1_json_schema_props->x_kubernetes_embedded_resource
+    if(v1_json_schema_props->x_kubernetes_embedded_resource) { 
+    if(cJSON_AddBoolToObject(item, "x_kubernetes_embedded_resource", v1_json_schema_props->x_kubernetes_embedded_resource) == NULL) {
     goto fail; //Bool
     }
      } 
 
 
-	// v1_json_schema_props->x-kubernetes-int-or-string
-    if(v1_json_schema_props->x-kubernetes-int-or-string) { 
-    if(cJSON_AddBoolToObject(item, "x-kubernetes-int-or-string", v1_json_schema_props->x-kubernetes-int-or-string) == NULL) {
+	// v1_json_schema_props->x_kubernetes_int_or_string
+    if(v1_json_schema_props->x_kubernetes_int_or_string) { 
+    if(cJSON_AddBoolToObject(item, "x_kubernetes_int_or_string", v1_json_schema_props->x_kubernetes_int_or_string) == NULL) {
     goto fail; //Bool
     }
      } 
 
 
-	// v1_json_schema_props->x-kubernetes-list-map-keys
-    if(v1_json_schema_props->x-kubernetes-list-map-keys) { 
-	cJSON *x_kubernetes_list_map_keys = cJSON_AddArrayToObject(item, "x-kubernetes-list-map-keys");
+	// v1_json_schema_props->x_kubernetes_list_map_keys
+    if(v1_json_schema_props->x_kubernetes_list_map_keys) { 
+	cJSON *x_kubernetes_list_map_keys = cJSON_AddArrayToObject(item, "x_kubernetes_list_map_keys");
 	if(x_kubernetes_list_map_keys == NULL) {
 		goto fail; //primitive container
 	}
 
 	listEntry_t *x_kubernetes_list_map_keysListEntry;
-    list_ForEach(x_kubernetes_list_map_keysListEntry, v1_json_schema_props->x-kubernetes-list-map-keys) {
+    list_ForEach(x_kubernetes_list_map_keysListEntry, v1_json_schema_props->x_kubernetes_list_map_keys) {
     if(cJSON_AddStringToObject(x_kubernetes_list_map_keys, "", (char*)x_kubernetes_list_map_keysListEntry->data) == NULL)
     {
         goto fail;
@@ -645,17 +645,17 @@ cJSON *v1_json_schema_props_convertToJSON(v1_json_schema_props_t *v1_json_schema
      } 
 
 
-	// v1_json_schema_props->x-kubernetes-list-type
-    if(v1_json_schema_props->x-kubernetes-list-type) { 
-    if(cJSON_AddStringToObject(item, "x-kubernetes-list-type", v1_json_schema_props->x-kubernetes-list-type) == NULL) {
+	// v1_json_schema_props->x_kubernetes_list_type
+    if(v1_json_schema_props->x_kubernetes_list_type) { 
+    if(cJSON_AddStringToObject(item, "x_kubernetes_list_type", v1_json_schema_props->x_kubernetes_list_type) == NULL) {
     goto fail; //String
     }
      } 
 
 
-	// v1_json_schema_props->x-kubernetes-preserve-unknown-fields
-    if(v1_json_schema_props->x-kubernetes-preserve-unknown-fields) { 
-    if(cJSON_AddBoolToObject(item, "x-kubernetes-preserve-unknown-fields", v1_json_schema_props->x-kubernetes-preserve-unknown-fields) == NULL) {
+	// v1_json_schema_props->x_kubernetes_preserve_unknown_fields
+    if(v1_json_schema_props->x_kubernetes_preserve_unknown_fields) { 
+    if(cJSON_AddBoolToObject(item, "x_kubernetes_preserve_unknown_fields", v1_json_schema_props->x_kubernetes_preserve_unknown_fields) == NULL) {
     goto fail; //Bool
     }
      } 
@@ -748,22 +748,22 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
     }
     }
 
-    // v1_json_schema_props->default
-    cJSON *default = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "default");
+    // v1_json_schema_props->default_
+    cJSON *default_ = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "default_");
     object_t *default_local_object = NULL;
-    if (default) { 
-    default_local_object = object_parseFromJSON(default); //object
+    if (default_) { 
+    default_local_object = object_parseFromJSON(default_); //object
     }
 
     // v1_json_schema_props->definitions
     cJSON *definitions = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "definitions");
-    list_t *v1_json_schema_propsList;
+    list_t *v1_json_schema_propsListdefinitions;
     if (definitions) { 
     cJSON *v1_json_schema_props_local_map;
     if(!cJSON_IsObject(definitions)) {
         goto end;//primitive map container
     }
-    v1_json_schema_propsList = list_create();
+    v1_json_schema_propsListdefinitions = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(v1_json_schema_props_local_map, definitions)
     {
@@ -772,7 +772,7 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(v1_json_schema_props_local_map->string),&v1_json_schema_props_local_map->valuedouble );
-        list_addElement(v1_json_schema_propsList , localMapKeyPair);
+        list_addElement(v1_json_schema_propsListdefinitions, localMapKeyPair);
     }
     }
 
@@ -806,18 +806,18 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
     }
     }
 
-    // v1_json_schema_props->enum
-    cJSON *enum = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "enum");
+    // v1_json_schema_props->enum_
+    cJSON *enum_ = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "enum_");
     list_t *enumList;
-    if (enum) { 
+    if (enum_) { 
     cJSON *enum_local_nonprimitive;
-    if(!cJSON_IsArray(enum)){
+    if(!cJSON_IsArray(enum_)){
         goto end; //nonprimitive container
     }
 
     enumList = list_create();
 
-    cJSON_ArrayForEach(enum_local_nonprimitive,enum )
+    cJSON_ArrayForEach(enum_local_nonprimitive,enum_ )
     {
         if(!cJSON_IsObject(enum_local_nonprimitive)){
             goto end;
@@ -966,11 +966,11 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
     }
     }
 
-    // v1_json_schema_props->not
-    cJSON *not = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "not");
+    // v1_json_schema_props->not_
+    cJSON *not_ = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "not_");
     v1_json_schema_props_t *not_local_nonprim = NULL;
-    if (not) { 
-    not_local_nonprim = v1_json_schema_props_parseFromJSON(not); //nonprimitive
+    if (not_) { 
+    not_local_nonprim = v1_json_schema_props_parseFromJSON(not_); //nonprimitive
     }
 
     // v1_json_schema_props->nullable
@@ -1015,13 +1015,13 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
 
     // v1_json_schema_props->patternProperties
     cJSON *patternProperties = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "patternProperties");
-    list_t *v1_json_schema_propsList;
+    list_t *v1_json_schema_propsListpatternProperties;
     if (patternProperties) { 
     cJSON *v1_json_schema_props_local_map;
     if(!cJSON_IsObject(patternProperties)) {
         goto end;//primitive map container
     }
-    v1_json_schema_propsList = list_create();
+    v1_json_schema_propsListpatternProperties = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(v1_json_schema_props_local_map, patternProperties)
     {
@@ -1030,7 +1030,7 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(v1_json_schema_props_local_map->string),&v1_json_schema_props_local_map->valuedouble );
-        list_addElement(v1_json_schema_propsList , localMapKeyPair);
+        list_addElement(v1_json_schema_propsListpatternProperties, localMapKeyPair);
     }
     }
 
@@ -1102,35 +1102,35 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
     }
     }
 
-    // v1_json_schema_props->x-kubernetes-embedded-resource
-    cJSON *x-kubernetes-embedded-resource = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x-kubernetes-embedded-resource");
-    if (x-kubernetes-embedded-resource) { 
-    if(!cJSON_IsBool(x-kubernetes-embedded-resource))
+    // v1_json_schema_props->x_kubernetes_embedded_resource
+    cJSON *x_kubernetes_embedded_resource = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x_kubernetes_embedded_resource");
+    if (x_kubernetes_embedded_resource) { 
+    if(!cJSON_IsBool(x_kubernetes_embedded_resource))
     {
     goto end; //Bool
     }
     }
 
-    // v1_json_schema_props->x-kubernetes-int-or-string
-    cJSON *x-kubernetes-int-or-string = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x-kubernetes-int-or-string");
-    if (x-kubernetes-int-or-string) { 
-    if(!cJSON_IsBool(x-kubernetes-int-or-string))
+    // v1_json_schema_props->x_kubernetes_int_or_string
+    cJSON *x_kubernetes_int_or_string = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x_kubernetes_int_or_string");
+    if (x_kubernetes_int_or_string) { 
+    if(!cJSON_IsBool(x_kubernetes_int_or_string))
     {
     goto end; //Bool
     }
     }
 
-    // v1_json_schema_props->x-kubernetes-list-map-keys
-    cJSON *x-kubernetes-list-map-keys = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x-kubernetes-list-map-keys");
+    // v1_json_schema_props->x_kubernetes_list_map_keys
+    cJSON *x_kubernetes_list_map_keys = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x_kubernetes_list_map_keys");
     list_t *x_kubernetes_list_map_keysList;
-    if (x-kubernetes-list-map-keys) { 
+    if (x_kubernetes_list_map_keys) { 
     cJSON *x_kubernetes_list_map_keys_local;
-    if(!cJSON_IsArray(x-kubernetes-list-map-keys)) {
+    if(!cJSON_IsArray(x_kubernetes_list_map_keys)) {
         goto end;//primitive container
     }
     x_kubernetes_list_map_keysList = list_create();
 
-    cJSON_ArrayForEach(x_kubernetes_list_map_keys_local, x-kubernetes-list-map-keys)
+    cJSON_ArrayForEach(x_kubernetes_list_map_keys_local, x_kubernetes_list_map_keys)
     {
         if(!cJSON_IsString(x_kubernetes_list_map_keys_local))
         {
@@ -1140,19 +1140,19 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
     }
     }
 
-    // v1_json_schema_props->x-kubernetes-list-type
-    cJSON *x-kubernetes-list-type = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x-kubernetes-list-type");
-    if (x-kubernetes-list-type) { 
-    if(!cJSON_IsString(x-kubernetes-list-type))
+    // v1_json_schema_props->x_kubernetes_list_type
+    cJSON *x_kubernetes_list_type = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x_kubernetes_list_type");
+    if (x_kubernetes_list_type) { 
+    if(!cJSON_IsString(x_kubernetes_list_type))
     {
     goto end; //String
     }
     }
 
-    // v1_json_schema_props->x-kubernetes-preserve-unknown-fields
-    cJSON *x-kubernetes-preserve-unknown-fields = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x-kubernetes-preserve-unknown-fields");
-    if (x-kubernetes-preserve-unknown-fields) { 
-    if(!cJSON_IsBool(x-kubernetes-preserve-unknown-fields))
+    // v1_json_schema_props->x_kubernetes_preserve_unknown_fields
+    cJSON *x_kubernetes_preserve_unknown_fields = cJSON_GetObjectItemCaseSensitive(v1_json_schema_propsJSON, "x_kubernetes_preserve_unknown_fields");
+    if (x_kubernetes_preserve_unknown_fields) { 
+    if(!cJSON_IsBool(x_kubernetes_preserve_unknown_fields))
     {
     goto end; //Bool
     }
@@ -1166,11 +1166,11 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
         additionalProperties ? additionalProperties_local_object : NULL,
         allOf ? allOfList : NULL,
         anyOf ? anyOfList : NULL,
-        default ? default_local_object : NULL,
-        definitions ? v1_json_schema_propsList : NULL,
+        default_ ? default_local_object : NULL,
+        definitions ? v1_json_schema_propsListdefinitions : NULL,
         dependencies ? objectList : NULL,
         description ? strdup(description->valuestring) : NULL,
-        enum ? enumList : NULL,
+        enum_ ? enumList : NULL,
         example ? example_local_object : NULL,
         exclusiveMaximum ? exclusiveMaximum->valueint : 0,
         exclusiveMinimum ? exclusiveMinimum->valueint : 0,
@@ -1187,21 +1187,21 @@ v1_json_schema_props_t *v1_json_schema_props_parseFromJSON(cJSON *v1_json_schema
         minProperties ? minProperties->valuedouble : 0,
         minimum ? minimum->valuedouble : 0,
         multipleOf ? multipleOf->valuedouble : 0,
-        not ? not_local_nonprim : NULL,
+        not_ ? not_local_nonprim : NULL,
         nullable ? nullable->valueint : 0,
         oneOf ? oneOfList : NULL,
         pattern ? strdup(pattern->valuestring) : NULL,
-        patternProperties ? v1_json_schema_propsList : NULL,
+        patternProperties ? v1_json_schema_propsListpatternProperties : NULL,
         properties ? v1_json_schema_propsList : NULL,
         required ? requiredList : NULL,
         title ? strdup(title->valuestring) : NULL,
         type ? strdup(type->valuestring) : NULL,
         uniqueItems ? uniqueItems->valueint : 0,
-        x-kubernetes-embedded-resource ? x-kubernetes-embedded-resource->valueint : 0,
-        x-kubernetes-int-or-string ? x-kubernetes-int-or-string->valueint : 0,
-        x-kubernetes-list-map-keys ? x_kubernetes_list_map_keysList : NULL,
-        x-kubernetes-list-type ? strdup(x-kubernetes-list-type->valuestring) : NULL,
-        x-kubernetes-preserve-unknown-fields ? x-kubernetes-preserve-unknown-fields->valueint : 0
+        x_kubernetes_embedded_resource ? x_kubernetes_embedded_resource->valueint : 0,
+        x_kubernetes_int_or_string ? x_kubernetes_int_or_string->valueint : 0,
+        x_kubernetes_list_map_keys ? x_kubernetes_list_map_keysList : NULL,
+        x_kubernetes_list_type ? strdup(x_kubernetes_list_type->valuestring) : NULL,
+        x_kubernetes_preserve_unknown_fields ? x_kubernetes_preserve_unknown_fields->valueint : 0
         );
 
     return v1_json_schema_props_local_var;

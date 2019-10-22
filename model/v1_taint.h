@@ -1,7 +1,7 @@
 /*
  * v1_taint.h
  *
- * The node this Taint is attached to has the \&quot;effect\&quot; on any pod that does not tolerate the Taint.
+ * The node this Taint is attached to has the \&quot;effect\&quot; on any pod that does not_ tolerate the Taint.
  */
 
 #ifndef _v1_taint_H_

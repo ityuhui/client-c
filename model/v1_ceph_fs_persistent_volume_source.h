@@ -1,7 +1,7 @@
 /*
  * v1_ceph_fs_persistent_volume_source.h
  *
- * Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+ * Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not_ support ownership management or SELinux relabeling.
  */
 
 #ifndef _v1_ceph_fs_persistent_volume_source_H_

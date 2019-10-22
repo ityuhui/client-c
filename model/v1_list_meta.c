@@ -6,7 +6,7 @@
 
 
 v1_list_meta_t *v1_list_meta_create(
-    char *continue,
+    char *continue_,
     long remainingItemCount,
     char *resourceVersion,
     char *selfLink
@@ -15,7 +15,7 @@ v1_list_meta_t *v1_list_meta_create(
     if (!v1_list_meta_local_var) {
         return NULL;
     }
-	v1_list_meta_local_var->continue = continue;
+	v1_list_meta_local_var->continue_ = continue_;
 	v1_list_meta_local_var->remainingItemCount = remainingItemCount;
 	v1_list_meta_local_var->resourceVersion = resourceVersion;
 	v1_list_meta_local_var->selfLink = selfLink;
@@ -26,7 +26,7 @@ v1_list_meta_t *v1_list_meta_create(
 
 void v1_list_meta_free(v1_list_meta_t *v1_list_meta) {
     listEntry_t *listEntry;
-    free(v1_list_meta->continue);
+    free(v1_list_meta->continue_);
     free(v1_list_meta->resourceVersion);
     free(v1_list_meta->selfLink);
 	free(v1_list_meta);
@@ -35,9 +35,9 @@ void v1_list_meta_free(v1_list_meta_t *v1_list_meta) {
 cJSON *v1_list_meta_convertToJSON(v1_list_meta_t *v1_list_meta) {
 	cJSON *item = cJSON_CreateObject();
 
-	// v1_list_meta->continue
-    if(v1_list_meta->continue) { 
-    if(cJSON_AddStringToObject(item, "continue", v1_list_meta->continue) == NULL) {
+	// v1_list_meta->continue_
+    if(v1_list_meta->continue_) { 
+    if(cJSON_AddStringToObject(item, "continue_", v1_list_meta->continue_) == NULL) {
     goto fail; //String
     }
      } 
@@ -78,10 +78,10 @@ v1_list_meta_t *v1_list_meta_parseFromJSON(cJSON *v1_list_metaJSON){
 
     v1_list_meta_t *v1_list_meta_local_var = NULL;
 
-    // v1_list_meta->continue
-    cJSON *continue = cJSON_GetObjectItemCaseSensitive(v1_list_metaJSON, "continue");
-    if (continue) { 
-    if(!cJSON_IsString(continue))
+    // v1_list_meta->continue_
+    cJSON *continue_ = cJSON_GetObjectItemCaseSensitive(v1_list_metaJSON, "continue_");
+    if (continue_) { 
+    if(!cJSON_IsString(continue_))
     {
     goto end; //String
     }
@@ -116,7 +116,7 @@ v1_list_meta_t *v1_list_meta_parseFromJSON(cJSON *v1_list_metaJSON){
 
 
     v1_list_meta_local_var = v1_list_meta_create (
-        continue ? strdup(continue->valuestring) : NULL,
+        continue_ ? strdup(continue_->valuestring) : NULL,
         remainingItemCount ? remainingItemCount->valuedouble : 0,
         resourceVersion ? strdup(resourceVersion->valuestring) : NULL,
         selfLink ? strdup(selfLink->valuestring) : NULL

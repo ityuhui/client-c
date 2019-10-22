@@ -1,7 +1,7 @@
 /*
  * v1beta1_subject_access_review.h
  *
- * SubjectAccessReview checks whether or not a user or group can perform an action.
+ * SubjectAccessReview checks whether or not_ a user or group can perform an action.
  */
 
 #ifndef _v1beta1_subject_access_review_H_

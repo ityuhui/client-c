@@ -31,14 +31,14 @@ void v1_config_map_free(v1_config_map_t *v1_config_map) {
     free(v1_config_map->apiVersion);
 	list_ForEach(listEntry, v1_config_map->binaryData) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_config_map->binaryData);
 	list_ForEach(listEntry, v1_config_map->data) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_config_map->data);
     free(v1_config_map->kind);
@@ -142,13 +142,13 @@ v1_config_map_t *v1_config_map_parseFromJSON(cJSON *v1_config_mapJSON){
 
     // v1_config_map->binaryData
     cJSON *binaryData = cJSON_GetObjectItemCaseSensitive(v1_config_mapJSON, "binaryData");
-    list_t *List;
+    list_t *ListBinaryData;
     if (binaryData) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(binaryData)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    ListBinaryData = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, binaryData)
     {
@@ -157,7 +157,7 @@ v1_config_map_t *v1_config_map_parseFromJSON(cJSON *v1_config_mapJSON){
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(ListBinaryData, localMapKeyPair);
     }
     }
 
@@ -201,7 +201,7 @@ v1_config_map_t *v1_config_map_parseFromJSON(cJSON *v1_config_mapJSON){
 
     v1_config_map_local_var = v1_config_map_create (
         apiVersion ? strdup(apiVersion->valuestring) : NULL,
-        binaryData ? List : NULL,
+        binaryData ? ListBinaryData : NULL,
         data ? List : NULL,
         kind ? strdup(kind->valuestring) : NULL,
         metadata ? metadata_local_nonprim : NULL

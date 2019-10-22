@@ -1,7 +1,7 @@
 /*
  * v2beta1_external_metric_source.h
  *
- * ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster). Exactly one \&quot;target\&quot; type should be set.
+ * ExternalMetricSource indicates how to scale on a metric not_ associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster). Exactly one \&quot;target\&quot; type should be set.
  */
 
 #ifndef _v2beta1_external_metric_source_H_

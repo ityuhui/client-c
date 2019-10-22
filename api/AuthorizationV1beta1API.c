@@ -110,7 +110,7 @@ AuthorizationV1beta1API_createAuthorizationV1beta1NamespacedLocalSubjectAccessRe
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_local_subject_access_review_t *elementToReturn = v1beta1_local_subject_access_review_parseFromJSON(AuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(AuthorizationV1beta1APIlocalVarJSON);
@@ -235,7 +235,7 @@ AuthorizationV1beta1API_createAuthorizationV1beta1SelfSubjectAccessReview(apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_self_subject_access_review_t *elementToReturn = v1beta1_self_subject_access_review_parseFromJSON(AuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(AuthorizationV1beta1APIlocalVarJSON);
@@ -359,7 +359,7 @@ AuthorizationV1beta1API_createAuthorizationV1beta1SelfSubjectRulesReview(apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_self_subject_rules_review_t *elementToReturn = v1beta1_self_subject_rules_review_parseFromJSON(AuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(AuthorizationV1beta1APIlocalVarJSON);
@@ -483,7 +483,7 @@ AuthorizationV1beta1API_createAuthorizationV1beta1SubjectAccessReview(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_subject_access_review_t *elementToReturn = v1beta1_subject_access_review_parseFromJSON(AuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(AuthorizationV1beta1APIlocalVarJSON);
@@ -556,7 +556,7 @@ AuthorizationV1beta1API_getAuthorizationV1beta1APIResources(apiClient_t *apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(AuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(AuthorizationV1beta1APIlocalVarJSON);

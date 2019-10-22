@@ -100,7 +100,7 @@ SchedulingV1beta1API_createSchedulingV1beta1PriorityClass(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_priority_class_t *elementToReturn = v1beta1_priority_class_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -138,7 +138,7 @@ end:
 // delete collection of PriorityClass
 //
 v1_status_t*
-SchedulingV1beta1API_deleteSchedulingV1beta1CollectionPriorityClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+SchedulingV1beta1API_deleteSchedulingV1beta1CollectionPriorityClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -183,10 +183,10 @@ SchedulingV1beta1API_deleteSchedulingV1beta1CollectionPriorityClass(apiClient_t 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -338,7 +338,7 @@ SchedulingV1beta1API_deleteSchedulingV1beta1CollectionPriorityClass(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -517,7 +517,7 @@ SchedulingV1beta1API_deleteSchedulingV1beta1PriorityClass(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -595,7 +595,7 @@ SchedulingV1beta1API_getSchedulingV1beta1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -622,7 +622,7 @@ end:
 // list or watch objects of kind PriorityClass
 //
 v1beta1_priority_class_list_t*
-SchedulingV1beta1API_listSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+SchedulingV1beta1API_listSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -667,10 +667,10 @@ SchedulingV1beta1API_listSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -767,7 +767,7 @@ SchedulingV1beta1API_listSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_priority_class_list_t *elementToReturn = v1beta1_priority_class_list_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -923,7 +923,7 @@ SchedulingV1beta1API_patchSchedulingV1beta1PriorityClass(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_priority_class_t *elementToReturn = v1beta1_priority_class_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -1045,7 +1045,7 @@ SchedulingV1beta1API_readSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_priority_class_t *elementToReturn = v1beta1_priority_class_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);
@@ -1173,7 +1173,7 @@ SchedulingV1beta1API_replaceSchedulingV1beta1PriorityClass(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *SchedulingV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_priority_class_t *elementToReturn = v1beta1_priority_class_parseFromJSON(SchedulingV1beta1APIlocalVarJSON);
     cJSON_Delete(SchedulingV1beta1APIlocalVarJSON);

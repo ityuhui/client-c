@@ -33,8 +33,8 @@ void v1_csi_volume_source_free(v1_csi_volume_source_t *v1_csi_volume_source) {
     v1_local_object_reference_free(v1_csi_volume_source->nodePublishSecretRef);
 	list_ForEach(listEntry, v1_csi_volume_source->volumeAttributes) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        //yhwa free (localKeyValue->key);
+        //yhwa free (localKeyValue->value);
 	}
 	list_free(v1_csi_volume_source->volumeAttributes);
 	free(v1_csi_volume_source);

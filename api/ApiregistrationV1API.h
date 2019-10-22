@@ -26,7 +26,7 @@ ApiregistrationV1API_deleteApiregistrationV1APIService(apiClient_t *apiClient ,c
 // delete collection of APIService
 //
 v1_status_t*
-ApiregistrationV1API_deleteApiregistrationV1CollectionAPIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+ApiregistrationV1API_deleteApiregistrationV1CollectionAPIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // get available resources
@@ -38,7 +38,7 @@ ApiregistrationV1API_getApiregistrationV1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind APIService
 //
 v1_api_service_list_t*
-ApiregistrationV1API_listApiregistrationV1APIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+ApiregistrationV1API_listApiregistrationV1APIService(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified APIService

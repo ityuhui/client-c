@@ -100,7 +100,7 @@ StorageV1API_createStorageV1StorageClass(apiClient_t *apiClient ,v1_storage_clas
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_storage_class_t *elementToReturn = v1_storage_class_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -224,7 +224,7 @@ StorageV1API_createStorageV1VolumeAttachment(apiClient_t *apiClient ,v1_volume_a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -262,7 +262,7 @@ end:
 // delete collection of StorageClass
 //
 v1_status_t*
-StorageV1API_deleteStorageV1CollectionStorageClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+StorageV1API_deleteStorageV1CollectionStorageClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -307,10 +307,10 @@ StorageV1API_deleteStorageV1CollectionStorageClass(apiClient_t *apiClient ,char 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -462,7 +462,7 @@ StorageV1API_deleteStorageV1CollectionStorageClass(apiClient_t *apiClient ,char 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -524,7 +524,7 @@ end:
 // delete collection of VolumeAttachment
 //
 v1_status_t*
-StorageV1API_deleteStorageV1CollectionVolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+StorageV1API_deleteStorageV1CollectionVolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -569,10 +569,10 @@ StorageV1API_deleteStorageV1CollectionVolumeAttachment(apiClient_t *apiClient ,c
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -724,7 +724,7 @@ StorageV1API_deleteStorageV1CollectionVolumeAttachment(apiClient_t *apiClient ,c
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -903,7 +903,7 @@ StorageV1API_deleteStorageV1StorageClass(apiClient_t *apiClient ,char * name ,ch
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1063,7 +1063,7 @@ StorageV1API_deleteStorageV1VolumeAttachment(apiClient_t *apiClient ,char * name
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1141,7 +1141,7 @@ StorageV1API_getStorageV1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1168,7 +1168,7 @@ end:
 // list or watch objects of kind StorageClass
 //
 v1_storage_class_list_t*
-StorageV1API_listStorageV1StorageClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+StorageV1API_listStorageV1StorageClass(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1213,10 +1213,10 @@ StorageV1API_listStorageV1StorageClass(apiClient_t *apiClient ,char * pretty ,in
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1313,7 +1313,7 @@ StorageV1API_listStorageV1StorageClass(apiClient_t *apiClient ,char * pretty ,in
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_storage_class_list_t *elementToReturn = v1_storage_class_list_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1363,7 +1363,7 @@ end:
 // list or watch objects of kind VolumeAttachment
 //
 v1_volume_attachment_list_t*
-StorageV1API_listStorageV1VolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+StorageV1API_listStorageV1VolumeAttachment(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1408,10 +1408,10 @@ StorageV1API_listStorageV1VolumeAttachment(apiClient_t *apiClient ,char * pretty
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1508,7 +1508,7 @@ StorageV1API_listStorageV1VolumeAttachment(apiClient_t *apiClient ,char * pretty
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_list_t *elementToReturn = v1_volume_attachment_list_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1664,7 +1664,7 @@ StorageV1API_patchStorageV1StorageClass(apiClient_t *apiClient ,char * name , bo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_storage_class_t *elementToReturn = v1_storage_class_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1811,7 +1811,7 @@ StorageV1API_patchStorageV1VolumeAttachment(apiClient_t *apiClient ,char * name 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -1958,7 +1958,7 @@ StorageV1API_patchStorageV1VolumeAttachmentStatus(apiClient_t *apiClient ,char *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -2080,7 +2080,7 @@ StorageV1API_readStorageV1StorageClass(apiClient_t *apiClient ,char * name ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_storage_class_t *elementToReturn = v1_storage_class_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -2196,7 +2196,7 @@ StorageV1API_readStorageV1VolumeAttachment(apiClient_t *apiClient ,char * name ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -2288,7 +2288,7 @@ StorageV1API_readStorageV1VolumeAttachmentStatus(apiClient_t *apiClient ,char * 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -2412,7 +2412,7 @@ StorageV1API_replaceStorageV1StorageClass(apiClient_t *apiClient ,char * name ,v
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_storage_class_t *elementToReturn = v1_storage_class_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -2544,7 +2544,7 @@ StorageV1API_replaceStorageV1VolumeAttachment(apiClient_t *apiClient ,char * nam
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);
@@ -2676,7 +2676,7 @@ StorageV1API_replaceStorageV1VolumeAttachmentStatus(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *StorageV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_volume_attachment_t *elementToReturn = v1_volume_attachment_parseFromJSON(StorageV1APIlocalVarJSON);
     cJSON_Delete(StorageV1APIlocalVarJSON);

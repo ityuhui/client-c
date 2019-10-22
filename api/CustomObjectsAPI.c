@@ -98,7 +98,7 @@ CustomObjectsAPI_createClusterCustomObject(apiClient_t *apiClient ,char * group 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -227,7 +227,7 @@ CustomObjectsAPI_createNamespacedCustomObject(apiClient_t *apiClient ,char * gro
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -381,7 +381,7 @@ CustomObjectsAPI_deleteClusterCustomObject(apiClient_t *apiClient ,char * group 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -549,7 +549,7 @@ CustomObjectsAPI_deleteNamespacedCustomObject(apiClient_t *apiClient ,char * gro
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -663,7 +663,7 @@ CustomObjectsAPI_getClusterCustomObject(apiClient_t *apiClient ,char * group ,ch
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -769,7 +769,7 @@ CustomObjectsAPI_getClusterCustomObjectScale(apiClient_t *apiClient ,char * grou
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -875,7 +875,7 @@ CustomObjectsAPI_getClusterCustomObjectStatus(apiClient_t *apiClient ,char * gro
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -989,7 +989,7 @@ CustomObjectsAPI_getNamespacedCustomObject(apiClient_t *apiClient ,char * group 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -1106,7 +1106,7 @@ CustomObjectsAPI_getNamespacedCustomObjectScale(apiClient_t *apiClient ,char * g
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -1223,7 +1223,7 @@ CustomObjectsAPI_getNamespacedCustomObjectStatus(apiClient_t *apiClient ,char * 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -1255,7 +1255,7 @@ end:
 // list or watch cluster scoped custom objects
 //
 object_t*
-CustomObjectsAPI_listClusterCustomObject(apiClient_t *apiClient ,char * group ,char * version ,char * plural ,char * pretty ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+CustomObjectsAPI_listClusterCustomObject(apiClient_t *apiClient ,char * group ,char * version ,char * plural ,char * pretty ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1318,10 +1318,10 @@ CustomObjectsAPI_listClusterCustomObject(apiClient_t *apiClient ,char * group ,c
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1415,7 +1415,7 @@ CustomObjectsAPI_listClusterCustomObject(apiClient_t *apiClient ,char * group ,c
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -1466,7 +1466,7 @@ end:
 // list or watch namespace scoped custom objects
 //
 object_t*
-CustomObjectsAPI_listNamespacedCustomObject(apiClient_t *apiClient ,char * group ,char * version ,char * namespace ,char * plural ,char * pretty ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+CustomObjectsAPI_listNamespacedCustomObject(apiClient_t *apiClient ,char * group ,char * version ,char * namespace ,char * plural ,char * pretty ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1539,10 +1539,10 @@ CustomObjectsAPI_listNamespacedCustomObject(apiClient_t *apiClient ,char * group
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1636,7 +1636,7 @@ CustomObjectsAPI_listNamespacedCustomObject(apiClient_t *apiClient ,char * group
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -1772,7 +1772,7 @@ CustomObjectsAPI_patchClusterCustomObject(apiClient_t *apiClient ,char * group ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -1891,7 +1891,7 @@ CustomObjectsAPI_patchClusterCustomObjectScale(apiClient_t *apiClient ,char * gr
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2010,7 +2010,7 @@ CustomObjectsAPI_patchClusterCustomObjectStatus(apiClient_t *apiClient ,char * g
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2137,7 +2137,7 @@ CustomObjectsAPI_patchNamespacedCustomObject(apiClient_t *apiClient ,char * grou
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2267,7 +2267,7 @@ CustomObjectsAPI_patchNamespacedCustomObjectScale(apiClient_t *apiClient ,char *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2397,7 +2397,7 @@ CustomObjectsAPI_patchNamespacedCustomObjectStatus(apiClient_t *apiClient ,char 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2513,7 +2513,7 @@ CustomObjectsAPI_replaceClusterCustomObject(apiClient_t *apiClient ,char * group
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2633,7 +2633,7 @@ CustomObjectsAPI_replaceClusterCustomObjectScale(apiClient_t *apiClient ,char * 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2753,7 +2753,7 @@ CustomObjectsAPI_replaceClusterCustomObjectStatus(apiClient_t *apiClient ,char *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -2878,7 +2878,7 @@ CustomObjectsAPI_replaceNamespacedCustomObject(apiClient_t *apiClient ,char * gr
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -3009,7 +3009,7 @@ CustomObjectsAPI_replaceNamespacedCustomObjectScale(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);
@@ -3140,7 +3140,7 @@ CustomObjectsAPI_replaceNamespacedCustomObjectStatus(apiClient_t *apiClient ,cha
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CustomObjectsAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     object_t *elementToReturn = object_parseFromJSON(CustomObjectsAPIlocalVarJSON);
     cJSON_Delete(CustomObjectsAPIlocalVarJSON);

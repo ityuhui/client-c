@@ -49,7 +49,7 @@ CertificatesAPI_getCertificatesAPIGroup(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CertificatesAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_group_t *elementToReturn = v1_api_group_parseFromJSON(CertificatesAPIlocalVarJSON);
     cJSON_Delete(CertificatesAPIlocalVarJSON);

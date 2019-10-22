@@ -26,7 +26,7 @@ AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1AuditSink(apiClient_
 // delete collection of AuditSink
 //
 v1_status_t*
-AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1CollectionAuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+AuditregistrationV1alpha1API_deleteAuditregistrationV1alpha1CollectionAuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // get available resources
@@ -38,7 +38,7 @@ AuditregistrationV1alpha1API_getAuditregistrationV1alpha1APIResources(apiClient_
 // list or watch objects of kind AuditSink
 //
 v1alpha1_audit_sink_list_t*
-AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified AuditSink

@@ -100,7 +100,7 @@ AuthenticationV1API_createAuthenticationV1TokenReview(apiClient_t *apiClient ,v1
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthenticationV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_token_review_t *elementToReturn = v1_token_review_parseFromJSON(AuthenticationV1APIlocalVarJSON);
     cJSON_Delete(AuthenticationV1APIlocalVarJSON);
@@ -173,7 +173,7 @@ AuthenticationV1API_getAuthenticationV1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AuthenticationV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(AuthenticationV1APIlocalVarJSON);
     cJSON_Delete(AuthenticationV1APIlocalVarJSON);

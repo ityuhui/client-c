@@ -28,8 +28,8 @@ void v1_label_selector_free(v1_label_selector_t *v1_label_selector) {
 	list_free(v1_label_selector->matchExpressions);
 	list_ForEach(listEntry, v1_label_selector->matchLabels) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_label_selector->matchLabels);
 	free(v1_label_selector);

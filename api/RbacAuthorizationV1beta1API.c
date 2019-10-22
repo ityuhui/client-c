@@ -100,7 +100,7 @@ RbacAuthorizationV1beta1API_createRbacAuthorizationV1beta1ClusterRole(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_t *elementToReturn = v1beta1_cluster_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -224,7 +224,7 @@ RbacAuthorizationV1beta1API_createRbacAuthorizationV1beta1ClusterRoleBinding(api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_binding_t *elementToReturn = v1beta1_cluster_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -358,7 +358,7 @@ RbacAuthorizationV1beta1API_createRbacAuthorizationV1beta1NamespacedRole(apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_t *elementToReturn = v1beta1_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -493,7 +493,7 @@ RbacAuthorizationV1beta1API_createRbacAuthorizationV1beta1NamespacedRoleBinding(
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_binding_t *elementToReturn = v1beta1_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -649,7 +649,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1ClusterRole(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -809,7 +809,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1ClusterRoleBinding(api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -852,7 +852,7 @@ end:
 // delete collection of ClusterRole
 //
 v1_status_t*
-RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRole(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRole(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -897,10 +897,10 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRole(
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1052,7 +1052,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRole(
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -1114,7 +1114,7 @@ end:
 // delete collection of ClusterRoleBinding
 //
 v1_status_t*
-RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRoleBinding(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRoleBinding(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1159,10 +1159,10 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRoleB
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1314,7 +1314,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionClusterRoleB
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -1376,7 +1376,7 @@ end:
 // delete collection of Role
 //
 v1_status_t*
-RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRole(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRole(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1431,10 +1431,10 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRo
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1586,7 +1586,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -1649,7 +1649,7 @@ end:
 // delete collection of RoleBinding
 //
 v1_status_t*
-RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRoleBinding(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRoleBinding(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1704,10 +1704,10 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRo
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1859,7 +1859,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1CollectionNamespacedRo
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2049,7 +2049,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1NamespacedRole(apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2220,7 +2220,7 @@ RbacAuthorizationV1beta1API_deleteRbacAuthorizationV1beta1NamespacedRoleBinding(
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2299,7 +2299,7 @@ RbacAuthorizationV1beta1API_getRbacAuthorizationV1beta1APIResources(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2326,7 +2326,7 @@ end:
 // list or watch objects of kind ClusterRole
 //
 v1beta1_cluster_role_list_t*
-RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRole(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRole(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2371,10 +2371,10 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRole(apiClient_t 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2471,7 +2471,7 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRole(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_list_t *elementToReturn = v1beta1_cluster_role_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2521,7 +2521,7 @@ end:
 // list or watch objects of kind ClusterRoleBinding
 //
 v1beta1_cluster_role_binding_list_t*
-RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRoleBinding(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRoleBinding(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2566,10 +2566,10 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRoleBinding(apiCl
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2666,7 +2666,7 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1ClusterRoleBinding(apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_binding_list_t *elementToReturn = v1beta1_cluster_role_binding_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2716,7 +2716,7 @@ end:
 // list or watch objects of kind Role
 //
 v1beta1_role_list_t*
-RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRole(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRole(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2771,10 +2771,10 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRole(apiClient
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -2871,7 +2871,7 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRole(apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_list_t *elementToReturn = v1beta1_role_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -2922,7 +2922,7 @@ end:
 // list or watch objects of kind RoleBinding
 //
 v1beta1_role_binding_list_t*
-RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRoleBinding(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRoleBinding(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2977,10 +2977,10 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRoleBinding(ap
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -3077,7 +3077,7 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1NamespacedRoleBinding(ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_binding_list_t *elementToReturn = v1beta1_role_binding_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -3128,7 +3128,7 @@ end:
 // list or watch objects of kind RoleBinding
 //
 v1beta1_role_binding_list_t*
-RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleBindingForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleBindingForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3161,10 +3161,10 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleBindingForAllNamespa
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -3273,7 +3273,7 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleBindingForAllNamespa
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_binding_list_t *elementToReturn = v1beta1_role_binding_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -3323,7 +3323,7 @@ end:
 // list or watch objects of kind Role
 //
 v1beta1_role_list_t*
-RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3356,10 +3356,10 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleForAllNamespaces(api
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -3468,7 +3468,7 @@ RbacAuthorizationV1beta1API_listRbacAuthorizationV1beta1RoleForAllNamespaces(api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_list_t *elementToReturn = v1beta1_role_list_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -3624,7 +3624,7 @@ RbacAuthorizationV1beta1API_patchRbacAuthorizationV1beta1ClusterRole(apiClient_t
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_t *elementToReturn = v1beta1_cluster_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -3771,7 +3771,7 @@ RbacAuthorizationV1beta1API_patchRbacAuthorizationV1beta1ClusterRoleBinding(apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_binding_t *elementToReturn = v1beta1_cluster_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -3928,7 +3928,7 @@ RbacAuthorizationV1beta1API_patchRbacAuthorizationV1beta1NamespacedRole(apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_t *elementToReturn = v1beta1_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4086,7 +4086,7 @@ RbacAuthorizationV1beta1API_patchRbacAuthorizationV1beta1NamespacedRoleBinding(a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_binding_t *elementToReturn = v1beta1_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4185,7 +4185,7 @@ RbacAuthorizationV1beta1API_readRbacAuthorizationV1beta1ClusterRole(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_t *elementToReturn = v1beta1_cluster_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4273,7 +4273,7 @@ RbacAuthorizationV1beta1API_readRbacAuthorizationV1beta1ClusterRoleBinding(apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_binding_t *elementToReturn = v1beta1_cluster_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4371,7 +4371,7 @@ RbacAuthorizationV1beta1API_readRbacAuthorizationV1beta1NamespacedRole(apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_t *elementToReturn = v1beta1_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4470,7 +4470,7 @@ RbacAuthorizationV1beta1API_readRbacAuthorizationV1beta1NamespacedRoleBinding(ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_binding_t *elementToReturn = v1beta1_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4595,7 +4595,7 @@ RbacAuthorizationV1beta1API_replaceRbacAuthorizationV1beta1ClusterRole(apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_t *elementToReturn = v1beta1_cluster_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4727,7 +4727,7 @@ RbacAuthorizationV1beta1API_replaceRbacAuthorizationV1beta1ClusterRoleBinding(ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cluster_role_binding_t *elementToReturn = v1beta1_cluster_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -4869,7 +4869,7 @@ RbacAuthorizationV1beta1API_replaceRbacAuthorizationV1beta1NamespacedRole(apiCli
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_t *elementToReturn = v1beta1_role_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);
@@ -5012,7 +5012,7 @@ RbacAuthorizationV1beta1API_replaceRbacAuthorizationV1beta1NamespacedRoleBinding
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *RbacAuthorizationV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_role_binding_t *elementToReturn = v1beta1_role_binding_parseFromJSON(RbacAuthorizationV1beta1APIlocalVarJSON);
     cJSON_Delete(RbacAuthorizationV1beta1APIlocalVarJSON);

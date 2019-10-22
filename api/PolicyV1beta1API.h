@@ -28,13 +28,13 @@ PolicyV1beta1API_createPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,po
 // delete collection of PodDisruptionBudget
 //
 v1_status_t*
-PolicyV1beta1API_deletePolicyV1beta1CollectionNamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+PolicyV1beta1API_deletePolicyV1beta1CollectionNamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete collection of PodSecurityPolicy
 //
 v1_status_t*
-PolicyV1beta1API_deletePolicyV1beta1CollectionPodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+PolicyV1beta1API_deletePolicyV1beta1CollectionPodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a PodDisruptionBudget
@@ -58,19 +58,19 @@ PolicyV1beta1API_getPolicyV1beta1APIResources(apiClient_t *apiClient);
 // list or watch objects of kind PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_list_t*
-PolicyV1beta1API_listPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+PolicyV1beta1API_listPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_list_t*
-PolicyV1beta1API_listPolicyV1beta1PodDisruptionBudgetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
+PolicyV1beta1API_listPolicyV1beta1PodDisruptionBudgetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // list or watch objects of kind PodSecurityPolicy
 //
 policy_v1beta1_pod_security_policy_list_t*
-PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified PodDisruptionBudget

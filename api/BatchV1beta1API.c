@@ -110,7 +110,7 @@ BatchV1beta1API_createBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -149,7 +149,7 @@ end:
 // delete collection of CronJob
 //
 v1_status_t*
-BatchV1beta1API_deleteBatchV1beta1CollectionNamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+BatchV1beta1API_deleteBatchV1beta1CollectionNamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -204,10 +204,10 @@ BatchV1beta1API_deleteBatchV1beta1CollectionNamespacedCronJob(apiClient_t *apiCl
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -359,7 +359,7 @@ BatchV1beta1API_deleteBatchV1beta1CollectionNamespacedCronJob(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -549,7 +549,7 @@ BatchV1beta1API_deleteBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -628,7 +628,7 @@ BatchV1beta1API_getBatchV1beta1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -655,7 +655,7 @@ end:
 // list or watch objects of kind CronJob
 //
 v1beta1_cron_job_list_t*
-BatchV1beta1API_listBatchV1beta1CronJobForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+BatchV1beta1API_listBatchV1beta1CronJobForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -688,10 +688,10 @@ BatchV1beta1API_listBatchV1beta1CronJobForAllNamespaces(apiClient_t *apiClient ,
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -800,7 +800,7 @@ BatchV1beta1API_listBatchV1beta1CronJobForAllNamespaces(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_list_t *elementToReturn = v1beta1_cron_job_list_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -850,7 +850,7 @@ end:
 // list or watch objects of kind CronJob
 //
 v1beta1_cron_job_list_t*
-BatchV1beta1API_listBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+BatchV1beta1API_listBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -905,10 +905,10 @@ BatchV1beta1API_listBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char *
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1005,7 +1005,7 @@ BatchV1beta1API_listBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_list_t *elementToReturn = v1beta1_cron_job_list_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -1172,7 +1172,7 @@ BatchV1beta1API_patchBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -1330,7 +1330,7 @@ BatchV1beta1API_patchBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -1463,7 +1463,7 @@ BatchV1beta1API_readBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -1566,7 +1566,7 @@ BatchV1beta1API_readBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -1701,7 +1701,7 @@ BatchV1beta1API_replaceBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,cha
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);
@@ -1844,7 +1844,7 @@ BatchV1beta1API_replaceBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *BatchV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_cron_job_t *elementToReturn = v1beta1_cron_job_parseFromJSON(BatchV1beta1APIlocalVarJSON);
     cJSON_Delete(BatchV1beta1APIlocalVarJSON);

@@ -1,7 +1,7 @@
 /*
  * v1_host_path_volume_source.h
  *
- * Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
+ * Represents a host path mapped into a pod. Host path volumes do not_ support ownership management or SELinux relabeling.
  */
 
 #ifndef _v1_host_path_volume_source_H_

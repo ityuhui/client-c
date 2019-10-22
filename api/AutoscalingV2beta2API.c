@@ -110,7 +110,7 @@ AutoscalingV2beta2API_createAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -149,7 +149,7 @@ end:
 // delete collection of HorizontalPodAutoscaler
 //
 v1_status_t*
-AutoscalingV2beta2API_deleteAutoscalingV2beta2CollectionNamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+AutoscalingV2beta2API_deleteAutoscalingV2beta2CollectionNamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -204,10 +204,10 @@ AutoscalingV2beta2API_deleteAutoscalingV2beta2CollectionNamespacedHorizontalPodA
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -359,7 +359,7 @@ AutoscalingV2beta2API_deleteAutoscalingV2beta2CollectionNamespacedHorizontalPodA
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -549,7 +549,7 @@ AutoscalingV2beta2API_deleteAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -628,7 +628,7 @@ AutoscalingV2beta2API_getAutoscalingV2beta2APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -655,7 +655,7 @@ end:
 // list or watch objects of kind HorizontalPodAutoscaler
 //
 v2beta2_horizontal_pod_autoscaler_list_t*
-AutoscalingV2beta2API_listAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AutoscalingV2beta2API_listAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -688,10 +688,10 @@ AutoscalingV2beta2API_listAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespa
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -800,7 +800,7 @@ AutoscalingV2beta2API_listAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespa
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_list_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_list_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -850,7 +850,7 @@ end:
 // list or watch objects of kind HorizontalPodAutoscaler
 //
 v2beta2_horizontal_pod_autoscaler_list_t*
-AutoscalingV2beta2API_listAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+AutoscalingV2beta2API_listAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -905,10 +905,10 @@ AutoscalingV2beta2API_listAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ap
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1005,7 +1005,7 @@ AutoscalingV2beta2API_listAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_list_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_list_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -1172,7 +1172,7 @@ AutoscalingV2beta2API_patchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -1330,7 +1330,7 @@ AutoscalingV2beta2API_patchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerSt
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -1463,7 +1463,7 @@ AutoscalingV2beta2API_readAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -1566,7 +1566,7 @@ AutoscalingV2beta2API_readAutoscalingV2beta2NamespacedHorizontalPodAutoscalerSta
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -1701,7 +1701,7 @@ AutoscalingV2beta2API_replaceAutoscalingV2beta2NamespacedHorizontalPodAutoscaler
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);
@@ -1844,7 +1844,7 @@ AutoscalingV2beta2API_replaceAutoscalingV2beta2NamespacedHorizontalPodAutoscaler
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *AutoscalingV2beta2APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v2beta2_horizontal_pod_autoscaler_t *elementToReturn = v2beta2_horizontal_pod_autoscaler_parseFromJSON(AutoscalingV2beta2APIlocalVarJSON);
     cJSON_Delete(AutoscalingV2beta2APIlocalVarJSON);

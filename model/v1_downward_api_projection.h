@@ -1,7 +1,7 @@
 /*
  * v1_downward_api_projection.h
  *
- * Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default mode.
+ * Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default_ mode.
  */
 
 #ifndef _v1_downward_api_projection_H_

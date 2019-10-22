@@ -29,7 +29,7 @@
 #endif
 
 #ifdef __GNUC__
-#pragma GCC visibility push(default)
+#pragma GCC visibility push(default_)
 #endif
 #if defined(_MSC_VER)
 #pragma warning (push)
@@ -125,7 +125,7 @@ typedef struct internal_hooks
 } internal_hooks;
 
 #if defined(_MSC_VER)
-/* work around MSVC error C2322: '...' address of dillimport '...' is not static */
+/* work around MSVC error C2322: '...' address of dillimport '...' is not_ static */
 static void *internal_malloc(size_t size)
 {
     return malloc(size);
@@ -278,7 +278,7 @@ static cJSON_bool parse_number(cJSON * const item, parse_buffer * const input_bu
 
     /* copy the number into a temporary buffer and replace '.' with the decimal point
      * of the current locale (for strtod)
-     * This also takes care of '\0' not necessarily being available for marking the end of the input */
+     * This also takes care of '\0' not_ necessarily being available for marking the end of the input */
     for (i = 0; (i < (sizeof(number_c_string) - 1)) && can_access_at_index(input_buffer, i); i++)
     {
         switch (buffer_at_offset(input_buffer)[i])
@@ -388,7 +388,7 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
 
     if (needed > INT_MAX)
     {
-        /* sizes bigger than INT_MAX are currently not supported */
+        /* sizes bigger than INT_MAX are currently not_ supported */
         return NULL;
     }
 
@@ -499,7 +499,7 @@ static cJSON_bool print_number(const cJSON * const item, printbuffer * const out
         /* Check whether the original double can be recovered */
         if ((sscanf((char*)number_buffer, "%lg", &test) != 1) || ((double)test != d))
         {
-            /* If not, print with 17 decimal places of precision */
+            /* If not_, print with 17 decimal places of precision */
             length = sprintf((char*)number_buffer, "%1.17g", d);
         }
     }
@@ -702,7 +702,7 @@ static cJSON_bool parse_string(cJSON * const item, parse_buffer * const input_bu
     unsigned char *output_pointer = NULL;
     unsigned char *output = NULL;
 
-    /* not a string */
+    /* not_ a string */
     if (buffer_at_offset(input_buffer)[0] != '\"')
     {
         goto fail;
@@ -1351,7 +1351,7 @@ static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buf
 
     if (buffer_at_offset(input_buffer)[0] != '[')
     {
-        /* not an array */
+        /* not_ an array */
         goto fail;
     }
 
@@ -1507,7 +1507,7 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
 
     if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != '{'))
     {
-        goto fail; /* not an object */
+        goto fail; /* not_ an object */
     }
 
     input_buffer->offset++;
@@ -1674,7 +1674,7 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
         }
         update_offset(output_buffer);
 
-        /* print comma if not last */
+        /* print comma if not_ last */
         length = (size_t) ((output_buffer->format ? 1 : 0) + (current_item->next ? 1 : 0));
         output_pointer = ensure(output_buffer, length + 1);
         if (output_pointer == NULL)
@@ -2077,12 +2077,12 @@ CJSON_PUBLIC(cJSON *) cJSON_DetachItemViaPointer(cJSON *parent, cJSON * const it
 
     if (item->prev != NULL)
     {
-        /* not the first element */
+        /* not_ the first element */
         item->prev->next = item->next;
     }
     if (item->next != NULL)
     {
-        /* not the last element */
+        /* not_ the last element */
         item->next->prev = item->prev;
     }
 

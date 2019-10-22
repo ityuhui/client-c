@@ -26,7 +26,7 @@ CertificatesV1beta1API_deleteCertificatesV1beta1CertificateSigningRequest(apiCli
 // delete collection of CertificateSigningRequest
 //
 v1_status_t*
-CertificatesV1beta1API_deleteCertificatesV1beta1CollectionCertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+CertificatesV1beta1API_deleteCertificatesV1beta1CollectionCertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // get available resources
@@ -38,7 +38,7 @@ CertificatesV1beta1API_getCertificatesV1beta1APIResources(apiClient_t *apiClient
 // list or watch objects of kind CertificateSigningRequest
 //
 v1beta1_certificate_signing_request_list_t*
-CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified CertificateSigningRequest

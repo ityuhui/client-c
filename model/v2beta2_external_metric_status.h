@@ -1,7 +1,7 @@
 /*
  * v2beta2_external_metric_status.h
  *
- * ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
+ * ExternalMetricStatus indicates the current value of a global metric not_ associated with any Kubernetes object.
  */
 
 #ifndef _v2beta2_external_metric_status_H_

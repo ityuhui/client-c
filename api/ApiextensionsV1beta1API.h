@@ -20,7 +20,7 @@ ApiextensionsV1beta1API_createApiextensionsV1beta1CustomResourceDefinition(apiCl
 // delete collection of CustomResourceDefinition
 //
 v1_status_t*
-ApiextensionsV1beta1API_deleteApiextensionsV1beta1CollectionCustomResourceDefinition(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
+ApiextensionsV1beta1API_deleteApiextensionsV1beta1CollectionCustomResourceDefinition(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body);
 
 
 // delete a CustomResourceDefinition
@@ -38,7 +38,7 @@ ApiextensionsV1beta1API_getApiextensionsV1beta1APIResources(apiClient_t *apiClie
 // list or watch objects of kind CustomResourceDefinition
 //
 v1beta1_custom_resource_definition_list_t*
-ApiextensionsV1beta1API_listApiextensionsV1beta1CustomResourceDefinition(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
+ApiextensionsV1beta1API_listApiextensionsV1beta1CustomResourceDefinition(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch);
 
 
 // partially update the specified CustomResourceDefinition

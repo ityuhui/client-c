@@ -110,7 +110,7 @@ PolicyV1beta1API_createPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -235,7 +235,7 @@ PolicyV1beta1API_createPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,po
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     policy_v1beta1_pod_security_policy_t *elementToReturn = policy_v1beta1_pod_security_policy_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -273,7 +273,7 @@ end:
 // delete collection of PodDisruptionBudget
 //
 v1_status_t*
-PolicyV1beta1API_deletePolicyV1beta1CollectionNamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+PolicyV1beta1API_deletePolicyV1beta1CollectionNamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -328,10 +328,10 @@ PolicyV1beta1API_deletePolicyV1beta1CollectionNamespacedPodDisruptionBudget(apiC
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -483,7 +483,7 @@ PolicyV1beta1API_deletePolicyV1beta1CollectionNamespacedPodDisruptionBudget(apiC
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -546,7 +546,7 @@ end:
 // delete collection of PodSecurityPolicy
 //
 v1_status_t*
-PolicyV1beta1API_deletePolicyV1beta1CollectionPodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+PolicyV1beta1API_deletePolicyV1beta1CollectionPodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -591,10 +591,10 @@ PolicyV1beta1API_deletePolicyV1beta1CollectionPodSecurityPolicy(apiClient_t *api
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -746,7 +746,7 @@ PolicyV1beta1API_deletePolicyV1beta1CollectionPodSecurityPolicy(apiClient_t *api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -935,7 +935,7 @@ PolicyV1beta1API_deletePolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *a
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -1096,7 +1096,7 @@ PolicyV1beta1API_deletePolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,ch
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -1174,7 +1174,7 @@ PolicyV1beta1API_getPolicyV1beta1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -1201,7 +1201,7 @@ end:
 // list or watch objects of kind PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_list_t*
-PolicyV1beta1API_listPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+PolicyV1beta1API_listPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1256,10 +1256,10 @@ PolicyV1beta1API_listPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *api
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1356,7 +1356,7 @@ PolicyV1beta1API_listPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_list_t *elementToReturn = v1beta1_pod_disruption_budget_list_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -1407,7 +1407,7 @@ end:
 // list or watch objects of kind PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_list_t*
-PolicyV1beta1API_listPolicyV1beta1PodDisruptionBudgetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+PolicyV1beta1API_listPolicyV1beta1PodDisruptionBudgetForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1440,10 +1440,10 @@ PolicyV1beta1API_listPolicyV1beta1PodDisruptionBudgetForAllNamespaces(apiClient_
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1552,7 +1552,7 @@ PolicyV1beta1API_listPolicyV1beta1PodDisruptionBudgetForAllNamespaces(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_list_t *elementToReturn = v1beta1_pod_disruption_budget_list_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -1602,7 +1602,7 @@ end:
 // list or watch objects of kind PodSecurityPolicy
 //
 policy_v1beta1_pod_security_policy_list_t*
-PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1647,10 +1647,10 @@ PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1747,7 +1747,7 @@ PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     policy_v1beta1_pod_security_policy_list_t *elementToReturn = policy_v1beta1_pod_security_policy_list_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -1913,7 +1913,7 @@ PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *ap
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2071,7 +2071,7 @@ PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2219,7 +2219,7 @@ PolicyV1beta1API_patchPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,cha
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     policy_v1beta1_pod_security_policy_t *elementToReturn = policy_v1beta1_pod_security_policy_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2351,7 +2351,7 @@ PolicyV1beta1API_readPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *api
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2454,7 +2454,7 @@ PolicyV1beta1API_readPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2567,7 +2567,7 @@ PolicyV1beta1API_readPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     policy_v1beta1_pod_security_policy_t *elementToReturn = policy_v1beta1_pod_security_policy_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2705,7 +2705,7 @@ PolicyV1beta1API_replacePolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2848,7 +2848,7 @@ PolicyV1beta1API_replacePolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClie
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1beta1_pod_disruption_budget_t *elementToReturn = v1beta1_pod_disruption_budget_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);
@@ -2981,7 +2981,7 @@ PolicyV1beta1API_replacePolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,c
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *PolicyV1beta1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     policy_v1beta1_pod_security_policy_t *elementToReturn = policy_v1beta1_pod_security_policy_parseFromJSON(PolicyV1beta1APIlocalVarJSON);
     cJSON_Delete(PolicyV1beta1APIlocalVarJSON);

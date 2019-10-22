@@ -15,7 +15,7 @@
 
 
 typedef struct v1_list_meta_t {
-    char *continue; // string
+    char *continue_; // string
     long remainingItemCount; //numeric
     char *resourceVersion; // string
     char *selfLink; // string
@@ -23,7 +23,7 @@ typedef struct v1_list_meta_t {
 } v1_list_meta_t;
 
 v1_list_meta_t *v1_list_meta_create(
-    char *continue,
+    char *continue_,
     long remainingItemCount,
     char *resourceVersion,
     char *selfLink

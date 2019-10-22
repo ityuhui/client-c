@@ -6,7 +6,7 @@
 
 
 v1_limit_range_item_t *v1_limit_range_item_create(
-    list_t* default,
+    list_t* default_,
     list_t* defaultRequest,
     list_t* max,
     list_t* maxLimitRequestRatio,
@@ -17,7 +17,7 @@ v1_limit_range_item_t *v1_limit_range_item_create(
     if (!v1_limit_range_item_local_var) {
         return NULL;
     }
-	v1_limit_range_item_local_var->default = default;
+	v1_limit_range_item_local_var->default_ = default_;
 	v1_limit_range_item_local_var->defaultRequest = defaultRequest;
 	v1_limit_range_item_local_var->max = max;
 	v1_limit_range_item_local_var->maxLimitRequestRatio = maxLimitRequestRatio;
@@ -30,34 +30,34 @@ v1_limit_range_item_t *v1_limit_range_item_create(
 
 void v1_limit_range_item_free(v1_limit_range_item_t *v1_limit_range_item) {
     listEntry_t *listEntry;
-	list_ForEach(listEntry, v1_limit_range_item->default) {
+	list_ForEach(listEntry, v1_limit_range_item->default_) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
-	list_free(v1_limit_range_item->default);
+	list_free(v1_limit_range_item->default_);
 	list_ForEach(listEntry, v1_limit_range_item->defaultRequest) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_limit_range_item->defaultRequest);
 	list_ForEach(listEntry, v1_limit_range_item->max) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_limit_range_item->max);
 	list_ForEach(listEntry, v1_limit_range_item->maxLimitRequestRatio) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_limit_range_item->maxLimitRequestRatio);
 	list_ForEach(listEntry, v1_limit_range_item->min) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_limit_range_item->min);
     free(v1_limit_range_item->type);
@@ -67,22 +67,22 @@ void v1_limit_range_item_free(v1_limit_range_item_t *v1_limit_range_item) {
 cJSON *v1_limit_range_item_convertToJSON(v1_limit_range_item_t *v1_limit_range_item) {
 	cJSON *item = cJSON_CreateObject();
 
-	// v1_limit_range_item->default
-    if(v1_limit_range_item->default) { 
-	cJSON *default = cJSON_AddObjectToObject(item, "default");
-	if(default == NULL) {
+	// v1_limit_range_item->default_
+    if(v1_limit_range_item->default_) { 
+	cJSON *default_ = cJSON_AddObjectToObject(item, "default_");
+	if(default_ == NULL) {
 		goto fail; //primitive map container
 	}
     cJSON *localMapObject = cJSON_CreateObject(); //Memory free to be implemented in user code
 	listEntry_t *defaultListEntry;
-    if (v1_limit_range_item->default) {
-    list_ForEach(defaultListEntry, v1_limit_range_item->default) {
+    if (v1_limit_range_item->default_) {
+    list_ForEach(defaultListEntry, v1_limit_range_item->default_) {
         keyValuePair_t *localKeyValue = (keyValuePair_t*)defaultListEntry->data;
         if(cJSON_AddStringToObject(localMapObject, localKeyValue->key, (char*)localKeyValue->value) == NULL)
         {
             goto fail;
         }
-        cJSON_AddItemToObject(default,"", localMapObject);
+        cJSON_AddItemToObject(default_,"", localMapObject);
     }
     }
      } 
@@ -191,17 +191,17 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
 
     v1_limit_range_item_t *v1_limit_range_item_local_var = NULL;
 
-    // v1_limit_range_item->default
-    cJSON *default = cJSON_GetObjectItemCaseSensitive(v1_limit_range_itemJSON, "default");
+    // v1_limit_range_item->default_
+    cJSON *default_ = cJSON_GetObjectItemCaseSensitive(v1_limit_range_itemJSON, "default_");
     list_t *List;
-    if (default) { 
+    if (default_) { 
     cJSON *_local_map;
-    if(!cJSON_IsObject(default)) {
+    if(!cJSON_IsObject(default_)) {
         goto end;//primitive map container
     }
     List = list_create();
     keyValuePair_t *localMapKeyPair;
-    cJSON_ArrayForEach(_local_map, default)
+    cJSON_ArrayForEach(_local_map, default_)
     {
         if(!cJSON_IsNumber(_local_map))
         {
@@ -307,7 +307,7 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
 
 
     v1_limit_range_item_local_var = v1_limit_range_item_create (
-        default ? List : NULL,
+        default_ ? List : NULL,
         defaultRequest ? List : NULL,
         max ? List : NULL,
         maxLimitRequestRatio ? List : NULL,

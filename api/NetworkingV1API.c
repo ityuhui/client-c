@@ -110,7 +110,7 @@ NetworkingV1API_createNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_network_policy_t *elementToReturn = v1_network_policy_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -149,7 +149,7 @@ end:
 // delete collection of NetworkPolicy
 //
 v1_status_t*
-NetworkingV1API_deleteNetworkingV1CollectionNamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
+NetworkingV1API_deleteNetworkingV1CollectionNamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * dryRun ,char * fieldSelector ,int gracePeriodSeconds ,char * labelSelector ,int limit ,int orphanDependents ,char * propagationPolicy ,char * resourceVersion ,int timeoutSeconds ,int watch ,v1_delete_options_t * body)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -204,10 +204,10 @@ NetworkingV1API_deleteNetworkingV1CollectionNamespacedNetworkPolicy(apiClient_t 
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -359,7 +359,7 @@ NetworkingV1API_deleteNetworkingV1CollectionNamespacedNetworkPolicy(apiClient_t 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -549,7 +549,7 @@ NetworkingV1API_deleteNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_status_t *elementToReturn = v1_status_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -628,7 +628,7 @@ NetworkingV1API_getNetworkingV1APIResources(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_resource_list_t *elementToReturn = v1_api_resource_list_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -655,7 +655,7 @@ end:
 // list or watch objects of kind NetworkPolicy
 //
 v1_network_policy_list_t*
-NetworkingV1API_listNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
+NetworkingV1API_listNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * namespace ,char * pretty ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -710,10 +710,10 @@ NetworkingV1API_listNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -810,7 +810,7 @@ NetworkingV1API_listNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_network_policy_list_t *elementToReturn = v1_network_policy_list_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -861,7 +861,7 @@ end:
 // list or watch objects of kind NetworkPolicy
 //
 v1_network_policy_list_t*
-NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
+NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiClient ,int allowWatchBookmarks ,char * continue_ ,char * fieldSelector ,char * labelSelector ,int limit ,char * pretty ,char * resourceVersion ,int timeoutSeconds ,int watch)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -894,10 +894,10 @@ NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiCl
     char *keyQuery_continue;
     char * valueQuery_continue;
     keyValuePair_t *keyPairQuery_continue = 0;
-    if (continue)
+    if (continue_)
     {
-        keyQuery_continue = strdup("continue");
-        valueQuery_continue = strdup((continue));
+        keyQuery_continue = strdup("continue_");
+        valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
@@ -1006,7 +1006,7 @@ NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiCl
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_network_policy_list_t *elementToReturn = v1_network_policy_list_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -1172,7 +1172,7 @@ NetworkingV1API_patchNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient 
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_network_policy_t *elementToReturn = v1_network_policy_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -1305,7 +1305,7 @@ NetworkingV1API_readNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_network_policy_t *elementToReturn = v1_network_policy_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);
@@ -1444,7 +1444,7 @@ NetworkingV1API_replaceNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClien
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *NetworkingV1APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_network_policy_t *elementToReturn = v1_network_policy_parseFromJSON(NetworkingV1APIlocalVarJSON);
     cJSON_Delete(NetworkingV1APIlocalVarJSON);

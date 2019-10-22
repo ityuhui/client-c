@@ -1,7 +1,7 @@
 /*
  * v1_flocker_volume_source.h
  *
- * Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
+ * Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not_ support ownership management or SELinux relabeling.
  */
 
 #ifndef _v1_flocker_volume_source_H_

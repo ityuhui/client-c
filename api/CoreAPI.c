@@ -49,7 +49,7 @@ CoreAPI_getCoreAPIVersions(apiClient_t *apiClient)
     if (apiClient->response_code == 401) {
         printf("%s\n","Unauthorized");
     }
-    //nonprimitive not container
+    //nonprimitive not_ container
     cJSON *CoreAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     v1_api_versions_t *elementToReturn = v1_api_versions_parseFromJSON(CoreAPIlocalVarJSON);
     cJSON_Delete(CoreAPIlocalVarJSON);

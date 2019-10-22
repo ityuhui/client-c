@@ -1,7 +1,7 @@
 /*
  * v1_secret_projection.h
  *
- * Adapts a secret into a projected volume.  The contents of the target Secret&#39;s Data field will be presented in a projected volume as files using the keys in the Data field as the file names. Note that this is identical to a secret volume source without the default mode.
+ * Adapts a secret into a projected volume.  The contents of the target Secret&#39;s Data field will be presented in a projected volume as files using the keys in the Data field as the file names. Note that this is identical to a secret volume source without the default_ mode.
  */
 
 #ifndef _v1_secret_projection_H_

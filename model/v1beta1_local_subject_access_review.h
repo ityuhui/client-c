@@ -1,7 +1,7 @@
 /*
  * v1beta1_local_subject_access_review.h
  *
- * LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.
+ * LocalSubjectAccessReview checks whether or not_ a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.
  */
 
 #ifndef _v1beta1_local_subject_access_review_H_

@@ -15,7 +15,7 @@
 
 
 typedef struct v1_limit_range_item_t {
-    list_t* default; //map
+    list_t* default_; //map
     list_t* defaultRequest; //map
     list_t* max; //map
     list_t* maxLimitRequestRatio; //map
@@ -25,7 +25,7 @@ typedef struct v1_limit_range_item_t {
 } v1_limit_range_item_t;
 
 v1_limit_range_item_t *v1_limit_range_item_create(
-    list_t* default,
+    list_t* default_,
     list_t* defaultRequest,
     list_t* max,
     list_t* maxLimitRequestRatio,
