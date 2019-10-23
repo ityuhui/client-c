@@ -32,8 +32,8 @@ void v1_persistent_volume_claim_status_free(v1_persistent_volume_claim_status_t 
 	list_free(v1_persistent_volume_claim_status->accessModes);
 	list_ForEach(listEntry, v1_persistent_volume_claim_status->capacity) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_persistent_volume_claim_status->capacity);
 	list_ForEach(listEntry, v1_persistent_volume_claim_status->conditions) {

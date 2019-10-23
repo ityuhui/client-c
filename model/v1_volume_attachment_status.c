@@ -29,8 +29,8 @@ void v1_volume_attachment_status_free(v1_volume_attachment_status_t *v1_volume_a
     v1_volume_error_free(v1_volume_attachment_status->attachError);
 	list_ForEach(listEntry, v1_volume_attachment_status->attachmentMetadata) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_volume_attachment_status->attachmentMetadata);
     v1_volume_error_free(v1_volume_attachment_status->detachError);

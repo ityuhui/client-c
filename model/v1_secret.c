@@ -33,16 +33,16 @@ void v1_secret_free(v1_secret_t *v1_secret) {
     free(v1_secret->apiVersion);
 	list_ForEach(listEntry, v1_secret->data) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_secret->data);
     free(v1_secret->kind);
     v1_object_meta_free(v1_secret->metadata);
 	list_ForEach(listEntry, v1_secret->stringData) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_secret->stringData);
     free(v1_secret->type);

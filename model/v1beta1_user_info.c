@@ -28,8 +28,8 @@ void v1beta1_user_info_free(v1beta1_user_info_t *v1beta1_user_info) {
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1beta1_user_info->extra) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1beta1_user_info->extra);
 	list_ForEach(listEntry, v1beta1_user_info->groups) {

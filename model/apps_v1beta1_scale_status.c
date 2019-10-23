@@ -26,8 +26,8 @@ void apps_v1beta1_scale_status_free(apps_v1beta1_scale_status_t *apps_v1beta1_sc
     listEntry_t *listEntry;
 	list_ForEach(listEntry, apps_v1beta1_scale_status->selector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(apps_v1beta1_scale_status->selector);
     free(apps_v1beta1_scale_status->targetSelector);

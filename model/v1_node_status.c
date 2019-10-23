@@ -46,14 +46,14 @@ void v1_node_status_free(v1_node_status_t *v1_node_status) {
 	list_free(v1_node_status->addresses);
 	list_ForEach(listEntry, v1_node_status->allocatable) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_node_status->allocatable);
 	list_ForEach(listEntry, v1_node_status->capacity) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_node_status->capacity);
 	list_ForEach(listEntry, v1_node_status->conditions) {
@@ -324,13 +324,13 @@ v1_node_status_t *v1_node_status_parseFromJSON(cJSON *v1_node_statusJSON){
 
     // v1_node_status->capacity
     cJSON *capacity = cJSON_GetObjectItemCaseSensitive(v1_node_statusJSON, "capacity");
-    list_t *List;
+    list_t *Listcapacity;
     if (capacity) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(capacity)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listcapacity = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, capacity)
     {
@@ -339,7 +339,7 @@ v1_node_status_t *v1_node_status_parseFromJSON(cJSON *v1_node_statusJSON){
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listcapacity, localMapKeyPair);
     }
     }
 
@@ -463,7 +463,7 @@ v1_node_status_t *v1_node_status_parseFromJSON(cJSON *v1_node_statusJSON){
     v1_node_status_local_var = v1_node_status_create (
         addresses ? addressesList : NULL,
         allocatable ? List : NULL,
-        capacity ? List : NULL,
+        capacity ? Listcapacity : NULL,
         conditions ? conditionsList : NULL,
         config ? config_local_nonprim : NULL,
         daemonEndpoints ? daemonEndpoints_local_nonprim : NULL,

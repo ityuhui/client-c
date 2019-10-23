@@ -65,8 +65,8 @@ void v1_service_spec_free(v1_service_spec_t *v1_service_spec) {
 	list_free(v1_service_spec->ports);
 	list_ForEach(listEntry, v1_service_spec->selector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_service_spec->selector);
     free(v1_service_spec->sessionAffinity);

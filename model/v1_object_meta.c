@@ -52,8 +52,8 @@ void v1_object_meta_free(v1_object_meta_t *v1_object_meta) {
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1_object_meta->annotations) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_object_meta->annotations);
     free(v1_object_meta->clusterName);
@@ -66,8 +66,8 @@ void v1_object_meta_free(v1_object_meta_t *v1_object_meta) {
     free(v1_object_meta->generateName);
 	list_ForEach(listEntry, v1_object_meta->labels) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_object_meta->labels);
 	list_ForEach(listEntry, v1_object_meta->managedFields) {
@@ -384,13 +384,13 @@ v1_object_meta_t *v1_object_meta_parseFromJSON(cJSON *v1_object_metaJSON){
 
     // v1_object_meta->labels
     cJSON *labels = cJSON_GetObjectItemCaseSensitive(v1_object_metaJSON, "labels");
-    list_t *List;
+    list_t *Listlabels;
     if (labels) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(labels)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listlabels = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, labels)
     {
@@ -399,7 +399,7 @@ v1_object_meta_t *v1_object_meta_parseFromJSON(cJSON *v1_object_metaJSON){
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listlabels, localMapKeyPair);
     }
     }
 
@@ -502,7 +502,7 @@ v1_object_meta_t *v1_object_meta_parseFromJSON(cJSON *v1_object_metaJSON){
         finalizers ? finalizersList : NULL,
         generateName ? strdup(generateName->valuestring) : NULL,
         generation ? generation->valuedouble : 0,
-        labels ? List : NULL,
+        labels ? Listlabels : NULL,
         managedFields ? managedFieldsList : NULL,
         name ? strdup(name->valuestring) : NULL,
         namespace ? strdup(namespace->valuestring) : NULL,

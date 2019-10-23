@@ -24,8 +24,8 @@ void v1alpha1_scheduling_free(v1alpha1_scheduling_t *v1alpha1_scheduling) {
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1alpha1_scheduling->nodeSelector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1alpha1_scheduling->nodeSelector);
 	list_ForEach(listEntry, v1alpha1_scheduling->tolerations) {

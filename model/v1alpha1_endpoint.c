@@ -37,8 +37,8 @@ void v1alpha1_endpoint_free(v1alpha1_endpoint_t *v1alpha1_endpoint) {
     v1_object_reference_free(v1alpha1_endpoint->targetRef);
 	list_ForEach(listEntry, v1alpha1_endpoint->topology) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1alpha1_endpoint->topology);
 	free(v1alpha1_endpoint);

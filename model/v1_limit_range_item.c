@@ -193,13 +193,13 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
 
     // v1_limit_range_item->default_
     cJSON *default_ = cJSON_GetObjectItemCaseSensitive(v1_limit_range_itemJSON, "default_");
-    list_t *List;
+    list_t *Listdefault_;
     if (default_) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(default_)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listdefault_ = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, default_)
     {
@@ -208,19 +208,19 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listdefault_, localMapKeyPair);
     }
     }
 
     // v1_limit_range_item->defaultRequest
     cJSON *defaultRequest = cJSON_GetObjectItemCaseSensitive(v1_limit_range_itemJSON, "defaultRequest");
-    list_t *List;
+    list_t *ListdefaultRequest;
     if (defaultRequest) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(defaultRequest)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    ListdefaultRequest = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, defaultRequest)
     {
@@ -229,19 +229,19 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(ListdefaultRequest, localMapKeyPair);
     }
     }
 
     // v1_limit_range_item->max
     cJSON *max = cJSON_GetObjectItemCaseSensitive(v1_limit_range_itemJSON, "max");
-    list_t *List;
+    list_t *Listmax;
     if (max) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(max)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listmax = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, max)
     {
@@ -250,19 +250,19 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listmax, localMapKeyPair);
     }
     }
 
     // v1_limit_range_item->maxLimitRequestRatio
     cJSON *maxLimitRequestRatio = cJSON_GetObjectItemCaseSensitive(v1_limit_range_itemJSON, "maxLimitRequestRatio");
-    list_t *List;
+    list_t *ListmaxLimitRequestRatio;
     if (maxLimitRequestRatio) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(maxLimitRequestRatio)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    ListmaxLimitRequestRatio = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, maxLimitRequestRatio)
     {
@@ -271,7 +271,7 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(ListmaxLimitRequestRatio, localMapKeyPair);
     }
     }
 
@@ -307,10 +307,10 @@ v1_limit_range_item_t *v1_limit_range_item_parseFromJSON(cJSON *v1_limit_range_i
 
 
     v1_limit_range_item_local_var = v1_limit_range_item_create (
-        default_ ? List : NULL,
-        defaultRequest ? List : NULL,
-        max ? List : NULL,
-        maxLimitRequestRatio ? List : NULL,
+        default_ ? Listdefault_ : NULL,
+        defaultRequest ? ListdefaultRequest : NULL,
+        max ? Listmax : NULL,
+        maxLimitRequestRatio ? ListmaxLimitRequestRatio : NULL,
         min ? List : NULL,
         type ? strdup(type->valuestring) : NULL
         );

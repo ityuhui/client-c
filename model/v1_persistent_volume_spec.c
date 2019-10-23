@@ -87,8 +87,8 @@ void v1_persistent_volume_spec_free(v1_persistent_volume_spec_t *v1_persistent_v
     v1_azure_file_persistent_volume_source_free(v1_persistent_volume_spec->azureFile);
 	list_ForEach(listEntry, v1_persistent_volume_spec->capacity) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_persistent_volume_spec->capacity);
     v1_ceph_fs_persistent_volume_source_free(v1_persistent_volume_spec->cephfs);

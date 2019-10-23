@@ -32,8 +32,8 @@ void v1beta1_pod_disruption_budget_status_free(v1beta1_pod_disruption_budget_sta
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1beta1_pod_disruption_budget_status->disruptedPods) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1beta1_pod_disruption_budget_status->disruptedPods);
 	free(v1beta1_pod_disruption_budget_status);

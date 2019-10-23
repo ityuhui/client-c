@@ -26,8 +26,8 @@ void v1_resource_quota_spec_free(v1_resource_quota_spec_t *v1_resource_quota_spe
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1_resource_quota_spec->hard) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_resource_quota_spec->hard);
     v1_scope_selector_free(v1_resource_quota_spec->scopeSelector);

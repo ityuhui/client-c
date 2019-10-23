@@ -117,14 +117,14 @@ void v1_json_schema_props_free(v1_json_schema_props_t *v1_json_schema_props) {
     object_free(v1_json_schema_props->default_);
 	list_ForEach(listEntry, v1_json_schema_props->definitions) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_json_schema_props->definitions);
 	list_ForEach(listEntry, v1_json_schema_props->dependencies) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_json_schema_props->dependencies);
     free(v1_json_schema_props->description);
@@ -145,14 +145,14 @@ void v1_json_schema_props_free(v1_json_schema_props_t *v1_json_schema_props) {
     free(v1_json_schema_props->pattern);
 	list_ForEach(listEntry, v1_json_schema_props->patternProperties) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_json_schema_props->patternProperties);
 	list_ForEach(listEntry, v1_json_schema_props->properties) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_json_schema_props->properties);
 	list_ForEach(listEntry, v1_json_schema_props->required) {

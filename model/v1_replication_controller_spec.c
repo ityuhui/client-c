@@ -28,8 +28,8 @@ void v1_replication_controller_spec_free(v1_replication_controller_spec_t *v1_re
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1_replication_controller_spec->selector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_replication_controller_spec->selector);
     v1_pod_template_spec_free(v1_replication_controller_spec->template);

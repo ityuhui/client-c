@@ -26,8 +26,8 @@ void v1beta2_scale_status_free(v1beta2_scale_status_t *v1beta2_scale_status) {
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1beta2_scale_status->selector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1beta2_scale_status->selector);
     free(v1beta2_scale_status->targetSelector);

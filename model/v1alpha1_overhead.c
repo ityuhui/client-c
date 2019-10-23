@@ -22,8 +22,8 @@ void v1alpha1_overhead_free(v1alpha1_overhead_t *v1alpha1_overhead) {
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1alpha1_overhead->podFixed) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1alpha1_overhead->podFixed);
 	free(v1alpha1_overhead);

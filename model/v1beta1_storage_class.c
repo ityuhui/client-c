@@ -51,8 +51,8 @@ void v1beta1_storage_class_free(v1beta1_storage_class_t *v1beta1_storage_class) 
 	list_free(v1beta1_storage_class->mountOptions);
 	list_ForEach(listEntry, v1beta1_storage_class->parameters) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1beta1_storage_class->parameters);
     free(v1beta1_storage_class->provisioner);

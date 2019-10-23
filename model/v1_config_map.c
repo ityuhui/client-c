@@ -31,14 +31,14 @@ void v1_config_map_free(v1_config_map_t *v1_config_map) {
     free(v1_config_map->apiVersion);
 	list_ForEach(listEntry, v1_config_map->binaryData) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_config_map->binaryData);
 	list_ForEach(listEntry, v1_config_map->data) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        //yhwa free (localKeyValue->key);
-        //yhwa free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_config_map->data);
     free(v1_config_map->kind);

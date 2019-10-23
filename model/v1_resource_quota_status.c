@@ -24,14 +24,14 @@ void v1_resource_quota_status_free(v1_resource_quota_status_t *v1_resource_quota
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1_resource_quota_status->hard) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_resource_quota_status->hard);
 	list_ForEach(listEntry, v1_resource_quota_status->used) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_resource_quota_status->used);
 	free(v1_resource_quota_status);
@@ -116,13 +116,13 @@ v1_resource_quota_status_t *v1_resource_quota_status_parseFromJSON(cJSON *v1_res
 
     // v1_resource_quota_status->used
     cJSON *used = cJSON_GetObjectItemCaseSensitive(v1_resource_quota_statusJSON, "used");
-    list_t *List;
+    list_t *Listused;
     if (used) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(used)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listused = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, used)
     {
@@ -131,14 +131,14 @@ v1_resource_quota_status_t *v1_resource_quota_status_parseFromJSON(cJSON *v1_res
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listused, localMapKeyPair);
     }
     }
 
 
     v1_resource_quota_status_local_var = v1_resource_quota_status_create (
         hard ? List : NULL,
-        used ? List : NULL
+        used ? Listused : NULL
         );
 
     return v1_resource_quota_status_local_var;

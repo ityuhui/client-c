@@ -24,14 +24,14 @@ void v1_resource_requirements_free(v1_resource_requirements_t *v1_resource_requi
     listEntry_t *listEntry;
 	list_ForEach(listEntry, v1_resource_requirements->limits) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_resource_requirements->limits);
 	list_ForEach(listEntry, v1_resource_requirements->requests) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_resource_requirements->requests);
 	free(v1_resource_requirements);
@@ -95,13 +95,13 @@ v1_resource_requirements_t *v1_resource_requirements_parseFromJSON(cJSON *v1_res
 
     // v1_resource_requirements->limits
     cJSON *limits = cJSON_GetObjectItemCaseSensitive(v1_resource_requirementsJSON, "limits");
-    list_t *List;
+    list_t *Listlimits;
     if (limits) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(limits)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listlimits = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, limits)
     {
@@ -110,7 +110,7 @@ v1_resource_requirements_t *v1_resource_requirements_parseFromJSON(cJSON *v1_res
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listlimits, localMapKeyPair);
     }
     }
 
@@ -137,7 +137,7 @@ v1_resource_requirements_t *v1_resource_requirements_parseFromJSON(cJSON *v1_res
 
 
     v1_resource_requirements_local_var = v1_resource_requirements_create (
-        limits ? List : NULL,
+        limits ? Listlimits : NULL,
         requests ? List : NULL
         );
 

@@ -113,14 +113,14 @@ void v1_pod_spec_free(v1_pod_spec_t *v1_pod_spec) {
     free(v1_pod_spec->nodeName);
 	list_ForEach(listEntry, v1_pod_spec->nodeSelector) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_pod_spec->nodeSelector);
 	list_ForEach(listEntry, v1_pod_spec->overhead) {
 		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localKeyValue->key);
-        free (localKeyValue->value);
+        free (localMapKeyPair->key);
+        free (localMapKeyPair->value);
 	}
 	list_free(v1_pod_spec->overhead);
     free(v1_pod_spec->preemptionPolicy);
@@ -798,13 +798,13 @@ v1_pod_spec_t *v1_pod_spec_parseFromJSON(cJSON *v1_pod_specJSON){
 
     // v1_pod_spec->nodeSelector
     cJSON *nodeSelector = cJSON_GetObjectItemCaseSensitive(v1_pod_specJSON, "nodeSelector");
-    list_t *List;
+    list_t *ListnodeSelector;
     if (nodeSelector) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(nodeSelector)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    ListnodeSelector = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, nodeSelector)
     {
@@ -813,7 +813,7 @@ v1_pod_spec_t *v1_pod_spec_parseFromJSON(cJSON *v1_pod_specJSON){
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(ListnodeSelector, localMapKeyPair);
     }
     }
 
@@ -1050,7 +1050,7 @@ v1_pod_spec_t *v1_pod_spec_parseFromJSON(cJSON *v1_pod_specJSON){
         imagePullSecrets ? imagePullSecretsList : NULL,
         initContainers ? initContainersList : NULL,
         nodeName ? strdup(nodeName->valuestring) : NULL,
-        nodeSelector ? List : NULL,
+        nodeSelector ? ListnodeSelector : NULL,
         overhead ? List : NULL,
         preemptionPolicy ? strdup(preemptionPolicy->valuestring) : NULL,
         priority ? priority->valuedouble : 0,
