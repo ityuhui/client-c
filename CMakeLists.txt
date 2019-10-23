@@ -23,6 +23,7 @@ set(SRCS
     src/apiKey.c
     src/apiClient.c
     external/cJSON.c
+	model/object.c
     model/admissionregistration_v1_service_reference.c
     model/admissionregistration_v1_webhook_client_config.c
     model/admissionregistration_v1beta1_service_reference.c
@@ -744,6 +745,7 @@ set(HDRS
     include/list.h
     include/keyValuePair.h
     external/cJSON.h
+	model/object.h
     model/admissionregistration_v1_service_reference.h
     model/admissionregistration_v1_webhook_client_config.h
     model/admissionregistration_v1beta1_service_reference.h

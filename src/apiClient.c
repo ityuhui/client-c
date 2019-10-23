@@ -22,7 +22,9 @@ apiClient_t *apiClient_create() {
 
 void apiClient_free(apiClient_t *apiClient) {
 
-    list_free(apiClient->apiKeys);
+    if (apiClient->apiKeys) {
+        list_free(apiClient->apiKeys);
+    }
 
     free(apiClient);
     curl_global_cleanup();
