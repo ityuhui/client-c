@@ -9,10 +9,10 @@
 
 size_t writeDataCallback(void *buffer, size_t size, size_t nmemb, void *userp);
 
-apiClient_t *apiClient_create() {
+apiClient_t *apiClient_create(const char *basePath, list_t *apiKeys) {
     curl_global_init(CURL_GLOBAL_ALL);
     apiClient_t *apiClient = malloc(sizeof(apiClient_t));
-    apiClient->basePath = "http://localhost";
+    apiClient->basePath = strdup(basePath);
     apiClient->dataReceived = NULL;
     apiClient->response_code = 0;
     apiClient->apiKeys = NULL;
@@ -24,6 +24,9 @@ void apiClient_free(apiClient_t *apiClient) {
 
     if (apiClient->apiKeys) {
         list_free(apiClient->apiKeys);
+    }
+    if (apiClient->basePath) {
+        free(apiClient->basePath);
     }
 
     free(apiClient);

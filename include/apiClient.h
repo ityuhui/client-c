@@ -22,7 +22,7 @@ typedef struct binary_t
     unsigned int len;
 } binary_t;
 
-apiClient_t* apiClient_create();
+apiClient_t* apiClient_create(const char *, list_t *);
 
 void apiClient_free(apiClient_t *apiClient);
 
