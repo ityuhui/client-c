@@ -14,6 +14,7 @@ typedef struct apiClient_t {
     void *dataReceived;
     long response_code;
     list_t *apiKeys;
+    char *caPath;
 } apiClient_t;
 
 typedef struct binary_t
@@ -22,7 +23,7 @@ typedef struct binary_t
     unsigned int len;
 } binary_t;
 
-apiClient_t* apiClient_create(const char *, list_t *);
+apiClient_t* apiClient_create(const char *, list_t *, const char *);
 
 void apiClient_free(apiClient_t *apiClient);
 

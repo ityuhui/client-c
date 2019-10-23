@@ -9,13 +9,22 @@
 
 size_t writeDataCallback(void *buffer, size_t size, size_t nmemb, void *userp);
 
-apiClient_t *apiClient_create(const char *basePath, list_t *apiKeys) {
+apiClient_t *apiClient_create(const char *basePath, list_t *apiKeys, const char *caPath) {
     curl_global_init(CURL_GLOBAL_ALL);
     apiClient_t *apiClient = malloc(sizeof(apiClient_t));
-    apiClient->basePath = strdup(basePath);
+    if (basePath) {
+        apiClient->basePath = strdup(basePath);
+    } else {
+        apiClient->basePath = strdup("http://localhost");
+    }
     apiClient->dataReceived = NULL;
     apiClient->response_code = 0;
-    apiClient->apiKeys = NULL;
+    apiClient->apiKeys = apiKeys;
+    if (caPath) {
+        apiClient->caPath = strdup(caPath);
+    } else {
+        apiClient->caPath = NULL;
+    }
 
     return apiClient;
 }
@@ -27,6 +36,9 @@ void apiClient_free(apiClient_t *apiClient) {
     }
     if (apiClient->basePath) {
         free(apiClient->basePath);
+    }
+    if (apiClient->caPath) {
+        free(apiClient->caPath);
     }
 
     free(apiClient);
@@ -319,6 +331,13 @@ void apiClient_invoke(apiClient_t    *apiClient,
         curl_easy_setopt(handle, CURLOPT_HTTPHEADER, headers);
         curl_easy_setopt(handle, CURLOPT_VERBOSE, 0); // to get curl debug msg 0: to disable, 1L:to enable
 
+        if (apiClient->caPath) {
+            curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, true);
+            curl_easy_setopt(handle, CURLOPT_CAINFO, apiClient->caPath);
+        } else {
+            curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, false);
+            curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, false);
+        }
 
         if(bodyParameters != NULL) {
             postData(handle, bodyParameters);

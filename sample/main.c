@@ -12,10 +12,11 @@ int main()
 
     //apiClient_t *app = apiClient_create("https://kubernetes:6443", apiKeys);
 
-    apiClient_t *apiClient = apiClient_create("https://9.111.254.254:6443", apiKeys);
+    apiClient_t *apiClient = apiClient_create("https://9.111.254.254:6443", apiKeys, NULL);
     
-    CoreAPI_getCoreAPIVersions(apiClient);
+    struct v1_api_versions_t *apivinfo = CoreAPI_getCoreAPIVersions(apiClient);
 
+    printf("apiVersion=%s, kind=%s\n", apivinfo->apiVersion, apivinfo->kind);
 
     apiClient_free(apiClient);
 }
