@@ -50,7 +50,7 @@ NetworkingV1API_listNetworkingV1NetworkPolicyForAllNamespaces(apiClient_t *apiCl
 // partially update the specified NetworkPolicy
 //
 v1_network_policy_t*
-NetworkingV1API_patchNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+NetworkingV1API_patchNetworkingV1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified NetworkPolicy

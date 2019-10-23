@@ -50,7 +50,7 @@ EventsV1beta1API_listEventsV1beta1NamespacedEvent(apiClient_t *apiClient ,char *
 // partially update the specified Event
 //
 v1beta1_event_t*
-EventsV1beta1API_patchEventsV1beta1NamespacedEvent(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+EventsV1beta1API_patchEventsV1beta1NamespacedEvent(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified Event

@@ -438,7 +438,7 @@ AutoscalingV1API_deleteAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -448,7 +448,7 @@ AutoscalingV1API_deleteAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1056,7 +1056,7 @@ end:
 // partially update the specified HorizontalPodAutoscaler
 //
 v1_horizontal_pod_autoscaler_t*
-AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1072,7 +1072,7 @@ AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1082,7 +1082,7 @@ AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1214,7 +1214,7 @@ end:
 // partially update status of the specified HorizontalPodAutoscaler
 //
 v1_horizontal_pod_autoscaler_t*
-AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1230,7 +1230,7 @@ AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiCl
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1240,7 +1240,7 @@ AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiCl
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1388,7 +1388,7 @@ AutoscalingV1API_readAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1398,7 +1398,7 @@ AutoscalingV1API_readAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1515,7 +1515,7 @@ AutoscalingV1API_readAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiCli
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1525,7 +1525,7 @@ AutoscalingV1API_readAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiCli
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1614,7 +1614,7 @@ AutoscalingV1API_replaceAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1624,7 +1624,7 @@ AutoscalingV1API_replaceAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1757,7 +1757,7 @@ AutoscalingV1API_replaceAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(api
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1767,7 +1767,7 @@ AutoscalingV1API_replaceAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(api
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }

@@ -817,7 +817,7 @@ end:
 // partially update the specified CustomResourceDefinition
 //
 v1_custom_resource_definition_t*
-ApiextensionsV1API_patchApiextensionsV1CustomResourceDefinition(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ApiextensionsV1API_patchApiextensionsV1CustomResourceDefinition(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -964,7 +964,7 @@ end:
 // partially update status of the specified CustomResourceDefinition
 //
 v1_custom_resource_definition_t*
-ApiextensionsV1API_patchApiextensionsV1CustomResourceDefinitionStatus(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ApiextensionsV1API_patchApiextensionsV1CustomResourceDefinitionStatus(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

@@ -50,13 +50,13 @@ BatchV1API_listBatchV1NamespacedJob(apiClient_t *apiClient ,char * namespace ,ch
 // partially update the specified Job
 //
 v1_job_t*
-BatchV1API_patchBatchV1NamespacedJob(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+BatchV1API_patchBatchV1NamespacedJob(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified Job
 //
 v1_job_t*
-BatchV1API_patchBatchV1NamespacedJobStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+BatchV1API_patchBatchV1NamespacedJobStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified Job

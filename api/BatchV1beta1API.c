@@ -438,7 +438,7 @@ BatchV1beta1API_deleteBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -448,7 +448,7 @@ BatchV1beta1API_deleteBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1056,7 +1056,7 @@ end:
 // partially update the specified CronJob
 //
 v1beta1_cron_job_t*
-BatchV1beta1API_patchBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+BatchV1beta1API_patchBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1072,7 +1072,7 @@ BatchV1beta1API_patchBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1082,7 +1082,7 @@ BatchV1beta1API_patchBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1214,7 +1214,7 @@ end:
 // partially update status of the specified CronJob
 //
 v1beta1_cron_job_t*
-BatchV1beta1API_patchBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+BatchV1beta1API_patchBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1230,7 +1230,7 @@ BatchV1beta1API_patchBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1240,7 +1240,7 @@ BatchV1beta1API_patchBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1388,7 +1388,7 @@ BatchV1beta1API_readBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char *
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1398,7 +1398,7 @@ BatchV1beta1API_readBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,char *
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1515,7 +1515,7 @@ BatchV1beta1API_readBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient ,
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1525,7 +1525,7 @@ BatchV1beta1API_readBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClient ,
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1614,7 +1614,7 @@ BatchV1beta1API_replaceBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,cha
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1624,7 +1624,7 @@ BatchV1beta1API_replaceBatchV1beta1NamespacedCronJob(apiClient_t *apiClient ,cha
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1757,7 +1757,7 @@ BatchV1beta1API_replaceBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClien
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1767,7 +1767,7 @@ BatchV1beta1API_replaceBatchV1beta1NamespacedCronJobStatus(apiClient_t *apiClien
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }

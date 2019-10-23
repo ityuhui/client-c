@@ -1558,7 +1558,7 @@ end:
 // partially update the specified MutatingWebhookConfiguration
 //
 v1_mutating_webhook_configuration_t*
-AdmissionregistrationV1API_patchAdmissionregistrationV1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+AdmissionregistrationV1API_patchAdmissionregistrationV1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1705,7 +1705,7 @@ end:
 // partially update the specified ValidatingWebhookConfiguration
 //
 v1_validating_webhook_configuration_t*
-AdmissionregistrationV1API_patchAdmissionregistrationV1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+AdmissionregistrationV1API_patchAdmissionregistrationV1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

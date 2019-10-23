@@ -50,7 +50,7 @@ SettingsV1alpha1API_listSettingsV1alpha1PodPresetForAllNamespaces(apiClient_t *a
 // partially update the specified PodPreset
 //
 v1alpha1_pod_preset_t*
-SettingsV1alpha1API_patchSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+SettingsV1alpha1API_patchSettingsV1alpha1NamespacedPodPreset(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified PodPreset

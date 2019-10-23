@@ -76,19 +76,19 @@ PolicyV1beta1API_listPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char
 // partially update the specified PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_t*
-PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_t*
-PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified PodSecurityPolicy
 //
 policy_v1beta1_pod_security_policy_t*
-PolicyV1beta1API_patchPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+PolicyV1beta1API_patchPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified PodDisruptionBudget

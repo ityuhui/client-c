@@ -44,13 +44,13 @@ ApiextensionsV1beta1API_listApiextensionsV1beta1CustomResourceDefinition(apiClie
 // partially update the specified CustomResourceDefinition
 //
 v1beta1_custom_resource_definition_t*
-ApiextensionsV1beta1API_patchApiextensionsV1beta1CustomResourceDefinition(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ApiextensionsV1beta1API_patchApiextensionsV1beta1CustomResourceDefinition(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified CustomResourceDefinition
 //
 v1beta1_custom_resource_definition_t*
-ApiextensionsV1beta1API_patchApiextensionsV1beta1CustomResourceDefinitionStatus(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ApiextensionsV1beta1API_patchApiextensionsV1beta1CustomResourceDefinitionStatus(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified CustomResourceDefinition

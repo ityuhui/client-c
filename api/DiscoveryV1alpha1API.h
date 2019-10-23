@@ -50,7 +50,7 @@ DiscoveryV1alpha1API_listDiscoveryV1alpha1NamespacedEndpointSlice(apiClient_t *a
 // partially update the specified EndpointSlice
 //
 v1alpha1_endpoint_slice_t*
-DiscoveryV1alpha1API_patchDiscoveryV1alpha1NamespacedEndpointSlice(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+DiscoveryV1alpha1API_patchDiscoveryV1alpha1NamespacedEndpointSlice(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified EndpointSlice

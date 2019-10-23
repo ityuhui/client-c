@@ -438,7 +438,7 @@ NetworkingV1beta1API_deleteNetworkingV1beta1NamespacedIngress(apiClient_t *apiCl
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -448,7 +448,7 @@ NetworkingV1beta1API_deleteNetworkingV1beta1NamespacedIngress(apiClient_t *apiCl
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1056,7 +1056,7 @@ end:
 // partially update the specified Ingress
 //
 networking_v1beta1_ingress_t*
-NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1072,7 +1072,7 @@ NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiCli
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1082,7 +1082,7 @@ NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiCli
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1214,7 +1214,7 @@ end:
 // partially update status of the specified Ingress
 //
 networking_v1beta1_ingress_t*
-NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1230,7 +1230,7 @@ NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1240,7 +1240,7 @@ NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1388,7 +1388,7 @@ NetworkingV1beta1API_readNetworkingV1beta1NamespacedIngress(apiClient_t *apiClie
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1398,7 +1398,7 @@ NetworkingV1beta1API_readNetworkingV1beta1NamespacedIngress(apiClient_t *apiClie
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1515,7 +1515,7 @@ NetworkingV1beta1API_readNetworkingV1beta1NamespacedIngressStatus(apiClient_t *a
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1525,7 +1525,7 @@ NetworkingV1beta1API_readNetworkingV1beta1NamespacedIngressStatus(apiClient_t *a
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1614,7 +1614,7 @@ NetworkingV1beta1API_replaceNetworkingV1beta1NamespacedIngress(apiClient_t *apiC
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1624,7 +1624,7 @@ NetworkingV1beta1API_replaceNetworkingV1beta1NamespacedIngress(apiClient_t *apiC
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1757,7 +1757,7 @@ NetworkingV1beta1API_replaceNetworkingV1beta1NamespacedIngressStatus(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1767,7 +1767,7 @@ NetworkingV1beta1API_replaceNetworkingV1beta1NamespacedIngressStatus(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }

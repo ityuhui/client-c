@@ -824,7 +824,7 @@ PolicyV1beta1API_deletePolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *a
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -834,7 +834,7 @@ PolicyV1beta1API_deletePolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *a
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1797,7 +1797,7 @@ end:
 // partially update the specified PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_t*
-PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1813,7 +1813,7 @@ PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *ap
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1823,7 +1823,7 @@ PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *ap
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -1955,7 +1955,7 @@ end:
 // partially update status of the specified PodDisruptionBudget
 //
 v1beta1_pod_disruption_budget_t*
-PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1971,7 +1971,7 @@ PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1981,7 +1981,7 @@ PolicyV1beta1API_patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2113,7 +2113,7 @@ end:
 // partially update the specified PodSecurityPolicy
 //
 policy_v1beta1_pod_security_policy_t*
-PolicyV1beta1API_patchPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+PolicyV1beta1API_patchPolicyV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -2276,7 +2276,7 @@ PolicyV1beta1API_readPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *api
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2286,7 +2286,7 @@ PolicyV1beta1API_readPolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *api
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2403,7 +2403,7 @@ PolicyV1beta1API_readPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2413,7 +2413,7 @@ PolicyV1beta1API_readPolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClient_
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2618,7 +2618,7 @@ PolicyV1beta1API_replacePolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2628,7 +2628,7 @@ PolicyV1beta1API_replacePolicyV1beta1NamespacedPodDisruptionBudget(apiClient_t *
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2761,7 +2761,7 @@ PolicyV1beta1API_replacePolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClie
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2771,7 +2771,7 @@ PolicyV1beta1API_replacePolicyV1beta1NamespacedPodDisruptionBudgetStatus(apiClie
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }

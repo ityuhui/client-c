@@ -300,7 +300,7 @@ ExtensionsV1beta1API_createExtensionsV1beta1NamespacedDeploymentRollback(apiClie
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -310,7 +310,7 @@ ExtensionsV1beta1API_createExtensionsV1beta1NamespacedDeploymentRollback(apiClie
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2602,7 +2602,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedDaemonSet(apiClient_t *api
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2612,7 +2612,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedDaemonSet(apiClient_t *api
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2773,7 +2773,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedDeployment(apiClient_t *ap
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2783,7 +2783,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedDeployment(apiClient_t *ap
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2944,7 +2944,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedIngress(apiClient_t *apiCl
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2954,7 +2954,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedIngress(apiClient_t *apiCl
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -3115,7 +3115,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -3125,7 +3125,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -3286,7 +3286,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedReplicaSet(apiClient_t *ap
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -3296,7 +3296,7 @@ ExtensionsV1beta1API_deleteExtensionsV1beta1NamespacedReplicaSet(apiClient_t *ap
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -5863,7 +5863,7 @@ end:
 // partially update the specified DaemonSet
 //
 v1beta1_daemon_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -5879,7 +5879,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiC
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -5889,7 +5889,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiC
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6021,7 +6021,7 @@ end:
 // partially update status of the specified DaemonSet
 //
 v1beta1_daemon_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6037,7 +6037,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6047,7 +6047,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6179,7 +6179,7 @@ end:
 // partially update the specified Deployment
 //
 extensions_v1beta1_deployment_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6195,7 +6195,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeployment(apiClient_t *api
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6205,7 +6205,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeployment(apiClient_t *api
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6337,7 +6337,7 @@ end:
 // partially update scale of the specified Deployment
 //
 extensions_v1beta1_scale_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6353,7 +6353,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentScale(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6363,7 +6363,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentScale(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6495,7 +6495,7 @@ end:
 // partially update status of the specified Deployment
 //
 extensions_v1beta1_deployment_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6511,7 +6511,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentStatus(apiClient_
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6521,7 +6521,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentStatus(apiClient_
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6653,7 +6653,7 @@ end:
 // partially update the specified Ingress
 //
 extensions_v1beta1_ingress_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6669,7 +6669,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngress(apiClient_t *apiCli
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6679,7 +6679,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngress(apiClient_t *apiCli
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6811,7 +6811,7 @@ end:
 // partially update status of the specified Ingress
 //
 extensions_v1beta1_ingress_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6827,7 +6827,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngressStatus(apiClient_t *
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6837,7 +6837,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngressStatus(apiClient_t *
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -6969,7 +6969,7 @@ end:
 // partially update the specified NetworkPolicy
 //
 v1beta1_network_policy_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -6985,7 +6985,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -6995,7 +6995,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -7127,7 +7127,7 @@ end:
 // partially update the specified ReplicaSet
 //
 v1beta1_replica_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -7143,7 +7143,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSet(apiClient_t *api
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -7153,7 +7153,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSet(apiClient_t *api
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -7285,7 +7285,7 @@ end:
 // partially update scale of the specified ReplicaSet
 //
 extensions_v1beta1_scale_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -7301,7 +7301,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -7311,7 +7311,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -7443,7 +7443,7 @@ end:
 // partially update status of the specified ReplicaSet
 //
 v1beta1_replica_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -7459,7 +7459,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -7469,7 +7469,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -7601,7 +7601,7 @@ end:
 // partially update scale of the specified ReplicationControllerDummy
 //
 extensions_v1beta1_scale_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicationControllerDummyScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicationControllerDummyScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -7617,7 +7617,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicationControllerDummyS
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -7627,7 +7627,7 @@ ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicationControllerDummyS
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -7759,7 +7759,7 @@ end:
 // partially update the specified PodSecurityPolicy
 //
 extensions_v1beta1_pod_security_policy_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ExtensionsV1beta1API_patchExtensionsV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -7922,7 +7922,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiCl
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -7932,7 +7932,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiCl
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8049,7 +8049,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8059,7 +8059,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8148,7 +8148,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDeployment(apiClient_t *apiC
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8158,7 +8158,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDeployment(apiClient_t *apiC
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8275,7 +8275,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDeploymentScale(apiClient_t 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8285,7 +8285,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDeploymentScale(apiClient_t 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8374,7 +8374,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDeploymentStatus(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8384,7 +8384,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedDeploymentStatus(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8473,7 +8473,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedIngress(apiClient_t *apiClie
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8483,7 +8483,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedIngress(apiClient_t *apiClie
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8600,7 +8600,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedIngressStatus(apiClient_t *a
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8610,7 +8610,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedIngressStatus(apiClient_t *a
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8699,7 +8699,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *a
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8709,7 +8709,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *a
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8826,7 +8826,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicaSet(apiClient_t *apiC
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8836,7 +8836,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicaSet(apiClient_t *apiC
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -8953,7 +8953,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t 
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -8963,7 +8963,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t 
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9052,7 +9052,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9062,7 +9062,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9151,7 +9151,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicationControllerDummySc
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9161,7 +9161,7 @@ ExtensionsV1beta1API_readExtensionsV1beta1NamespacedReplicationControllerDummySc
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9366,7 +9366,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDaemonSet(apiClient_t *ap
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9376,7 +9376,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDaemonSet(apiClient_t *ap
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9509,7 +9509,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDaemonSetStatus(apiClient
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9519,7 +9519,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDaemonSetStatus(apiClient
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9652,7 +9652,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDeployment(apiClient_t *a
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9662,7 +9662,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDeployment(apiClient_t *a
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9795,7 +9795,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDeploymentScale(apiClient
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9805,7 +9805,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDeploymentScale(apiClient
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -9938,7 +9938,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDeploymentStatus(apiClien
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -9948,7 +9948,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedDeploymentStatus(apiClien
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10081,7 +10081,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedIngress(apiClient_t *apiC
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10091,7 +10091,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedIngress(apiClient_t *apiC
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10224,7 +10224,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedIngressStatus(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10234,7 +10234,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedIngressStatus(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10367,7 +10367,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10377,7 +10377,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10510,7 +10510,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicaSet(apiClient_t *a
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10520,7 +10520,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicaSet(apiClient_t *a
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10653,7 +10653,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicaSetScale(apiClient
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10663,7 +10663,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicaSetScale(apiClient
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10796,7 +10796,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicaSetStatus(apiClien
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10806,7 +10806,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicaSetStatus(apiClien
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -10939,7 +10939,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicationControllerDumm
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -10949,7 +10949,7 @@ ExtensionsV1beta1API_replaceExtensionsV1beta1NamespacedReplicationControllerDumm
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }

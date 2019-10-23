@@ -1558,7 +1558,7 @@ end:
 // partially update the specified StorageClass
 //
 v1_storage_class_t*
-StorageV1API_patchStorageV1StorageClass(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1API_patchStorageV1StorageClass(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1705,7 +1705,7 @@ end:
 // partially update the specified VolumeAttachment
 //
 v1_volume_attachment_t*
-StorageV1API_patchStorageV1VolumeAttachment(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1API_patchStorageV1VolumeAttachment(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -1852,7 +1852,7 @@ end:
 // partially update status of the specified VolumeAttachment
 //
 v1_volume_attachment_t*
-StorageV1API_patchStorageV1VolumeAttachmentStatus(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1API_patchStorageV1VolumeAttachmentStatus(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

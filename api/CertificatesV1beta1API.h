@@ -44,13 +44,13 @@ CertificatesV1beta1API_listCertificatesV1beta1CertificateSigningRequest(apiClien
 // partially update the specified CertificateSigningRequest
 //
 v1beta1_certificate_signing_request_t*
-CertificatesV1beta1API_patchCertificatesV1beta1CertificateSigningRequest(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+CertificatesV1beta1API_patchCertificatesV1beta1CertificateSigningRequest(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified CertificateSigningRequest
 //
 v1beta1_certificate_signing_request_t*
-CertificatesV1beta1API_patchCertificatesV1beta1CertificateSigningRequestStatus(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+CertificatesV1beta1API_patchCertificatesV1beta1CertificateSigningRequestStatus(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified CertificateSigningRequest

@@ -44,13 +44,13 @@ ApiregistrationV1API_listApiregistrationV1APIService(apiClient_t *apiClient ,cha
 // partially update the specified APIService
 //
 v1_api_service_t*
-ApiregistrationV1API_patchApiregistrationV1APIService(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ApiregistrationV1API_patchApiregistrationV1APIService(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified APIService
 //
 v1_api_service_t*
-ApiregistrationV1API_patchApiregistrationV1APIServiceStatus(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ApiregistrationV1API_patchApiregistrationV1APIServiceStatus(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified APIService

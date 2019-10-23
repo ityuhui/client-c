@@ -1938,7 +1938,7 @@ RbacAuthorizationV1alpha1API_deleteRbacAuthorizationV1alpha1NamespacedRole(apiCl
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -1948,7 +1948,7 @@ RbacAuthorizationV1alpha1API_deleteRbacAuthorizationV1alpha1NamespacedRole(apiCl
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -2109,7 +2109,7 @@ RbacAuthorizationV1alpha1API_deleteRbacAuthorizationV1alpha1NamespacedRoleBindin
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -2119,7 +2119,7 @@ RbacAuthorizationV1alpha1API_deleteRbacAuthorizationV1alpha1NamespacedRoleBindin
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -3518,7 +3518,7 @@ end:
 // partially update the specified ClusterRole
 //
 v1alpha1_cluster_role_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRole(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRole(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3665,7 +3665,7 @@ end:
 // partially update the specified ClusterRoleBinding
 //
 v1alpha1_cluster_role_binding_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRoleBinding(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRoleBinding(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3812,7 +3812,7 @@ end:
 // partially update the specified Role
 //
 v1alpha1_role_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRole(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRole(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3828,7 +3828,7 @@ RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRole(apiCli
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -3838,7 +3838,7 @@ RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRole(apiCli
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -3970,7 +3970,7 @@ end:
 // partially update the specified RoleBinding
 //
 v1alpha1_role_binding_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRoleBinding(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRoleBinding(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3986,7 +3986,7 @@ RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRoleBinding
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -3996,7 +3996,7 @@ RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRoleBinding
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -4320,7 +4320,7 @@ RbacAuthorizationV1alpha1API_readRbacAuthorizationV1alpha1NamespacedRole(apiClie
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -4330,7 +4330,7 @@ RbacAuthorizationV1alpha1API_readRbacAuthorizationV1alpha1NamespacedRole(apiClie
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -4419,7 +4419,7 @@ RbacAuthorizationV1alpha1API_readRbacAuthorizationV1alpha1NamespacedRoleBinding(
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -4429,7 +4429,7 @@ RbacAuthorizationV1alpha1API_readRbacAuthorizationV1alpha1NamespacedRoleBinding(
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -4782,7 +4782,7 @@ RbacAuthorizationV1alpha1API_replaceRbacAuthorizationV1alpha1NamespacedRole(apiC
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -4792,7 +4792,7 @@ RbacAuthorizationV1alpha1API_replaceRbacAuthorizationV1alpha1NamespacedRole(apiC
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
@@ -4925,7 +4925,7 @@ RbacAuthorizationV1alpha1API_replaceRbacAuthorizationV1alpha1NamespacedRoleBindi
 
 
     // Path Params
-    long sizeOfPathParams_name = strlen(name)+3strlen(namespace)+3 + strlen("{ name }");
+    long sizeOfPathParams_name = strlen(name)+3 + strlen(namespace)+3 + strlen("{ name }");
     if(name == NULL) {
         goto end;
     }
@@ -4935,7 +4935,7 @@ RbacAuthorizationV1alpha1API_replaceRbacAuthorizationV1alpha1NamespacedRoleBindi
     localVarPath = strReplace(localVarPath, localVarToReplace_name, name);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(name)+3strlen(namespace)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(name)+3 + strlen(namespace)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }

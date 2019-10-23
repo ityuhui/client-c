@@ -122,43 +122,43 @@ AppsV1beta1API_listAppsV1beta1StatefulSetForAllNamespaces(apiClient_t *apiClient
 // partially update the specified ControllerRevision
 //
 v1beta1_controller_revision_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedControllerRevision(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified Deployment
 //
 apps_v1beta1_deployment_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified Deployment
 //
 apps_v1beta1_scale_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified Deployment
 //
 apps_v1beta1_deployment_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified StatefulSet
 //
 v1beta1_stateful_set_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified StatefulSet
 //
 apps_v1beta1_scale_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSetScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSetScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified StatefulSet
 //
 v1beta1_stateful_set_t*
-AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta1API_patchAppsV1beta1NamespacedStatefulSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified ControllerRevision

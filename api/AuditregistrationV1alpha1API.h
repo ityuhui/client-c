@@ -44,7 +44,7 @@ AuditregistrationV1alpha1API_listAuditregistrationV1alpha1AuditSink(apiClient_t 
 // partially update the specified AuditSink
 //
 v1alpha1_audit_sink_t*
-AuditregistrationV1alpha1API_patchAuditregistrationV1alpha1AuditSink(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AuditregistrationV1alpha1API_patchAuditregistrationV1alpha1AuditSink(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified AuditSink

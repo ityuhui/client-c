@@ -179,73 +179,73 @@ AppsV1beta2API_listAppsV1beta2StatefulSetForAllNamespaces(apiClient_t *apiClient
 // partially update the specified ControllerRevision
 //
 v1beta2_controller_revision_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedControllerRevision(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedControllerRevision(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified DaemonSet
 //
 v1beta2_daemon_set_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedDaemonSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedDaemonSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified DaemonSet
 //
 v1beta2_daemon_set_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedDaemonSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedDaemonSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified Deployment
 //
 v1beta2_deployment_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified Deployment
 //
 v1beta2_scale_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified Deployment
 //
 v1beta2_deployment_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified ReplicaSet
 //
 v1beta2_replica_set_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedReplicaSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedReplicaSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified ReplicaSet
 //
 v1beta2_scale_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedReplicaSetScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedReplicaSetScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified ReplicaSet
 //
 v1beta2_replica_set_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedReplicaSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedReplicaSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified StatefulSet
 //
 v1beta2_stateful_set_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedStatefulSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedStatefulSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified StatefulSet
 //
 v1beta2_scale_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedStatefulSetScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedStatefulSetScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified StatefulSet
 //
 v1beta2_stateful_set_t*
-AppsV1beta2API_patchAppsV1beta2NamespacedStatefulSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AppsV1beta2API_patchAppsV1beta2NamespacedStatefulSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified ControllerRevision

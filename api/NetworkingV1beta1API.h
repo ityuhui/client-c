@@ -50,13 +50,13 @@ NetworkingV1beta1API_listNetworkingV1beta1NamespacedIngress(apiClient_t *apiClie
 // partially update the specified Ingress
 //
 networking_v1beta1_ingress_t*
-NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified Ingress
 //
 networking_v1beta1_ingress_t*
-NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+NetworkingV1beta1API_patchNetworkingV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified Ingress

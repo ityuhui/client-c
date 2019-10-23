@@ -134,25 +134,25 @@ RbacAuthorizationV1alpha1API_listRbacAuthorizationV1alpha1RoleForAllNamespaces(a
 // partially update the specified ClusterRole
 //
 v1alpha1_cluster_role_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRole(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRole(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified ClusterRoleBinding
 //
 v1alpha1_cluster_role_binding_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRoleBinding(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1ClusterRoleBinding(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified Role
 //
 v1alpha1_role_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRole(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRole(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified RoleBinding
 //
 v1alpha1_role_binding_t*
-RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRoleBinding(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1alpha1API_patchRbacAuthorizationV1alpha1NamespacedRoleBinding(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified ClusterRole

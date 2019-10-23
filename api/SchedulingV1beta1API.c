@@ -817,7 +817,7 @@ end:
 // partially update the specified PriorityClass
 //
 v1beta1_priority_class_t*
-SchedulingV1beta1API_patchSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+SchedulingV1beta1API_patchSchedulingV1beta1PriorityClass(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

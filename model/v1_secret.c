@@ -153,13 +153,13 @@ v1_secret_t *v1_secret_parseFromJSON(cJSON *v1_secretJSON){
 
     // v1_secret->data
     cJSON *data = cJSON_GetObjectItemCaseSensitive(v1_secretJSON, "data");
-    list_t *List;
+    list_t *Listdata;
     if (data) { 
     cJSON *_local_map;
     if(!cJSON_IsObject(data)) {
         goto end;//primitive map container
     }
-    List = list_create();
+    Listdata = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(_local_map, data)
     {
@@ -168,7 +168,7 @@ v1_secret_t *v1_secret_parseFromJSON(cJSON *v1_secretJSON){
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(_local_map->string),&_local_map->valuedouble );
-        list_addElement(List , localMapKeyPair);
+        list_addElement(Listdata, localMapKeyPair);
     }
     }
 
@@ -221,7 +221,7 @@ v1_secret_t *v1_secret_parseFromJSON(cJSON *v1_secretJSON){
 
     v1_secret_local_var = v1_secret_create (
         apiVersion ? strdup(apiVersion->valuestring) : NULL,
-        data ? List : NULL,
+        data ? Listdata : NULL,
         kind ? strdup(kind->valuestring) : NULL,
         metadata ? metadata_local_nonprim : NULL,
         stringData ? List : NULL,

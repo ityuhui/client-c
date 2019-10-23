@@ -817,7 +817,7 @@ end:
 // partially update the specified RuntimeClass
 //
 v1alpha1_runtime_class_t*
-NodeV1alpha1API_patchNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+NodeV1alpha1API_patchNodeV1alpha1RuntimeClass(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

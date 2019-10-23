@@ -50,13 +50,13 @@ AutoscalingV1API_listAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t 
 // partially update the specified HorizontalPodAutoscaler
 //
 v1_horizontal_pod_autoscaler_t*
-AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscaler(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified HorizontalPodAutoscaler
 //
 v1_horizontal_pod_autoscaler_t*
-AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AutoscalingV1API_patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified HorizontalPodAutoscaler

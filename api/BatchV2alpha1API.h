@@ -50,13 +50,13 @@ BatchV2alpha1API_listBatchV2alpha1NamespacedCronJob(apiClient_t *apiClient ,char
 // partially update the specified CronJob
 //
 v2alpha1_cron_job_t*
-BatchV2alpha1API_patchBatchV2alpha1NamespacedCronJob(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+BatchV2alpha1API_patchBatchV2alpha1NamespacedCronJob(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified CronJob
 //
 v2alpha1_cron_job_t*
-BatchV2alpha1API_patchBatchV2alpha1NamespacedCronJobStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+BatchV2alpha1API_patchBatchV2alpha1NamespacedCronJobStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified CronJob

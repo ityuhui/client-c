@@ -817,7 +817,7 @@ end:
 // partially update the specified APIService
 //
 v1beta1_api_service_t*
-ApiregistrationV1beta1API_patchApiregistrationV1beta1APIService(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ApiregistrationV1beta1API_patchApiregistrationV1beta1APIService(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -964,7 +964,7 @@ end:
 // partially update status of the specified APIService
 //
 v1beta1_api_service_t*
-ApiregistrationV1beta1API_patchApiregistrationV1beta1APIServiceStatus(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+ApiregistrationV1beta1API_patchApiregistrationV1beta1APIServiceStatus(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

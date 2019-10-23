@@ -1015,13 +1015,13 @@ v1beta1_json_schema_props_t *v1beta1_json_schema_props_parseFromJSON(cJSON *v1be
 
     // v1beta1_json_schema_props->patternProperties
     cJSON *patternProperties = cJSON_GetObjectItemCaseSensitive(v1beta1_json_schema_propsJSON, "patternProperties");
-    list_t *v1beta1_json_schema_propsList;
+    list_t *v1beta1_json_schema_propsListpatternProperties;
     if (patternProperties) { 
     cJSON *v1beta1_json_schema_props_local_map;
     if(!cJSON_IsObject(patternProperties)) {
         goto end;//primitive map container
     }
-    v1beta1_json_schema_propsList = list_create();
+    v1beta1_json_schema_propsListpatternProperties = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(v1beta1_json_schema_props_local_map, patternProperties)
     {
@@ -1030,19 +1030,19 @@ v1beta1_json_schema_props_t *v1beta1_json_schema_props_parseFromJSON(cJSON *v1be
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(v1beta1_json_schema_props_local_map->string),&v1beta1_json_schema_props_local_map->valuedouble );
-        list_addElement(v1beta1_json_schema_propsList , localMapKeyPair);
+        list_addElement(v1beta1_json_schema_propsListpatternProperties, localMapKeyPair);
     }
     }
 
     // v1beta1_json_schema_props->properties
     cJSON *properties = cJSON_GetObjectItemCaseSensitive(v1beta1_json_schema_propsJSON, "properties");
-    list_t *v1beta1_json_schema_propsList;
+    list_t *v1beta1_json_schema_propsListproperties;
     if (properties) { 
     cJSON *v1beta1_json_schema_props_local_map;
     if(!cJSON_IsObject(properties)) {
         goto end;//primitive map container
     }
-    v1beta1_json_schema_propsList = list_create();
+    v1beta1_json_schema_propsListproperties = list_create();
     keyValuePair_t *localMapKeyPair;
     cJSON_ArrayForEach(v1beta1_json_schema_props_local_map, properties)
     {
@@ -1051,7 +1051,7 @@ v1beta1_json_schema_props_t *v1beta1_json_schema_props_parseFromJSON(cJSON *v1be
             goto end;
         }
         localMapKeyPair = keyValuePair_create(strdup(v1beta1_json_schema_props_local_map->string),&v1beta1_json_schema_props_local_map->valuedouble );
-        list_addElement(v1beta1_json_schema_propsList , localMapKeyPair);
+        list_addElement(v1beta1_json_schema_propsListproperties, localMapKeyPair);
     }
     }
 
@@ -1191,8 +1191,8 @@ v1beta1_json_schema_props_t *v1beta1_json_schema_props_parseFromJSON(cJSON *v1be
         nullable ? nullable->valueint : 0,
         oneOf ? oneOfList : NULL,
         pattern ? strdup(pattern->valuestring) : NULL,
-        patternProperties ? v1beta1_json_schema_propsList : NULL,
-        properties ? v1beta1_json_schema_propsList : NULL,
+        patternProperties ? v1beta1_json_schema_propsListpatternProperties : NULL,
+        properties ? v1beta1_json_schema_propsListproperties : NULL,
         required ? requiredList : NULL,
         title ? strdup(title->valuestring) : NULL,
         type ? strdup(type->valuestring) : NULL,

@@ -212,79 +212,79 @@ ExtensionsV1beta1API_listExtensionsV1beta1ReplicaSetForAllNamespaces(apiClient_t
 // partially update the specified DaemonSet
 //
 v1beta1_daemon_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified DaemonSet
 //
 v1beta1_daemon_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDaemonSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified Deployment
 //
 extensions_v1beta1_deployment_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeployment(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified Deployment
 //
 extensions_v1beta1_scale_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified Deployment
 //
 extensions_v1beta1_deployment_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedDeploymentStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified Ingress
 //
 extensions_v1beta1_ingress_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngress(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified Ingress
 //
 extensions_v1beta1_ingress_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedIngressStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified NetworkPolicy
 //
 v1beta1_network_policy_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedNetworkPolicy(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified ReplicaSet
 //
 v1beta1_replica_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSet(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSet(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified ReplicaSet
 //
 extensions_v1beta1_scale_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update status of the specified ReplicaSet
 //
 v1beta1_replica_set_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicaSetStatus(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update scale of the specified ReplicationControllerDummy
 //
 extensions_v1beta1_scale_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicationControllerDummyScale(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1NamespacedReplicationControllerDummyScale(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified PodSecurityPolicy
 //
 extensions_v1beta1_pod_security_policy_t*
-ExtensionsV1beta1API_patchExtensionsV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+ExtensionsV1beta1API_patchExtensionsV1beta1PodSecurityPolicy(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified DaemonSet

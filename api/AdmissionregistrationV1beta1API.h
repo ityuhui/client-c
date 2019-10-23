@@ -70,13 +70,13 @@ AdmissionregistrationV1beta1API_listAdmissionregistrationV1beta1ValidatingWebhoo
 // partially update the specified MutatingWebhookConfiguration
 //
 v1beta1_mutating_webhook_configuration_t*
-AdmissionregistrationV1beta1API_patchAdmissionregistrationV1beta1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AdmissionregistrationV1beta1API_patchAdmissionregistrationV1beta1MutatingWebhookConfiguration(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified ValidatingWebhookConfiguration
 //
 v1beta1_validating_webhook_configuration_t*
-AdmissionregistrationV1beta1API_patchAdmissionregistrationV1beta1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+AdmissionregistrationV1beta1API_patchAdmissionregistrationV1beta1ValidatingWebhookConfiguration(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified MutatingWebhookConfiguration

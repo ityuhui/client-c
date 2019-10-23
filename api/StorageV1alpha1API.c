@@ -817,7 +817,7 @@ end:
 // partially update the specified VolumeAttachment
 //
 v1alpha1_volume_attachment_t*
-StorageV1alpha1API_patchStorageV1alpha1VolumeAttachment(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1alpha1API_patchStorageV1alpha1VolumeAttachment(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

@@ -3040,7 +3040,7 @@ end:
 // partially update the specified CSIDriver
 //
 v1beta1_csi_driver_t*
-StorageV1beta1API_patchStorageV1beta1CSIDriver(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1beta1API_patchStorageV1beta1CSIDriver(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3187,7 +3187,7 @@ end:
 // partially update the specified CSINode
 //
 v1beta1_csi_node_t*
-StorageV1beta1API_patchStorageV1beta1CSINode(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1beta1API_patchStorageV1beta1CSINode(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3334,7 +3334,7 @@ end:
 // partially update the specified StorageClass
 //
 v1beta1_storage_class_t*
-StorageV1beta1API_patchStorageV1beta1StorageClass(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1beta1API_patchStorageV1beta1StorageClass(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -3481,7 +3481,7 @@ end:
 // partially update the specified VolumeAttachment
 //
 v1beta1_volume_attachment_t*
-StorageV1beta1API_patchStorageV1beta1VolumeAttachment(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
+StorageV1beta1API_patchStorageV1beta1VolumeAttachment(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;

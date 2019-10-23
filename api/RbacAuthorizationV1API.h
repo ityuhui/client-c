@@ -134,25 +134,25 @@ RbacAuthorizationV1API_listRbacAuthorizationV1RoleForAllNamespaces(apiClient_t *
 // partially update the specified ClusterRole
 //
 v1_cluster_role_t*
-RbacAuthorizationV1API_patchRbacAuthorizationV1ClusterRole(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1API_patchRbacAuthorizationV1ClusterRole(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified ClusterRoleBinding
 //
 v1_cluster_role_binding_t*
-RbacAuthorizationV1API_patchRbacAuthorizationV1ClusterRoleBinding(apiClient_t *apiClient ,char * name , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1API_patchRbacAuthorizationV1ClusterRoleBinding(apiClient_t *apiClient ,char * name , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified Role
 //
 v1_role_t*
-RbacAuthorizationV1API_patchRbacAuthorizationV1NamespacedRole(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1API_patchRbacAuthorizationV1NamespacedRole(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // partially update the specified RoleBinding
 //
 v1_role_binding_t*
-RbacAuthorizationV1API_patchRbacAuthorizationV1NamespacedRoleBinding(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+RbacAuthorizationV1API_patchRbacAuthorizationV1NamespacedRoleBinding(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified ClusterRole

@@ -50,7 +50,7 @@ CoordinationV1beta1API_listCoordinationV1beta1NamespacedLease(apiClient_t *apiCl
 // partially update the specified Lease
 //
 v1beta1_lease_t*
-CoordinationV1beta1API_patchCoordinationV1beta1NamespacedLease(apiClient_t *apiClient ,char * name ,char * namespace , body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
+CoordinationV1beta1API_patchCoordinationV1beta1NamespacedLease(apiClient_t *apiClient ,char * name ,char * namespace , object_t * body ,char * pretty ,char * dryRun ,char * fieldManager ,int force);
 
 
 // read the specified Lease
