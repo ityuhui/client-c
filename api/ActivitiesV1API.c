@@ -25,7 +25,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
     list_t *localVarHeaderType = list_create();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
-    char      *plural = "activities",
+    char      *plural = "activities";
 
     // create the path
     long sizeOfPath = strlen("/apis/{group}/{version}/namespaces/{namespace}/{plural}")+1;

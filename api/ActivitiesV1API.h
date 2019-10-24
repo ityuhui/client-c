@@ -16,8 +16,8 @@ CustomObjectsAPI_createClusterCustomObject(apiClient_t *apiClient ,char * group 
 
 // Creates a namespace scoped Activity
 //
-activity_t*
-ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,char * version ,char * namespace_ , activity_t * body ,char * pretty);
+ego_v1_activity_t*
+ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,char * version ,char * namespace_ , ego_v1_activity_t * body ,char * pretty);
 
 /*
 // Deletes the specified cluster scoped custom object

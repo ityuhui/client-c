@@ -4,8 +4,8 @@
  * JobStatus represents the current state of a Job.
  */
 
-#ifndef _v1_job_status_H_
-#define _v1_job_status_H_
+#ifndef _ego_v1_activity_status_H_
+#define _ego_v1_activity_status_H_
 
 #include <string.h>
 #include "../external/cJSON.h"
@@ -28,5 +28,5 @@ ego_v1_activity_status_t *v1_job_status_parseFromJSON(cJSON *ego_v1_activity_sta
 
 cJSON *ego_v1_activity_status_convertToJSON(ego_v1_activity_status_t *ego_v1_activity_status);
 
-#endif /* _v1_job_status_H_ */
+#endif /* ego_v1_activity_status */
 

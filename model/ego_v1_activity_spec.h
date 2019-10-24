@@ -4,8 +4,8 @@
  * JobSpec describes how the job execution will look like.
  */
 
-#ifndef _v1_job_spec_H_
-#define _v1_job_spec_H_
+#ifndef _ego_v1_activity_spec_H_
+#define _ego_v1_activity_spec_H_
 
 #include <string.h>
 #include "../external/cJSON.h"
@@ -31,5 +31,5 @@ ego_v1_activity_spec_t *ego_v1_activity_spec_parseFromJSON(cJSON *ego_v1_activit
 
 cJSON *ego_v1_activity_spec_convertToJSON(ego_v1_activity_spec_t *ego_v1_activity_spec);
 
-#endif /* _v1_job_spec_H_ */
+#endif /* _ego_v1_activity_spec_H_ */
 
