@@ -24,6 +24,7 @@ set(SRCS
     src/apiClient.c
     external/cJSON.c
 	model/object.c
+	model/ego_v1_activity.c
     model/admissionregistration_v1_service_reference.c
     model/admissionregistration_v1_webhook_client_config.c
     model/admissionregistration_v1beta1_service_reference.c
@@ -669,6 +670,7 @@ set(SRCS
     model/v2beta2_resource_metric_source.c
     model/v2beta2_resource_metric_status.c
     model/version_info.c
+	api/ActivitiesV1API.c
     api/AdmissionregistrationAPI.c
     api/AdmissionregistrationV1API.c
     api/AdmissionregistrationV1beta1API.c
@@ -746,6 +748,7 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
 	model/object.h
+	model/ego_v1_activity.h
     model/admissionregistration_v1_service_reference.h
     model/admissionregistration_v1_webhook_client_config.h
     model/admissionregistration_v1beta1_service_reference.h
@@ -1391,6 +1394,7 @@ set(HDRS
     model/v2beta2_resource_metric_source.h
     model/v2beta2_resource_metric_status.h
     model/version_info.h
+	api/ActivitiesV1API.h
     api/AdmissionregistrationAPI.h
     api/AdmissionregistrationV1API.h
     api/AdmissionregistrationV1beta1API.h
