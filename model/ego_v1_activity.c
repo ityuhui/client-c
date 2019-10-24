@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "ego_v1_activity.h"
 
-activity_t *activity_create() {
+activity_t *ego_v1_activity_create() {
     activity_t *object = malloc(sizeof(activity_t));
 
     return object;
@@ -117,7 +117,7 @@ activity_t *activity_parseFromJSON(char *jsonString){
     }
 
 
-    activity = ego_v1_activity_create(
+    activity = activity_create(
         apiVersion ? strdup(apiVersion->valuestring) : NULL,
         kind ? strdup(kind->valuestring) : NULL,
         metadata ? metadata_local_nonprim : NULL,
