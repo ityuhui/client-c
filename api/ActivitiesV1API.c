@@ -16,8 +16,8 @@
 
 // Creates a namespace scoped Custom object
 //
-activity_t*
-ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,char * version ,char * namespace ,activity_t * body ,char * pretty)
+ego_v1_activity_t*
+ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,char * version ,char * namespace ,ego_v1_activity_t * body ,char * pretty)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -92,7 +92,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
     if (body != NULL)
     {
         //string
-        localVarSingleItemJSON_body = activity_convertToJSON(body);
+        localVarSingleItemJSON_body = ego_v1_activity_convertToJSON(body);
         localVarBodyParameters = cJSON_Print(localVarSingleItemJSON_body);
     }
     list_addElement(localVarHeaderType,"application/json"); //produces
@@ -114,7 +114,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
     }
     //nonprimitive not_ container
     cJSON *activitiesAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    activity_t *elementToReturn = activity_parseFromJSON(activitiesAPIlocalVarJSON);
+    ego_v1_activity_t *elementToReturn = ego_v1_activity_parseFromJSON(activitiesAPIlocalVarJSON);
     cJSON_Delete(activitiesAPIlocalVarJSON);
     if(elementToReturn == NULL) {
         // return 0;

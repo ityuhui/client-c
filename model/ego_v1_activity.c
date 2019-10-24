@@ -3,17 +3,32 @@
 #include <stdio.h>
 #include "ego_v1_activity.h"
 
-activity_t *ego_v1_activity_create() {
-    activity_t *object = malloc(sizeof(activity_t));
+ego_v1_activity_t *ego_v1_activity_create(
+    char *apiVersion,
+    char *kind,
+    v1_object_meta_t *metadata,
+    ego_v1_activity_spec_t *spec,
+    ego_v1_activity_status_t *status
+) {
+    ego_v1_activity_t *ego_v1_activity_local_var = malloc(sizeof(ego_v1_activity_t));
+    if (!ego_v1_activity_local_var) {
+        return NULL;
+    }
+    ego_v1_activity_local_var->apiVersion = apiVersion;
+    ego_v1_activity_local_var->kind = kind;
+    ego_v1_activity_local_var->metadata = metadata;
+    ego_v1_activity_local_var->spec = spec;
+    ego_v1_activity_local_var->status = status;
 
-    return object;
+    return ego_v1_activity_local_var;
 }
 
-void activity_free(activity_t *object) {
+
+void ego_v1_activity_free(ego_v1_activity_t *object) {
     free (object);
 }
 
-cJSON *activity_convertToJSON(activity_t *activity) {
+cJSON *ego_v1_activity_convertToJSON(ego_v1_activity_t *activity) {
     cJSON *item = cJSON_CreateObject();
 
     // activity->apiVersion
@@ -76,8 +91,8 @@ fail:
     return NULL;
 }
 
-activity_t *activity_parseFromJSON(char *jsonString){
-    activity_t *activity = NULL;
+ego_v1_activity_t *ego_v1_activity_parseFromJSON(char *jsonString){
+    ego_v1_activity_t *activity = NULL;
 
     // activity_t->apiVersion
     cJSON *apiVersion = cJSON_GetObjectItemCaseSensitive(jsonString, "apiVersion");
@@ -117,7 +132,7 @@ activity_t *activity_parseFromJSON(char *jsonString){
     }
 
 
-    activity = activity_create(
+    activity = ego_v1_activity_create(
         apiVersion ? strdup(apiVersion->valuestring) : NULL,
         kind ? strdup(kind->valuestring) : NULL,
         metadata ? metadata_local_nonprim : NULL,
