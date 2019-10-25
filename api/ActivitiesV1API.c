@@ -78,8 +78,8 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient , char * namespa
     printf("localVarPath=%s\n", localVarPath);
 
     // query parameters
-    char *keyQuery_pretty;
-    char * valueQuery_pretty;
+    char *keyQuery_pretty = NULL;
+    char *valueQuery_pretty = NULL;
     keyValuePair_t *keyPairQuery_pretty = 0;
     if (pretty)
     {
@@ -131,15 +131,15 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient , char * namespa
     
     list_free(localVarHeaderType);
     
-    free(localVarPath);
-    free(localVarToReplace_group);
-    free(localVarToReplace_version);
-    free(localVarToReplace_namespace);
-    free(localVarToReplace_plural);
+    FREEUP(localVarPath);
+    FREEUP(localVarToReplace_group);
+    FREEUP(localVarToReplace_version);
+    FREEUP(localVarToReplace_namespace);
+    FREEUP(localVarToReplace_plural);
     cJSON_Delete(localVarSingleItemJSON_body);
-    free(localVarBodyParameters);
-    free(keyQuery_pretty);
-    free(valueQuery_pretty);
+    FREEUP(localVarBodyParameters);
+    FREEUP(keyQuery_pretty);
+    FREEUP(valueQuery_pretty);
     keyValuePair_free(keyPairQuery_pretty);
     return elementToReturn;
 end:

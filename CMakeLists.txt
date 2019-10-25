@@ -9,6 +9,7 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN OFF)
 set(CMAKE_BUILD_TYPE Debug)
 
 set(pkgName "kubernetes")
+set(pkgNameStatic "k8s")
 
 find_package(CURL 7.58.0 REQUIRED)
 if(CURL_FOUND)
@@ -1472,6 +1473,7 @@ set(HDRS
 
 # Add library with project file with projectname as library name
 add_library(${pkgName} SHARED ${SRCS} ${HDRS})
+add_library(${pkgNameStatic} STATIC ${SRCS} ${HDRS})
 # Link dependent libraries
 target_link_libraries(${pkgName} ${CURL_LIBRARIES} )
 #install library to destination
