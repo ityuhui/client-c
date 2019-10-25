@@ -16,8 +16,8 @@
 
 // Creates a namespace scoped Custom object
 //
-ego_v1_activity_t*
-ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,char * version ,char * namespace ,ego_v1_activity_t * body ,char * pretty)
+ego_v1_activity_t *
+ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient , char * namespace_ , ego_v1_activity_t * body , char * pretty)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -25,6 +25,8 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
     list_t *localVarHeaderType = list_create();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
+    char      *group = "ego";
+    char      *version = "v1";
     char      *plural = "activities";
 
     // create the path
@@ -34,7 +36,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
 
 
     // Path Params
-    long sizeOfPathParams_group = strlen(group)+3 + strlen(version)+3 + strlen(namespace)+3 + strlen(plural)+3 + strlen("{ group }");
+    long sizeOfPathParams_group = strlen(group)+3 + strlen(version)+3 + strlen(namespace_)+3 + strlen(plural)+3 + strlen("{ group }");
     if(group == NULL) {
         goto end;
     }
@@ -44,7 +46,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
     localVarPath = strReplace(localVarPath, localVarToReplace_group, group);
 
     // Path Params
-    long sizeOfPathParams_version = strlen(group)+3 + strlen(version)+3 + strlen(namespace)+3 + strlen(plural)+3 + strlen("{ version }");
+    long sizeOfPathParams_version = strlen(group)+3 + strlen(version)+3 + strlen(namespace_)+3 + strlen(plural)+3 + strlen("{ version }");
     if(version == NULL) {
         goto end;
     }
@@ -54,7 +56,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient ,char * group ,c
     localVarPath = strReplace(localVarPath, localVarToReplace_version, version);
 
     // Path Params
-    long sizeOfPathParams_namespace = strlen(group)+3 + strlen(version)+3 + strlen(namespace)+3 + strlen(plural)+3 + strlen("{ namespace }");
+    long sizeOfPathParams_namespace = strlen(group)+3 + strlen(version)+3 + strlen(namespace_)+3 + strlen(plural)+3 + strlen("{ namespace }");
     if(namespace == NULL) {
         goto end;
     }
