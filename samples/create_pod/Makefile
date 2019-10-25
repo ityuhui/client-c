@@ -1,5 +1,5 @@
-INCLUDE:=-I../include -I../model -I../api
-LIBS:=-L../build -lkubernetes -lpthread -lssl -lz
+INCLUDE:=-I../../include -I../../model -I../../api
+LIBS:=-L../../build -lkubernetes -lpthread -lssl -lz
 CFLAGS:=-g
 
 all:

@@ -57,16 +57,16 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient , char * namespa
 
     // Path Params
     long sizeOfPathParams_namespace = strlen(group)+3 + strlen(version)+3 + strlen(namespace_)+3 + strlen(plural)+3 + strlen("{ namespace }");
-    if(namespace == NULL) {
+    if(namespace_ == NULL) {
         goto end;
     }
     char* localVarToReplace_namespace = malloc(sizeOfPathParams_namespace);
     sprintf(localVarToReplace_namespace, "{%s}", "namespace");
 
-    localVarPath = strReplace(localVarPath, localVarToReplace_namespace, namespace);
+    localVarPath = strReplace(localVarPath, localVarToReplace_namespace, namespace_);
 
     // Path Params
-    long sizeOfPathParams_plural = strlen(group)+3 + strlen(version)+3 + strlen(namespace)+3 + strlen(plural)+3 + strlen("{ plural }");
+    long sizeOfPathParams_plural = strlen(group)+3 + strlen(version)+3 + strlen(namespace_)+3 + strlen(plural)+3 + strlen("{ plural }");
     if(plural == NULL) {
         goto end;
     }

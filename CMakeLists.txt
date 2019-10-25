@@ -25,8 +25,8 @@ set(SRCS
     external/cJSON.c
     model/object.c
     model/ego_v1_activity.c
-    model/ego_v1_activity_spec.h
-    model/ego_v1_activity_status.h
+    model/ego_v1_activity_spec.c
+    model/ego_v1_activity_status.c
     model/admissionregistration_v1_service_reference.c
     model/admissionregistration_v1_webhook_client_config.c
     model/admissionregistration_v1beta1_service_reference.c
