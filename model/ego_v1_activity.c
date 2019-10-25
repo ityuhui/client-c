@@ -25,7 +25,18 @@ ego_v1_activity_t *ego_v1_activity_create(
 
 
 void ego_v1_activity_free(ego_v1_activity_t *object) {
-    free (object);
+    FREEUP(object->apiVersion);
+    FREEUP(object->kind);
+    if (object->metadata) {
+        v1_object_meta_free(object->metadata);
+    }
+    if (object->spec) {
+        ego_v1_activity_spec_free(object->spec);
+    }
+    if (object->status) {
+        ego_v1_activity_status_free(object->status);
+    }
+    FREEUP(object);
 }
 
 cJSON *ego_v1_activity_convertToJSON(ego_v1_activity_t *activity) {

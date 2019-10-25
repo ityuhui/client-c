@@ -18,7 +18,7 @@ ego_v1_activity_status_t *ego_v1_activity_status_create(
 
 
 void ego_v1_activity_status_free(ego_v1_activity_status_t *ego_v1_activity_status) {
-	free(ego_v1_activity_status);
+    FREEUP(ego_v1_activity_status);
 }
 
 cJSON *ego_v1_activity_status_convertToJSON(ego_v1_activity_status_t *ego_v1_activity_status) {

@@ -11,11 +11,11 @@ void create_one_activity(apiClient_t *apiClient)
     ego_v1_activity_t * activityinfo = calloc(1, sizeof(ego_v1_activity_t));
     activityinfo->apiVersion = strdup("ego.symphony.spectrumcomputing.ibm.com/v1");
     activityinfo->kind = strdup("Activity");
-    activityinfo->spec = calloc(1, sizeof(v1_pod_spec_t));
 
     activityinfo->metadata = calloc(1, sizeof(v1_object_meta_t));
-    activityinfo->metadata->name = strdup("activity-sample-ego-3");
+    activityinfo->metadata->name = strdup("activity-sample-ego-4");
 
+    activityinfo->spec = calloc(1, sizeof(ego_v1_activity_spec_t));
     activityinfo->spec->host = strdup("workload-pod-2");
     activityinfo->spec->command = strdup("sleep 3601");
 
@@ -26,6 +26,8 @@ void create_one_activity(apiClient_t *apiClient)
         NULL);
 
     printf("code=%ld\n", apiClient->response_code);
+
+    ego_v1_activity_free(activityinfo);
 }
 
 void print_usage()

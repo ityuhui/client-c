@@ -50,40 +50,57 @@ v1_object_meta_t *v1_object_meta_create(
 
 void v1_object_meta_free(v1_object_meta_t *v1_object_meta) {
     listEntry_t *listEntry;
-	list_ForEach(listEntry, v1_object_meta->annotations) {
-		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localMapKeyPair->key);
-        free (localMapKeyPair->value);
-	}
-	list_free(v1_object_meta->annotations);
-    free(v1_object_meta->clusterName);
-    free(v1_object_meta->creationTimestamp);
-    free(v1_object_meta->deletionTimestamp);
-	list_ForEach(listEntry, v1_object_meta->finalizers) {
-		free(listEntry->data);
-	}
-	list_free(v1_object_meta->finalizers);
-    free(v1_object_meta->generateName);
-	list_ForEach(listEntry, v1_object_meta->labels) {
-		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localMapKeyPair->key);
-        free (localMapKeyPair->value);
-	}
-	list_free(v1_object_meta->labels);
-	list_ForEach(listEntry, v1_object_meta->managedFields) {
-		v1_managed_fields_entry_free(listEntry->data);
-	}
-	list_free(v1_object_meta->managedFields);
-    free(v1_object_meta->name);
-    free(v1_object_meta->namespace);
-	list_ForEach(listEntry, v1_object_meta->ownerReferences) {
-		v1_owner_reference_free(listEntry->data);
-	}
-	list_free(v1_object_meta->ownerReferences);
-    free(v1_object_meta->resourceVersion);
-    free(v1_object_meta->selfLink);
-    free(v1_object_meta->uid);
-	free(v1_object_meta);
+    if (v1_object_meta->annotations) {
+        list_ForEach(listEntry, v1_object_meta->annotations) {
+            keyValuePair_t *localMapKeyPair = (keyValuePair_t*)listEntry->data;
+            FREEUP(localMapKeyPair->key);
+            FREEUP(localMapKeyPair->value);
+        }
+        list_free(v1_object_meta->annotations);
+    }
+    FREEUP(v1_object_meta->clusterName);
+    FREEUP(v1_object_meta->creationTimestamp);
+    FREEUP(v1_object_meta->deletionTimestamp);
+
+    if (v1_object_meta->finalizers) {
+        list_ForEach(listEntry, v1_object_meta->finalizers) {
+            FREEUP(listEntry->data);
+        }
+        list_free(v1_object_meta->finalizers);
+    }
+
+    FREEUP(v1_object_meta->generateName);
+
+    if (v1_object_meta->labels) {
+        list_ForEach(listEntry, v1_object_meta->labels) {
+            keyValuePair_t *localMapKeyPair = (keyValuePair_t*)listEntry->data;
+            FREEUP(localMapKeyPair->key);
+            FREEUP(localMapKeyPair->value);
+        }
+        list_free(v1_object_meta->labels);
+    }
+
+    if (v1_object_meta->managedFields) {
+        list_ForEach(listEntry, v1_object_meta->managedFields) {
+            v1_managed_fields_entry_free(listEntry->data);
+        }
+        list_free(v1_object_meta->managedFields);
+    }
+
+    FREEUP(v1_object_meta->name);
+    FREEUP(v1_object_meta->namespace);
+
+    if (v1_object_meta->ownerReferences) {
+        list_ForEach(listEntry, v1_object_meta->ownerReferences) {
+            v1_owner_reference_free(listEntry->data);
+        }
+        list_free(v1_object_meta->ownerReferences);
+    }
+
+    FREEUP(v1_object_meta->resourceVersion);
+    FREEUP(v1_object_meta->selfLink);
+    FREEUP(v1_object_meta->uid);
+    FREEUP(v1_object_meta);
 }
 
 cJSON *v1_object_meta_convertToJSON(v1_object_meta_t *v1_object_meta) {

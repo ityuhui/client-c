@@ -22,9 +22,9 @@ ego_v1_activity_spec_t *ego_v1_activity_spec_create(
 
 
 void ego_v1_activity_spec_free(ego_v1_activity_spec_t *ego_v1_activity_spec) {
-    free(ego_v1_activity_spec->host);
-    free(ego_v1_activity_spec->command);
-	free(ego_v1_activity_spec);
+    FREEUP(ego_v1_activity_spec->host);
+    FREEUP(ego_v1_activity_spec->command);
+    FREEUP(ego_v1_activity_spec);
 }
 
 cJSON *ego_v1_activity_spec_convertToJSON(ego_v1_activity_spec_t *ego_v1_activity_spec) {

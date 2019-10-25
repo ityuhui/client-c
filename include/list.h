@@ -4,6 +4,14 @@
 #include "../external/cJSON.h"
 #include "../include/list.h"
 
+#if !defined(FREEUP)
+#define FREEUP(p)      \
+    if ( (p) != NULL ) {                        \
+        free(p);       \
+        (p) = NULL;    \
+    }
+#endif
+
 typedef struct list_t list_t;
 
 typedef struct listEntry_t listEntry_t;
