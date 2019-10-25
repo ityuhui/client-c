@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <ActivitiesV1API.h>
 
-
+#define K8S_APISERVER_BASEPATH "https://9.111.254.254:6443"
 
 void create_one_activity(apiClient_t *apiClient)
 {
@@ -54,10 +54,8 @@ int main(int argc, char *argv[])
     keyValuePair_t *keyPairToken = keyValuePair_create(keyToken, valueToken);
     list_addElement(apiKeys, keyPairToken);
 
-    //apiClient_t *app = apiClient_create("https://kubernetes:6443", apiKeys);
-
     //For hypervisor
-    apiClient_t *apiClient = apiClient_create("https://9.111.254.254:6443", apiKeys, NULL);
+    apiClient_t *apiClient = apiClient_create(K8S_APISERVER_BASEPATH, apiKeys, NULL);
 
     //For kubectl proxy
     //apiClient_t *apiClient = apiClient_create("http://localhost:8001", NULL, NULL);

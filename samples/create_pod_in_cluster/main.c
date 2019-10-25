@@ -76,10 +76,6 @@ fname, K8S_TOKEN_FILE_IN_CLUSTER);
         ;
     }
 
-    /*int len = strlen(token);
-    if (len < token_buf_size) {
-        token[strlen(token)] = '\0';
-    }*/
     printf("%s\n", token);
 
     fclose(fp);
