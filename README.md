@@ -17,7 +17,7 @@ sudo apt remove curl
 wget http://curl.haxx.se/download/curl-7.58.0.tar.gz
 tar -xvf curl-7.58.0.tar.gz
 cd curl-7.58.0/
-./configure
+./configure --with-ssl
 make
 sudo make install
 ```
