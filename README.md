@@ -46,6 +46,9 @@ sudo make install
 ```
 ## How to use compiled library
 
-Please refer [sample](https://github.com/ityuhui/client-c/tree/master/samples)
+Please refer samples
+
+- [create pod](https://github.com/ityuhui/client-c/tree/master/samples/create_pod)
+- [create a sample of CRD](https://github.com/ityuhui/client-c/tree/master/samples/create_crd_sample)
 
 
