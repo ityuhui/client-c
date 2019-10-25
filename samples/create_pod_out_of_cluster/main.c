@@ -38,14 +38,7 @@ void create_a_pod(apiClient_t *apiClient)
     v1_pod_t* apod = CoreV1API_createCoreV1NamespacedPod(apiClient, namesapce, podinfo, NULL, NULL, NULL);
     printf("code=%ld\n", apiClient->response_code);
 
-    v1_pod_free(apod);
-}
-
-void list_pod(apiClient_t *apiClient)
-{
-    char *namesapce = "default";
-
-    CoreV1API_listCoreV1NamespacedPod(apiClient, namesapce, NULL, 0, 0, NULL, NULL, 5, NULL, 30, 0);
+    //v1_pod_free(apod);
 }
 
 void print_usage()
