@@ -46,6 +46,6 @@ sudo make install
 ```
 ## How to use compiled library
 
-Please refer [sample](https://github.com/ityuhui/client-c/tree/master/sample)
+Please refer [sample](https://github.com/ityuhui/client-c/tree/master/samples)
 
 
