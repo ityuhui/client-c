@@ -25,7 +25,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient , char * namespa
     list_t *localVarHeaderType = list_create();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
-    char      *group = "ego";
+    char      *group = "ego.symphony.spectrumcomputing.ibm.com";
     char      *version = "v1";
     char      *plural = "activities";
 
@@ -75,7 +75,7 @@ ActivitiesV1API_createNamespacedActivity(apiClient_t *apiClient , char * namespa
 
     localVarPath = strReplace(localVarPath, localVarToReplace_plural, plural);
 
-
+    printf("localVarPath=%s\n", localVarPath);
 
     // query parameters
     char *keyQuery_pretty;

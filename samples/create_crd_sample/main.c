@@ -1,49 +1,31 @@
 #include <apiClient.h>
-#include <CoreV1API.h>
 #include <malloc.h>
+#include <ActivitiesV1API.h>
 
 
 
-void create_a_pod(apiClient_t *apiClient)
+void create_one_activity(apiClient_t *apiClient)
 {
     char *namesapce = "default";
 
-    v1_pod_t * podinfo = calloc(1, sizeof(v1_pod_t));
-    podinfo->apiVersion = strdup("v1");
-    podinfo->kind = strdup("Pod");
-    podinfo->spec = calloc(1, sizeof(v1_pod_spec_t));
+    ego_v1_activity_t * activityinfo = calloc(1, sizeof(ego_v1_activity_t));
+    activityinfo->apiVersion = strdup("ego.symphony.spectrumcomputing.ibm.com/v1");
+    activityinfo->kind = strdup("Activity");
+    activityinfo->spec = calloc(1, sizeof(v1_pod_spec_t));
 
-    podinfo->metadata = calloc(1, sizeof(v1_object_meta_t));
-    podinfo->metadata->name = strdup("test-p3");
+    activityinfo->metadata = calloc(1, sizeof(v1_object_meta_t));
+    activityinfo->metadata->name = strdup("activity-sample-ego-3");
 
-    list_t *containerlist = list_create();
-    v1_container_t *con = calloc(1, sizeof(v1_container_t));
-    con->name = strdup("my-container");
-    con->image = strdup("ubuntu:16.04");
-    con->imagePullPolicy = strdup("IfNotPresent");
+    activityinfo->spec->host = strdup("workload-pod-2");
+    activityinfo->spec->command = strdup("sleep 3601");
 
-    list_t *commandlist = list_create();
-    char *cmd = strdup("sleep");
-    list_addElement(commandlist, cmd);
-    con->command = commandlist;
+    ego_v1_activity_t* activ = ActivitiesV1API_createNamespacedActivity(
+        apiClient, 
+        namesapce, 
+        activityinfo, 
+        NULL);
 
-    list_t *arglist = list_create();
-    char *arg1 = strdup("3600");
-    list_addElement(arglist, arg1);
-    con->args = arglist;
-
-    list_addElement(containerlist, con);
-    podinfo->spec->containers = containerlist;
-
-    v1_pod_t* apod = CoreV1API_createCoreV1NamespacedPod(apiClient, namesapce, podinfo, NULL, NULL, NULL);
     printf("code=%ld\n", apiClient->response_code);
-}
-
-void list_pod(apiClient_t *apiClient)
-{
-    char *namesapce = "default";
-
-    CoreV1API_listCoreV1NamespacedPod(apiClient, namesapce, NULL, 0, 0, NULL, NULL, 5, NULL, 30, 0);
 }
 
 void print_usage()
@@ -78,7 +60,7 @@ int main(int argc, char *argv[])
     //For kubectl proxy
     //apiClient_t *apiClient = apiClient_create("http://localhost:8001", NULL, NULL);
 
-    create_a_pod(apiClient);
+    create_one_activity(apiClient);
 
     apiClient_free(apiClient);
 }
