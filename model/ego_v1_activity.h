@@ -22,11 +22,16 @@ typedef struct ego_v1_activity {
     ego_v1_activity_status_t *status; //model
 } ego_v1_activity_t;
 
-ego_v1_activity_t *ego_v1_activity_create();
+ego_v1_activity_t *ego_v1_activity_create(
+    char *apiVersion,
+    char *kind,
+    v1_object_meta_t *metadata,
+    ego_v1_activity_spec_t *spec,
+    ego_v1_activity_status_t *status);
 
 void ego_v1_activity_free(ego_v1_activity_t *object);
 
-ego_v1_activity_t *ego_v1_activity_parseFromJSON(char *jsonString);
+ego_v1_activity_t *ego_v1_activity_parseFromJSON(cJSON *ego_v1_JSON);
 
 cJSON *ego_v1_activity_convertToJSON(ego_v1_activity_t *activity);
 

@@ -91,11 +91,11 @@ fail:
     return NULL;
 }
 
-ego_v1_activity_t *ego_v1_activity_parseFromJSON(char *jsonString){
+ego_v1_activity_t *ego_v1_activity_parseFromJSON(cJSON *ego_v1_JSON){
     ego_v1_activity_t *activity = NULL;
 
     // activity_t->apiVersion
-    cJSON *apiVersion = cJSON_GetObjectItemCaseSensitive(jsonString, "apiVersion");
+    cJSON *apiVersion = cJSON_GetObjectItemCaseSensitive(ego_v1_JSON, "apiVersion");
     if (apiVersion) {
         if (!cJSON_IsString(apiVersion)) {
             goto end; //String
@@ -103,7 +103,7 @@ ego_v1_activity_t *ego_v1_activity_parseFromJSON(char *jsonString){
     }
 
     // activity_t->kind
-    cJSON *kind = cJSON_GetObjectItemCaseSensitive(jsonString, "kind");
+    cJSON *kind = cJSON_GetObjectItemCaseSensitive(ego_v1_JSON, "kind");
     if (kind) {
         if (!cJSON_IsString(kind)) {
             goto end; //String
@@ -111,21 +111,21 @@ ego_v1_activity_t *ego_v1_activity_parseFromJSON(char *jsonString){
     }
 
     // activity_t->metadata
-    cJSON *metadata = cJSON_GetObjectItemCaseSensitive(jsonString, "metadata");
+    cJSON *metadata = cJSON_GetObjectItemCaseSensitive(ego_v1_JSON, "metadata");
     v1_object_meta_t *metadata_local_nonprim = NULL;
     if (metadata) {
         metadata_local_nonprim = v1_object_meta_parseFromJSON(metadata); //nonprimitive
     }
 
     // activity_t->spec
-    cJSON *spec = cJSON_GetObjectItemCaseSensitive(jsonString, "spec");
+    cJSON *spec = cJSON_GetObjectItemCaseSensitive(ego_v1_JSON, "spec");
     ego_v1_activity_spec_t *spec_local_nonprim = NULL;
     if (spec) {
         spec_local_nonprim = ego_v1_activity_spec_parseFromJSON(spec); //nonprimitive
     }
 
     // activity_t->status
-    cJSON *status = cJSON_GetObjectItemCaseSensitive(jsonString, "status");
+    cJSON *status = cJSON_GetObjectItemCaseSensitive(ego_v1_JSON, "status");
     ego_v1_activity_status_t *status_local_nonprim = NULL;
     if (status) {
         status_local_nonprim = ego_v1_activity_status_parseFromJSON(status); //nonprimitive
