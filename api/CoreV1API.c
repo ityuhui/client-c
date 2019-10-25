@@ -5673,8 +5673,8 @@ CoreV1API_createCoreV1NamespacedPod(apiClient_t *apiClient ,char * namespace ,v1
 
 
     // query parameters
-    char *keyQuery_pretty;
-    char * valueQuery_pretty;
+    char *keyQuery_pretty = NULL;
+    char * valueQuery_pretty = NULL;
     keyValuePair_t *keyPairQuery_pretty = 0;
     if (pretty)
     {
@@ -5685,8 +5685,8 @@ CoreV1API_createCoreV1NamespacedPod(apiClient_t *apiClient ,char * namespace ,v1
     }
 
     // query parameters
-    char *keyQuery_dryRun;
-    char * valueQuery_dryRun;
+    char *keyQuery_dryRun = NULL;
+    char * valueQuery_dryRun = NULL;
     keyValuePair_t *keyPairQuery_dryRun = 0;
     if (dryRun)
     {
@@ -5697,8 +5697,8 @@ CoreV1API_createCoreV1NamespacedPod(apiClient_t *apiClient ,char * namespace ,v1
     }
 
     // query parameters
-    char *keyQuery_fieldManager;
-    char * valueQuery_fieldManager;
+    char *keyQuery_fieldManager = NULL;
+    char * valueQuery_fieldManager = NULL;
     keyValuePair_t *keyPairQuery_fieldManager = 0;
     if (fieldManager)
     {
@@ -5758,18 +5758,18 @@ CoreV1API_createCoreV1NamespacedPod(apiClient_t *apiClient ,char * namespace ,v1
     
     list_free(localVarHeaderType);
     
-    free(localVarPath);
-    free(localVarToReplace_namespace);
+    FREEUP(localVarPath);
+    FREEUP(localVarToReplace_namespace);
     cJSON_Delete(localVarSingleItemJSON_body);
-    free(localVarBodyParameters);
-    free(keyQuery_pretty);
-    free(valueQuery_pretty);
+    FREEUP(localVarBodyParameters);
+    FREEUP(keyQuery_pretty);
+    FREEUP(valueQuery_pretty);
     keyValuePair_free(keyPairQuery_pretty);
-    free(keyQuery_dryRun);
-    free(valueQuery_dryRun);
+    FREEUP(keyQuery_dryRun);
+    FREEUP(valueQuery_dryRun);
     keyValuePair_free(keyPairQuery_dryRun);
-    free(keyQuery_fieldManager);
-    free(valueQuery_fieldManager);
+    FREEUP(keyQuery_fieldManager);
+    FREEUP(valueQuery_fieldManager);
     keyValuePair_free(keyPairQuery_fieldManager);
     return elementToReturn;
 end:
