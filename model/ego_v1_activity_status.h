@@ -24,7 +24,7 @@ ego_v1_activity_status_t *ego_v1_activity_status_create(
 
 void ego_v1_activity_status_free(ego_v1_activity_status_t *ego_v1_activity_status);
 
-ego_v1_activity_status_t *v1_job_status_parseFromJSON(cJSON *ego_v1_activity_statusJSON);
+ego_v1_activity_status_t *ego_v1_activity_status_parseFromJSON(cJSON *ego_v1_activity_statusJSON);
 
 cJSON *ego_v1_activity_status_convertToJSON(ego_v1_activity_status_t *ego_v1_activity_status);
 
