@@ -1,7 +1,6 @@
 /*
- * v1_job_spec.h
+ * ego_v1_activity_spec.h
  *
- * JobSpec describes how the job execution will look like.
  */
 
 #ifndef _ego_v1_activity_spec_H_
@@ -11,18 +10,22 @@
 #include "../external/cJSON.h"
 #include "../include/list.h"
 #include "../include/keyValuePair.h"
-#include "v1_label_selector.h"
-#include "v1_pod_template_spec.h"
 
 
 typedef struct ego_v1_activity_spec {
-    char *host; // string
-    char *command; // string
+    char *host; 
+    char *command;      /**< argc and argv to execute           */
+    char *execuser;     /**< execution user name                */
+    char *execcwd;      /**< execution working directory        */
+    list_t *envs;       /**< environment variables              */
 } ego_v1_activity_spec_t;
 
-ego_v1_activity_spec_t *v1_job_spec_create(
+ego_v1_activity_spec_t *ego_v1_activity_spec_create(
     char *host, // string
-    char *command// string
+    char *command,// string
+    char *execuser,
+    char *execcwd,
+    list_t *envs
 );
 
 void ego_v1_activity_spec_free(ego_v1_activity_spec_t *ego_v1_activity_spec);

@@ -36,7 +36,7 @@ ego_v1_activity_status_t *ego_v1_activity_status_parseFromJSON(cJSON *ego_v1_act
 
     ego_v1_activity_status_t *ego_v1_activity_status_local_var = NULL;
 
-    ego_v1_activity_status_local_var = v1_job_status_create (
+    ego_v1_activity_status_local_var = ego_v1_activity_status_create(
         );
 
     return ego_v1_activity_status_local_var;
