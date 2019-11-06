@@ -6505,8 +6505,8 @@ CoreV1API_createCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace 
 
 
     // query parameters
-    char *keyQuery_pretty;
-    char * valueQuery_pretty;
+    char *keyQuery_pretty = NULL;
+    char * valueQuery_pretty = NULL;
     keyValuePair_t *keyPairQuery_pretty = 0;
     if (pretty)
     {
@@ -6517,8 +6517,8 @@ CoreV1API_createCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace 
     }
 
     // query parameters
-    char *keyQuery_dryRun;
-    char * valueQuery_dryRun;
+    char *keyQuery_dryRun = NULL;
+    char * valueQuery_dryRun = NULL;
     keyValuePair_t *keyPairQuery_dryRun = 0;
     if (dryRun)
     {
@@ -6529,8 +6529,8 @@ CoreV1API_createCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace 
     }
 
     // query parameters
-    char *keyQuery_fieldManager;
-    char * valueQuery_fieldManager;
+    char *keyQuery_fieldManager = NULL;
+    char * valueQuery_fieldManager = NULL;
     keyValuePair_t *keyPairQuery_fieldManager = 0;
     if (fieldManager)
     {
@@ -6541,7 +6541,7 @@ CoreV1API_createCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace 
     }
 
     // Body Param
-    cJSON *localVarSingleItemJSON_body;
+    cJSON *localVarSingleItemJSON_body = NULL;
     if (body != NULL)
     {
         //string
@@ -6585,24 +6585,35 @@ CoreV1API_createCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace 
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
     }
-    list_free(localVarQueryParameters);
+    if (localVarQueryParameters) {
+        list_free(localVarQueryParameters);
+    }
     
+    if (localVarHeaderType) {
+        list_free(localVarHeaderType);
+    }
     
-    list_free(localVarHeaderType);
-    
-    free(localVarPath);
-    free(localVarToReplace_namespace);
-    cJSON_Delete(localVarSingleItemJSON_body);
-    free(localVarBodyParameters);
-    free(keyQuery_pretty);
-    free(valueQuery_pretty);
-    keyValuePair_free(keyPairQuery_pretty);
-    free(keyQuery_dryRun);
-    free(valueQuery_dryRun);
-    keyValuePair_free(keyPairQuery_dryRun);
-    free(keyQuery_fieldManager);
-    free(valueQuery_fieldManager);
-    keyValuePair_free(keyPairQuery_fieldManager);
+    FREEUP(localVarPath);
+    FREEUP(localVarToReplace_namespace);
+    if (localVarSingleItemJSON_body) {
+        cJSON_Delete(localVarSingleItemJSON_body);
+    }
+    FREEUP(localVarBodyParameters);
+    FREEUP(keyQuery_pretty);
+    FREEUP(valueQuery_pretty);
+    if (keyPairQuery_pretty) {
+        keyValuePair_free(keyPairQuery_pretty);
+    }
+    FREEUP(keyQuery_dryRun);
+    FREEUP(valueQuery_dryRun);
+    if (keyPairQuery_dryRun) {
+        keyValuePair_free(keyPairQuery_dryRun);
+    }
+    FREEUP(keyQuery_fieldManager);
+    FREEUP(valueQuery_fieldManager);
+    if (keyPairQuery_fieldManager) {
+        keyValuePair_free(keyPairQuery_fieldManager);
+    }
     return elementToReturn;
 end:
     return NULL;
@@ -28176,8 +28187,8 @@ CoreV1API_replaceCoreV1NamespacedSecret(apiClient_t *apiClient ,char * name ,cha
 
 
     // query parameters
-    char *keyQuery_pretty;
-    char * valueQuery_pretty;
+    char *keyQuery_pretty = NULL;
+    char * valueQuery_pretty = NULL;
     keyValuePair_t *keyPairQuery_pretty = 0;
     if (pretty)
     {
@@ -28188,8 +28199,8 @@ CoreV1API_replaceCoreV1NamespacedSecret(apiClient_t *apiClient ,char * name ,cha
     }
 
     // query parameters
-    char *keyQuery_dryRun;
-    char * valueQuery_dryRun;
+    char *keyQuery_dryRun = NULL;
+    char * valueQuery_dryRun = NULL;
     keyValuePair_t *keyPairQuery_dryRun = 0;
     if (dryRun)
     {
@@ -28200,8 +28211,8 @@ CoreV1API_replaceCoreV1NamespacedSecret(apiClient_t *apiClient ,char * name ,cha
     }
 
     // query parameters
-    char *keyQuery_fieldManager;
-    char * valueQuery_fieldManager;
+    char *keyQuery_fieldManager = NULL;
+    char * valueQuery_fieldManager = NULL;
     keyValuePair_t *keyPairQuery_fieldManager = 0;
     if (fieldManager)
     {
@@ -28212,7 +28223,7 @@ CoreV1API_replaceCoreV1NamespacedSecret(apiClient_t *apiClient ,char * name ,cha
     }
 
     // Body Param
-    cJSON *localVarSingleItemJSON_body;
+    cJSON *localVarSingleItemJSON_body = NULL;
     if (body != NULL)
     {
         //string
@@ -28253,25 +28264,34 @@ CoreV1API_replaceCoreV1NamespacedSecret(apiClient_t *apiClient ,char * name ,cha
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
     }
-    list_free(localVarQueryParameters);
+    if (localVarQueryParameters) {
+        list_free(localVarQueryParameters);
+    }
     
+    if (localVarHeaderType) {
+        list_free(localVarHeaderType);
+    }
     
-    list_free(localVarHeaderType);
-    
-    free(localVarPath);
-    free(localVarToReplace_name);
-    free(localVarToReplace_namespace);
+    FREEUP(localVarPath);
+    FREEUP(localVarToReplace_name);
+    FREEUP(localVarToReplace_namespace);
     cJSON_Delete(localVarSingleItemJSON_body);
-    free(localVarBodyParameters);
-    free(keyQuery_pretty);
-    free(valueQuery_pretty);
-    keyValuePair_free(keyPairQuery_pretty);
-    free(keyQuery_dryRun);
-    free(valueQuery_dryRun);
-    keyValuePair_free(keyPairQuery_dryRun);
-    free(keyQuery_fieldManager);
-    free(valueQuery_fieldManager);
-    keyValuePair_free(keyPairQuery_fieldManager);
+    FREEUP(localVarBodyParameters);
+    FREEUP(keyQuery_pretty);
+    FREEUP(valueQuery_pretty);
+    if (keyPairQuery_pretty) {
+        keyValuePair_free(keyPairQuery_pretty);
+    }
+    FREEUP(keyQuery_dryRun);
+    FREEUP(valueQuery_dryRun);
+    if (keyPairQuery_dryRun) {
+        keyValuePair_free(keyPairQuery_dryRun);
+    }
+    FREEUP(keyQuery_fieldManager);
+    FREEUP(valueQuery_fieldManager);
+    if (keyPairQuery_fieldManager) {
+        keyValuePair_free(keyPairQuery_fieldManager);
+    }
     return elementToReturn;
 end:
     return NULL;

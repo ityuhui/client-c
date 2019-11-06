@@ -30,23 +30,27 @@ v1_secret_t *v1_secret_create(
 
 void v1_secret_free(v1_secret_t *v1_secret) {
     listEntry_t *listEntry;
-    free(v1_secret->apiVersion);
-	list_ForEach(listEntry, v1_secret->data) {
-		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localMapKeyPair->key);
-        free (localMapKeyPair->value);
-	}
-	list_free(v1_secret->data);
-    free(v1_secret->kind);
+    FREEUP(v1_secret->apiVersion);
+    if (v1_secret->data) {
+        list_ForEach(listEntry, v1_secret->data) {
+            keyValuePair_t *localMapKeyPair = (keyValuePair_t*)listEntry->data;
+            FREEUP(localMapKeyPair->key);
+            FREEUP(localMapKeyPair->value);
+        }
+        list_free(v1_secret->data);
+    }
+    FREEUP(v1_secret->kind);
     v1_object_meta_free(v1_secret->metadata);
-	list_ForEach(listEntry, v1_secret->stringData) {
-		keyValuePair_t *localMapKeyPair = (keyValuePair_t*) listEntry->data;
-        free (localMapKeyPair->key);
-        free (localMapKeyPair->value);
-	}
-	list_free(v1_secret->stringData);
-    free(v1_secret->type);
-	free(v1_secret);
+    if (v1_secret->stringData) {
+        list_ForEach(listEntry, v1_secret->stringData) {
+            keyValuePair_t *localMapKeyPair = (keyValuePair_t*)listEntry->data;
+            FREEUP(localMapKeyPair->key);
+            FREEUP(localMapKeyPair->value);
+        }
+        list_free(v1_secret->stringData);
+    }
+    FREEUP(v1_secret->type);
+    FREEUP(v1_secret);
 }
 
 cJSON *v1_secret_convertToJSON(v1_secret_t *v1_secret) {
