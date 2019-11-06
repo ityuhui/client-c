@@ -35,7 +35,7 @@ setupK8sSecretSample()
 {
     char fname[] = "setupK8sSecretSample";
 
-    char *b64_cred= "MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMQ==";
+    char *b64_cred= "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222";
 
     v1_secret_t *secretSample = calloc(1, sizeof(v1_secret_t));
     fillinSecretBody(secretSample, b64_cred);
