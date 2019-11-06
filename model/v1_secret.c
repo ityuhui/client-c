@@ -112,16 +112,15 @@ cJSON *v1_secret_convertToJSON(v1_secret_t *v1_secret) {
 	if(stringData == NULL) {
 		goto fail; //primitive map container
 	}
-    cJSON *localMapObject = cJSON_CreateObject(); //Memory free to be implemented in user code
+
 	listEntry_t *stringDataListEntry;
     if (v1_secret->stringData) {
     list_ForEach(stringDataListEntry, v1_secret->stringData) {
         keyValuePair_t *localKeyValue = (keyValuePair_t*)stringDataListEntry->data;
-        if(cJSON_AddStringToObject(localMapObject, localKeyValue->key, (char*)localKeyValue->value) == NULL)
+        if(cJSON_AddStringToObject(stringData, localKeyValue->key, (char*)localKeyValue->value) == NULL)
         {
             goto fail;
         }
-        cJSON_AddItemToObject(stringData,"", localMapObject);
     }
     }
      } 
