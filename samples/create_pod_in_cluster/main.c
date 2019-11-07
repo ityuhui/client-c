@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-//#define K8S_APISERVER_BASEPATH "https://kubernetes"
-#define K8S_APISERVER_BASEPATH "https://9.111.254.254:6443"
+#define K8S_APISERVER_BASEPATH "https://kubernetes"
 #define K8S_TOKEN_FILE_IN_CLUSTER "/var/run/secrets/kubernetes.io/serviceaccount/token"
 #define K8S_TOKEN_BUF_SIZE 1024
 #define K8S_AUTH_KEY "Authorization"

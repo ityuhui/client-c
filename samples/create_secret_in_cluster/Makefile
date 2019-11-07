@@ -3,6 +3,6 @@ LIBS:=-L../../build -lk8s -lpthread -lssl -lz -lcurl
 CFLAGS:=-g
 
 all:
-	gcc main.c $(CFLAGS) $(INCLUDE) $(LIBS) -o main
+	gcc main.c $(CFLAGS) $(INCLUDE) $(LIBS) -o csecretInCluster
 clean:
-	rm main
+	rm csecretInCluster

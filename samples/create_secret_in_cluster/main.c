@@ -3,7 +3,7 @@
 #include <CoreV1API.h>
 #include <errno.h>
 
-#define K8S_APISERVER_BASEPATH "https://9.111.254.254:6443"
+#define K8S_APISERVER_BASEPATH "https://kubernetes"
 #define K8S_SECRET_SAMLE_NAME "secret-sample-1"
 #define K8S_SECRET_VERSION "v1"
 #define K8S_SECRET_KIND "Secret"

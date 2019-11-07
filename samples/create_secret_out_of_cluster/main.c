@@ -9,6 +9,10 @@
 #define K8S_SECRET_DATA_TOKEN_KEY "token"
 #define K8S_NAMESPACE_SAMPLE "default"
 
+#define K8S_TOKEN_BUF_SIZE 1024
+#define K8S_AUTH_KEY "Authorization"
+#define K8S_AUTH_VALUE_TEMPLATE "Bearer %s"
+
 typedef list_t k8s_client_c_list_t;
 
 apiClient_t *g_k8sAPIConnector;
@@ -92,10 +96,10 @@ int main(int argc, char *argv[])
     list_t *apiKeys;
     apiKeys = list_create();
     
-    char *keyToken = strdup("Authorization");
-    char valueToken[1024];
+    char *keyToken = strdup(K8S_AUTH_KEY);
+    char valueToken[K8S_TOKEN_BUF_SIZE];
     memset(valueToken, 0, sizeof(valueToken));
-    sprintf(valueToken, "Bearer %s", argv[1]);
+    sprintf(valueToken, K8S_AUTH_VALUE_TEMPLATE, argv[1]);
 
     keyValuePair_t *keyPairToken = keyValuePair_create(keyToken, valueToken);
     list_addElement(apiKeys, keyPairToken);
