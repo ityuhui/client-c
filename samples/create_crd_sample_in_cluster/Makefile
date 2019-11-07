@@ -5,4 +5,4 @@ CFLAGS:=-g
 all:
 	gcc main.c $(CFLAGS) $(INCLUDE) $(LIBS) -o cactivity
 clean:
-	rm main
+	rm cactivity
