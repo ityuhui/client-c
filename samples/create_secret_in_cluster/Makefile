@@ -3,6 +3,6 @@ LIBS:=-L../../build -lk8s -lpthread -lssl -lz -lcurl
 CFLAGS:=-g
 
 all:
-	gcc main.c $(CFLAGS) $(INCLUDE) $(LIBS) -o cactivityOutCluster
+	gcc main.c $(CFLAGS) $(INCLUDE) $(LIBS) -o main
 clean:
-	rm cactivityOutCluster
+	rm main

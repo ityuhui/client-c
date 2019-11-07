@@ -16,10 +16,10 @@ ego_v1_activity_spec_t *ego_v1_activity_spec_create(
     if (!ego_v1_activity_spec_local_var) {
         return NULL;
     }
-    ego_v1_activity_spec_local_var->host = strdup(host);
-    ego_v1_activity_spec_local_var->command = strdup(command);
-    ego_v1_activity_spec_local_var->execuser = strdup(execuser);
-    ego_v1_activity_spec_local_var->execcwd = strdup(execcwd);
+    ego_v1_activity_spec_local_var->host = host;
+    ego_v1_activity_spec_local_var->command = command;
+    ego_v1_activity_spec_local_var->execuser = execuser;
+    ego_v1_activity_spec_local_var->execcwd = execcwd;
     ego_v1_activity_spec_local_var->envs = envs;
 
 	return ego_v1_activity_spec_local_var;

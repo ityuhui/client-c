@@ -32,13 +32,13 @@ void create_one_activity(apiClient_t *apiClient)
 
 void print_usage()
 {
-    printf("Usage: main baseurl(mandotory) token(mandotory) cafile(optional)\n\
-e.g. main https://kubernetes:6443 mtpZCI6IjJZT3k1bDNK\n");
+    printf("Usage: main token(mandotory) cafile(optional)\n\
+e.g. main mtpZCI6IjJZT3k1bDNK\n");
 }
 
 int main(int argc, char *argv[])
 {
-    if (argc < 3) {
+    if (argc < 2) {
         print_usage();
         return 1;
     }
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     char *keyToken = strdup("Authorization");
     char valueToken[1024];
     memset(valueToken, 0, sizeof(valueToken));
-    sprintf(valueToken, "Bearer %s", argv[2]);
+    sprintf(valueToken, "Bearer %s", argv[1]);
 
     keyValuePair_t *keyPairToken = keyValuePair_create(keyToken, valueToken);
     list_addElement(apiKeys, keyPairToken);
