@@ -39,7 +39,7 @@ setupK8sSecretSample()
 {
     char fname[] = "setupK8sSecretSample";
 
-    char *b64_cred= "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222";
+    char *b64_cred= "Admin\"2019-11-27T01:41:56Z\"VmlxT1TNVUf2wyNG3L2kFWUPLsk+uzulkuU8d4wg2vz7UXEqqle17fG9lXOBPrMxPT2Z6nK9NtYLwga3XJ3VwA==\"laYEX07TQC+n4YEGDxELHg==";
 
     v1_secret_t *secretSample = calloc(1, sizeof(v1_secret_t));
     fillinSecretBody(secretSample, b64_cred);

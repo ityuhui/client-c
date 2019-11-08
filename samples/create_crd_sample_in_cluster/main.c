@@ -12,7 +12,7 @@
 
 apiClient_t *g_k8sAPIConnector;
 
-void create_one_activity(apiClient_t *apiClient)
+void create_one_activity()
 {
     char *namesapce = "default";
 
@@ -28,12 +28,12 @@ void create_one_activity(apiClient_t *apiClient)
     activityinfo->spec->command = strdup("sleep 3601");
 
     ego_v1_activity_t* activ = ActivitiesV1API_createNamespacedActivity(
-        apiClient,
+        g_k8sAPIConnector,
         namesapce,
         activityinfo,
         NULL);
 
-    printf("code=%ld\n", apiClient->response_code);
+    printf("code=%ld\n", g_k8sAPIConnector->response_code);
 
     ego_v1_activity_free(activityinfo);
 }
@@ -69,6 +69,8 @@ fname, K8S_TOKEN_FILE_IN_CLUSTER);
         token[len -1] = '\0';
     }
 
+    printf("%s\n", token);
+    
     fclose(fp);
 
     return 0;
@@ -88,10 +90,7 @@ init_k8s_connector()
 
     char valueToken[K8S_TOKEN_BUF_SIZE];
     memset(valueToken, 0, sizeof(valueToken));
-    //sprintf(valueToken, K8S_AUTH_VALUE_TEMPLATE, "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJZT3k1bDNKTVc3Nk9qWXlqTVlYcXFRZWQwb2tGWnNFNWI0eVY1cnBQNzgifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4tOHA0aDQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImMxNjhmM2NjLTFhODQtNGNjNC04ZmUxLWJjZDNhYTE5MTllOCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.IwgMXmMmTG_bmARroB2S_Fc-7tvrQ4WpyadzXVNVlzLeSuMgABSisBmUfTURwIstOZ_yojJIC6UXYl2Cq2IELl9cJZ6Z1knktvtgfCjqUNUCFqNRkAbt4TB8b22yZEi_ZngvxDknRkJv79XcDm6Nab9MutWMN6b45iH1aL-1W93fqqXburakkpDeMm5fN0TcYxT_zLV7LWjVwWRsvcIEr1dNfVjmZiKdTs9Oepbm__t9q-kvk-t2ItzwPFuNkpygNWsQSH_lDeIutNucBh7oRPUtkvBGDlyOajYcV-Xy1ufSicdw_Mm-oDKgPB72WEYyc87H5Z8SGn6VaCqlTwiDFw");
     sprintf(valueToken, K8S_AUTH_VALUE_TEMPLATE, token);
-
-    printf("%s\n", valueToken);
 
     keyValuePair_t *keyPairToken = keyValuePair_create(keyToken, strdup(valueToken));
     list_addElement(apiKeys, keyPairToken);
@@ -103,6 +102,6 @@ int main(int argc, char *argv[])
 {
     init_k8s_connector();
 
-    create_one_activity(g_k8sAPIConnector);
+    create_one_activity();
 }
 

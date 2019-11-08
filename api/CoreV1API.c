@@ -16460,8 +16460,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
 
 
     // query parameters
-    char *keyQuery_pretty;
-    char * valueQuery_pretty;
+    char *keyQuery_pretty = NULL;
+    char * valueQuery_pretty = NULL;
     keyValuePair_t *keyPairQuery_pretty = 0;
     if (pretty)
     {
@@ -16472,8 +16472,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_allowWatchBookmarks;
-    int valueQuery_allowWatchBookmarks;
+    char *keyQuery_allowWatchBookmarks = NULL;
+    int valueQuery_allowWatchBookmarks = NULL;
     keyValuePair_t *keyPairQuery_allowWatchBookmarks = 0;
     if (allowWatchBookmarks)
     {
@@ -16484,20 +16484,20 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_continue;
-    char * valueQuery_continue;
+    char *keyQuery_continue = NULL;
+    char * valueQuery_continue = NULL;
     keyValuePair_t *keyPairQuery_continue = 0;
     if (continue_)
     {
-        keyQuery_continue = strdup("continue_");
+        keyQuery_continue = strdup("continue");
         valueQuery_continue = strdup((continue_));
         keyPairQuery_continue = keyValuePair_create(keyQuery_continue, valueQuery_continue);
         list_addElement(localVarQueryParameters,keyPairQuery_continue);
     }
 
     // query parameters
-    char *keyQuery_fieldSelector;
-    char * valueQuery_fieldSelector;
+    char *keyQuery_fieldSelector = NULL;
+    char * valueQuery_fieldSelector = NULL;
     keyValuePair_t *keyPairQuery_fieldSelector = 0;
     if (fieldSelector)
     {
@@ -16508,8 +16508,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_labelSelector;
-    char * valueQuery_labelSelector;
+    char *keyQuery_labelSelector = NULL;
+    char * valueQuery_labelSelector = NULL;
     keyValuePair_t *keyPairQuery_labelSelector = 0;
     if (labelSelector)
     {
@@ -16520,8 +16520,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_limit;
-    int valueQuery_limit;
+    char *keyQuery_limit = NULL;
+    int valueQuery_limit = NULL;
     keyValuePair_t *keyPairQuery_limit = 0;
     if (limit)
     {
@@ -16532,8 +16532,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_resourceVersion;
-    char * valueQuery_resourceVersion;
+    char *keyQuery_resourceVersion = NULL;
+    char * valueQuery_resourceVersion = NULL;
     keyValuePair_t *keyPairQuery_resourceVersion = 0;
     if (resourceVersion)
     {
@@ -16544,8 +16544,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_timeoutSeconds;
-    int valueQuery_timeoutSeconds;
+    char *keyQuery_timeoutSeconds = NULL;
+    int valueQuery_timeoutSeconds = NULL;
     keyValuePair_t *keyPairQuery_timeoutSeconds = 0;
     if (timeoutSeconds)
     {
@@ -16556,8 +16556,8 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     }
 
     // query parameters
-    char *keyQuery_watch;
-    int valueQuery_watch;
+    char *keyQuery_watch = NULL;
+    int valueQuery_watch = NULL;
     keyValuePair_t *keyPairQuery_watch = 0;
     if (watch)
     {
@@ -16599,36 +16599,57 @@ CoreV1API_listCoreV1NamespacedSecret(apiClient_t *apiClient ,char * namespace ,c
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
     }
-    list_free(localVarQueryParameters);
+    if (localVarQueryParameters) {
+        list_free(localVarQueryParameters);
+    }
     
+    if (localVarHeaderType) {
+        list_free(localVarHeaderType);
+    }
     
-    list_free(localVarHeaderType);
-    
-    free(localVarPath);
-    free(localVarToReplace_namespace);
-    free(keyQuery_pretty);
-    free(valueQuery_pretty);
-    keyValuePair_free(keyPairQuery_pretty);
-    free(keyQuery_allowWatchBookmarks);
-    keyValuePair_free(keyPairQuery_allowWatchBookmarks);
-    free(keyQuery_continue);
-    free(valueQuery_continue);
-    keyValuePair_free(keyPairQuery_continue);
-    free(keyQuery_fieldSelector);
-    free(valueQuery_fieldSelector);
-    keyValuePair_free(keyPairQuery_fieldSelector);
-    free(keyQuery_labelSelector);
-    free(valueQuery_labelSelector);
-    keyValuePair_free(keyPairQuery_labelSelector);
-    free(keyQuery_limit);
-    keyValuePair_free(keyPairQuery_limit);
-    free(keyQuery_resourceVersion);
-    free(valueQuery_resourceVersion);
-    keyValuePair_free(keyPairQuery_resourceVersion);
-    free(keyQuery_timeoutSeconds);
-    keyValuePair_free(keyPairQuery_timeoutSeconds);
-    free(keyQuery_watch);
-    keyValuePair_free(keyPairQuery_watch);
+    FREEUP(localVarPath);
+    FREEUP(localVarToReplace_namespace);
+    FREEUP(keyQuery_pretty);
+    FREEUP(valueQuery_pretty);
+    if (keyPairQuery_pretty) {
+        keyValuePair_free(keyPairQuery_pretty);
+    }
+    FREEUP(keyQuery_allowWatchBookmarks);
+    if (keyPairQuery_allowWatchBookmarks) {
+        keyValuePair_free(keyPairQuery_allowWatchBookmarks);
+    }
+    FREEUP(keyQuery_continue);
+    FREEUP(valueQuery_continue);
+    if (keyPairQuery_continue) {
+        keyValuePair_free(keyPairQuery_continue);
+    }
+    FREEUP(keyQuery_fieldSelector);
+    FREEUP(valueQuery_fieldSelector);
+    if (keyPairQuery_fieldSelector) {
+        keyValuePair_free(keyPairQuery_fieldSelector);
+    }
+    FREEUP(keyQuery_labelSelector);
+    FREEUP(valueQuery_labelSelector);
+    if (keyPairQuery_labelSelector) {
+        keyValuePair_free(keyPairQuery_labelSelector);
+    }
+    FREEUP(keyQuery_limit);
+    if (keyPairQuery_limit) {
+        keyValuePair_free(keyPairQuery_limit);
+    }
+    FREEUP(keyQuery_resourceVersion);
+    FREEUP(valueQuery_resourceVersion);
+    if (keyPairQuery_resourceVersion) {
+        keyValuePair_free(keyPairQuery_resourceVersion);
+    }
+    FREEUP(keyQuery_timeoutSeconds);
+    if (keyPairQuery_timeoutSeconds) {
+        keyValuePair_free(keyPairQuery_timeoutSeconds);
+    }
+    FREEUP(keyQuery_watch);
+    if (keyPairQuery_watch) {
+        keyValuePair_free(keyPairQuery_watch);
+    }
     return elementToReturn;
 end:
     return NULL;
