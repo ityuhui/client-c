@@ -55,7 +55,7 @@ fname, K8S_TOKEN_FILE_IN_CLUSTER);
 static int
 fillinSecretBody(v1_secret_t *secretSample, const char *b64_cred)
 {
-    secretSample->apiVersion = strdup(K8S_SECRET_VERSION);
+    secretSample->api_version = strdup(K8S_SECRET_VERSION);
     secretSample->kind = strdup(K8S_SECRET_KIND);
     secretSample->metadata = calloc(1, sizeof(v1_object_meta_t));
     secretSample->metadata->name = strdup(K8S_SECRET_SAMLE_NAME);
@@ -64,7 +64,7 @@ fillinSecretBody(v1_secret_t *secretSample, const char *b64_cred)
     tokenList = list_create();
     keyValuePair_t *keyPairToken = keyValuePair_create(strdup(K8S_SECRET_DATA_TOKEN_KEY), strdup(b64_cred));
     list_addElement(tokenList, keyPairToken);
-    secretSample->stringData = tokenList;
+    secretSample->string_data = tokenList;
 
     return 0;
 }
