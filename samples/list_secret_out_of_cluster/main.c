@@ -107,28 +107,6 @@ listSecret()
     */
 }
 
-int
-init_k8s_connector()
-{
-    list_t *apiKeys;
-    apiKeys = list_create();
-
-    char *keyToken = strdup(K8S_AUTH_KEY);
-    char token[K8S_TOKEN_BUF_SIZE];
-    memset(token, 0, sizeof(token));
-
-    loadK8sConfigInCluster(token, K8S_TOKEN_BUF_SIZE);
-
-    char valueToken[K8S_TOKEN_BUF_SIZE];
-    memset(valueToken, 0, sizeof(valueToken));
-    sprintf(valueToken, K8S_AUTH_VALUE_TEMPLATE, token);
-
-    keyValuePair_t *keyPairToken = keyValuePair_create(keyToken, valueToken);
-    list_addElement(apiKeys, keyPairToken);
-
-    g_k8sAPIConnector = apiClient_create(K8S_APISERVER_BASEPATH, apiKeys, NULL);
-}
-
 void print_usage()
 {
     printf("Usage: main token(mandotory) cafile(optional)\n\
@@ -154,7 +132,7 @@ int main(int argc, char *argv[])
     list_addElement(apiKeys, keyPairToken);
 
     // connect to API server directly in hypervisor
-    g_k8sAPIConnector = apiClient_create(K8S_APISERVER_BASEPATH, apiKeys, NULL);
+    g_k8sAPIConnector = apiClient_create_with_base_path(K8S_APISERVER_BASEPATH, apiKeys);
 
     listSecret();
 
