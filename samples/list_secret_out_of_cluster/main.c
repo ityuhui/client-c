@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
     list_addElement(apiKeys, keyPairToken);
 
     // connect to API server directly in hypervisor
-    g_k8sAPIConnector = apiClient_create_with_base_path(K8S_APISERVER_BASEPATH, apiKeys);
+    g_k8sAPIConnector = apiClient_create_with_base_path(K8S_APISERVER_BASEPATH, NULL, apiKeys);
 
     listSecret();
 
