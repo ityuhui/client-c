@@ -32,6 +32,7 @@ jobs:
       - name: Release Prepare
         run: |
           git checkout -b 'automated-release-${{ github.event.inputs.releaseVersion }}'
+          git tag -a v${{ github.event.inputs.releaseVersion }} -m "version "${{ github.event.inputs.releaseVersion }}
       - name: Release Perform
         if: ${{ github.event.inputs.dry-run != 'true' }}
         run: |
