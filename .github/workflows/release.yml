@@ -31,21 +31,11 @@ jobs:
           git config user.name "Kubernetes Prow Robot"
       - name: Release Prepare
         run: |
-          git checkout -b 'automated-release-${{ github.event.inputs.releaseVersion }}'
           git tag -a v${{ github.event.inputs.releaseVersion }} -m "version "${{ github.event.inputs.releaseVersion }}
       - name: Release Perform
         if: ${{ github.event.inputs.dry-run != 'true' }}
         run: |
-          git push https://${{ github.token }}@github.com/${{ github.repository }}.git \
-            automated-release-${{ github.event.inputs.releaseVersion }}:automated-release-${{ github.event.inputs.releaseVersion }}
           git push https://${{ github.token }}@github.com/${{ github.repository }}.git v${{ github.event.inputs.releaseVersion }}
-      - name: Pull Request
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: automated-release-${{ github.event.inputs.releaseVersion }}
-          destination_branch: ${{ github.ref_name }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Automated Release: ${{ github.event.inputs.releaseVersion }}"
       - name: Publish Release
         if: ${{ github.event.inputs.dry-run != 'true' }}
         uses: ncipollo/release-action@v1
