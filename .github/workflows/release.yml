@@ -27,9 +27,6 @@ jobs:
           cat OWNERS | grep ${{ github.actor }}
       - name: Prepare
         run: |
-          export GPG_TTY=$(tty)
-          (echo 5; echo y; echo save) | gpg --command-fd 0 --no-tty --pinentry-mode loopback --passphrase ${{ secrets.GPG_PASSWORD }} --no-greeting --edit-key 'Kubernetes Client Publishers' trust
-          (echo 0; echo y; echo save) | gpg --command-fd 0 --no-tty --pinentry-mode loopback --passphrase ${{ secrets.GPG_PASSWORD }} --no-greeting --edit-key 'Kubernetes Client Publishers' expire
           git config user.email "k8s.ci.robot@gmail.com"
           git config user.name "Kubernetes Prow Robot"
       - name: Release Prepare
@@ -37,8 +34,6 @@ jobs:
           git checkout -b 'automated-release-${{ github.event.inputs.releaseVersion }}'
       - name: Release Perform
         if: ${{ github.event.inputs.dry-run != 'true' }}
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSWORD }}
         run: |
           git push https://${{ github.token }}@github.com/${{ github.repository }}.git \
             automated-release-${{ github.event.inputs.releaseVersion }}:automated-release-${{ github.event.inputs.releaseVersion }}
